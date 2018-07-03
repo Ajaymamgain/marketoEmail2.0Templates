@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" style="width: 100%;">
   <head>
-<!-- Updating the Show/Hide for most elements  -->
+<!-- Inlined the footer logo and social. Update spacing next  -->
     <!-- Marketo Variable Definitions -->
     <meta class="mktoList" id="textFontFamily" mktoName="Main Text Font Family" default="'Roboto'" values="Arial,Verdana,Tahoma,'Roboto', 'Lato'" mktomodulescope="false"/>
     <meta class="mktoList" id="globalColorSelector" mktoName="Global Color Setting" default="#2A9FD8" values="#ffffff, #2A9FD8, #40528F, #8F9B49, #EEEEEE, #d3d3d3, #808080, #000000," mktomodulescope="false"/>
@@ -101,11 +101,11 @@
     <meta class="mktoString" id="signatureLinkText" mktoname="Link Text" default="marco.rossi@geologo.net" mktomodulescope="true" />
     <meta class="mktoString" id="signatureLink" mktoname="Link" default="http://mylink" mktomodulescope="true" />
     <!-- Social Footer Marketo Variable Definitions -->
-    <meta class="mktoBoolean" id="showFooterLogo" mktoname="Show Footer Logo?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
+    <meta class="mktoBoolean" id="showFooterLogo" mktoname="Show Footer Logo?" default="true" false_value="none" true_value="inline-block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
     <meta class="mktoList" id="blankSpaceBackgroundColor3" mktoname="Module Background" default="#ffffff" values="#ffffff, #2A9FD8, #40528F, #8F9B49, #EEEEEE, #d3d3d3, #808080, #000000, ${globalColorSelector}" mktomodulescope="true" />
     <meta class="mktoNumber" id="blankSpaceSpacer3" mktoname="Top Spacer" default="40" min="1" max="300" units="px" step="1" mktomodulescope="true" />
     <meta class="mktoList" id="contactsBackgroundColor" mktoname="Social Module Background" default="#808080" values="#ffffff, #2A9FD8, #40528F, #8F9B49, #EEEEEE, #d3d3d3, #808080, #000000, ${globalColorSelector}" mktomodulescope="true" />
-    <meta class="mktoNumber" id="contactsSpacer" mktoname="Top Spacer" default="10" min="1" max="300" units="px" step="1" mktomodulescope="true" />
+    <meta class="mktoNumber" id="contactsSpacer" mktoname="Top Spacer" default="20" min="1" max="300" units="px" step="1" mktomodulescope="true" />
     <meta class="mktoNumber" id="contactsSpacer2" mktoname="Top Spacer" default="1" min="1" max="300" units="px" step="1" mktomodulescope="true" />
     <meta class="mktoNumber" id="contactsSpacer3" mktoname="Spacer Below Image" default="10" min="1" max="300" units="px" step="1" mktomodulescope="true" />
     <meta class="mktoNumber" id="contactsSpacer4" mktoname="Spacer Below Image" default="1" min="1" max="300" units="px" step="1" mktomodulescope="true" />
@@ -985,13 +985,13 @@ solid;border-top-color:${articleBorderColor};border-right-color:${articleBorderC
                                               <tr>
                                                 <td  style=" -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;">
                                                     <div style="display:inline" class="mktoImg" mktoname="Logo" id="logo2" mktolockimgsize="true">
-                                                      <a><img src="http://na-sj24.marketo.com/rs/630-BEY-937/images/tyler_logo_RGB_WHITE_tag_line_below.png" alt="Logo" width="auto" height="86" style="-ms-interpolation-mode: bicubic; outline: none; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; text-decoration: none; border-top-width: 0; width: auto; height: 86px; max-width: 100%; display: block; line-height: 100%;"  /></a>
+                                                      <a><img src="http://na-sj24.marketo.com/rs/630-BEY-937/images/tyler_logo_RGB_WHITE_tag_line_below.png" alt="Logo" width="auto" height="86" style="-ms-interpolation-mode: bicubic; outline: none; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; text-decoration: none; border-top-width: 0; width: auto; height: 86px; max-width: 100%; line-height: 100%;"  /></a>
                                                     </div>
                                                 </td>
                                               </tr>
                                             </table>
                                           </td>
-                                          <td class="right-social-icons" id="showSocial" style=" display: ${showSocial};" -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse; >
+                                          <td class="right-social-icons" id="showSocial" style=" display: ${showSocial}; line-height: 120px;" -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse; >
                                             <table>
                                               <tr>
                                                 <td style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;">
