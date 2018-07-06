@@ -1,9 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" style="width: 100%;">
   <head>
-<!-- Footer: Updated logos  -->
+<!-- Updating header Logo section to be perm/cannot edit, title spacing and removing line, updated font ot Roboto  -->
     <!-- Marketo Variable Definitions -->
-    <meta class="mktoList" id="textFontFamily" mktoName="Main Text Font Family" default="'Roboto'" values="Arial,Verdana,Tahoma,'Roboto', 'Lato'" mktomodulescope="false"/>
     <meta class="mktoList" id="globalColorSelector" mktoName="Global Color Setting" default="#2A9FD8" values="#ffffff, #2A9FD8, #40528F, #8F9B49, #EEEEEE, #d3d3d3, #808080, #000000," mktomodulescope="false"/>
 
     <!--Spacer Marketo Variable Definitions -->
@@ -11,17 +10,7 @@
     <meta class="mktoNumber" id="spacerSpacer" mktoname="Height" default="5" min="1" max="300" units="px" step="1" mktomodulescope="true" />
 
     <!--Logo Marketo Variable Definitions -->
-    <meta class="mktoList" id="headerBackgroundColor" mktoname="Logo Module Background" default="#ffffff" values="#ffffff, #2A9FD8, #40528F, #8F9B49, #EEEEEE, #d3d3d3, #808080, #000000, ${globalColorSelector}" mktomodulescope="true" />
-    <meta class="mktoNumber" id="headerSpacer" mktoname="Top Spacer" default="10" min="1" max="300" units="px" step="1" mktomodulescope="true" />
-    <meta class="mktoList" id="logoBorderColor" mktoname="Border Color" default="#808080" values="#ffffff, #2A9FD8, #40528F, #8F9B49, #EEEEEE, #d3d3d3, #808080, #000000, ${globalColorSelector}" mktomodulescope="true" />
-    <meta class="mktoNumber" id="logoBorderSize" mktoname="Border Width" default="0" min="0" max="20" units="px" step="1" mktomodulescope="true" />
-    <meta class="mktoList" id="headerButtonBackgroundColor" mktoname="Right Button Background Color" default="${globalColorSelector}" values="#ffffff, #2A9FD8, #40528F, #8F9B49, #EEEEEE, #d3d3d3, #808080, #000000, ${globalColorSelector}"  mktomodulescope="true" />
-    <meta class="mktoList" id="headerBorderColor" mktoname="Right Button Border Color" default="${globalColorSelector}" values="#ffffff, #2A9FD8, #40528F, #8F9B49, #EEEEEE, #d3d3d3, #808080, #000000, ${globalColorSelector}" mktomodulescope="true" />
-    <meta class="mktoNumber" id="headerBorderSize" mktoname="Right Button Border Width" default="1" min="0" max="20" units="px" step="1" mktomodulescope="true" />
-    <meta class="mktoNumber" id="headerSpacer2" mktoname="Bottom Spacer" default="10" min="1" max="300" units="px" step="1" mktomodulescope="true" />
-    <meta class="mktoString" id="headerLinkText" mktoname="Right Button Text" default="Download" mktomodulescope="true" />
-    <meta class="mktoString" id="headerLink" mktoname="Right Button Link" default="http://mylink" mktomodulescope="true" />
-    <meta class="mktoBoolean" id="showLogoButton" mktoname="Show Logo Button?" false_value="none" true_value="inline-block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
+    <meta class="mktoBoolean" id="showTaglineButton" mktoname="Show Tagline?" false_value="none" true_value="inline-block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
 
     <!--Image Marketo Variable Definitions -->
     <meta class="mktoString" id="freeImageLink" mktoname="Image Link" default="Add Me!" mktomodulescope="true" />
@@ -145,20 +134,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
     <meta name="robots" content="noindex,nofollow" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet" type="text/css" />
     <!--[if mso]>
 <style type='text/css'>
 .primary-font {
-font-family: ${textFontFamily} !important;
+font-family: 'Roboto' !important;
 }
 </style>
 <![endif]-->
     <!--[if mso]>
 <style type='text/css'>
 .secondary-font {
-font-family: ${textFontFamily} !important;
+font-family: 'Roboto' !important;
 }
 </style>
 <![endif]-->
@@ -491,15 +478,15 @@ font-family: ${textFontFamily} !important;
               <tbody>
                 <tr>
                   <td class="mktoContainer boxedbackground" id="template-wrapper" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;">
-                    <table id="header" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" class="mktoModule m_header" mktoname="Logo Section" mktoAddByDefault="false">
+                    <table id="header" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" class="mktoModule m_header" mktoname="Logo Section" mktoAddByDefault="true">
                         <tbody>
                           <tr>
-                            <td class="bordered" style="-moz-hyphens: none;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-ms-text-size-adjust: 100%;hyphens: none;border-bottom-width: 1px;border-bottom-style: solid;border-bottom-color: #f0eff4;border-collapse: collapse;background-color:${headerBackgroundColor};" bgcolor="${headerBackgroundColor}" valign="top">
+                            <td class="bordered" style="-moz-hyphens: none;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-ms-text-size-adjust: 100%;hyphens: none;border-bottom-width: 1px;border-bottom-style: solid;border-bottom-color: #f0eff4;border-collapse: collapse;background-color:#ffffff;" bgcolor="#ffffff" valign="top">
                               <center>
                                 <table class="table600" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse; margin-top: 0; margin-right: auto; margin-bottom: 0; margin-left: auto;" align="center" border="0" cellpadding="0" cellspacing="0" width="600">
                                   <tbody>
                                     <tr>
-                                      <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;line-height:${headerSpacer};font-size:${headerSpacer};" height="${headerSpacer}">&nbsp;</td>
+                                      <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;line-height:15px;font-size:15px;" height="15px">&nbsp;</td>
                                     </tr>
                                     <tr>
                                       <td style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse; ">
@@ -519,7 +506,7 @@ font-family: ${textFontFamily} !important;
  </td>
                                     </tr>
                                     <tr>
-                                      <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;line-height:${headerSpacer2};font-size:${headerSpacer2};" height="${headerSpacer2}">&nbsp;</td>
+                                      <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;line-height:15px;font-size:15px;" height="15px">&nbsp;</td>
                                     </tr>
                                   </tbody>
                                 </table>
@@ -563,7 +550,7 @@ font-family: ${textFontFamily} !important;
                                       <table class="table3-3" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" border="0" cellpadding="0" cellspacing="0" width="600">
                                         <tbody>
                                           <tr>
-                                            <td class="primary-font title" style="-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;-ms-text-size-adjust: 100%;margin-bottom: 10px;font-family:${textFontFamily};font-weight: bold;margin-left: 0;font-size: 24px;text-align: center;padding-top: 10px;padding-right: 0;padding-bottom: 10px;padding-left: 0;margin-top: 10px;margin-right: 0;color: #4c4d52;border-collapse: collapse;border-top-color:${titleBorderColor};border-top-width:${titleBorderSize};">
+                                            <td class="primary-font title" style="-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;-ms-text-size-adjust: 100%;margin-bottom: 10px;font-family:'Roboto';font-weight: bold;margin-left: 0;font-size: 24px;text-align: center;padding-top: 10px;padding-right: 0;padding-bottom: 10px;padding-left: 0;margin-top: 10px;margin-right: 0;color: #4c4d52;border-collapse: collapse;border-top-color:${titleBorderColor};border-top-width:${titleBorderSize};">
                                               <div class="mktoText" mktoname="Title" id="title2">
                                                 Main features of this product
                                               </div> </td>
@@ -620,7 +607,7 @@ font-family: ${textFontFamily} !important;
                                     <td class="" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;line-height:${freeTextSpacer};font-size:${freeTextSpacer};" height="${freeTextSpacer}">&nbsp;</td>
                                   </tr>
                                   <tr>
-                                    <td class="secondary-font text" style="-moz-hyphens: none;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-ms-text-size-adjust: 100%;hyphens: none;font-family: ${textFontFamily};font-size: 16px;line-height: 23px;color: #666666;border-collapse: collapse;">
+                                    <td class="secondary-font text" style="-moz-hyphens: none;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-ms-text-size-adjust: 100%;hyphens: none;font-family: 'Roboto';font-size: 16px;line-height: 23px;color: #666666;border-collapse: collapse;">
                                       <div class="mktoText" mktoname="Main Text" id="text">
                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum officiis dolorum, nulla, mollitia ducimus iure modi perferendis tenetur ea illum veniam aut sapiente deserunt repellendus. Excepturi illo numquam sint harum.
                                       </div> </td>
@@ -651,7 +638,7 @@ font-family: ${textFontFamily} !important;
                                           <tbody>
                                             <tr>
                                               <td style="border-radius: 32px; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;" align="center" bgcolor="${ctaButtonBackgroundColor}">
-                                                <a href="${ctaLink}" target="_blank" class="primary-font button" style="border-radius: 32px; -webkit-text-size-adjust:100%;-ms-text-size-adjust: 100%;border-left-color:${ctaBorderColor};font-size: 16px;font-family: ${textFontFamily};color: #ffffff;padding-top: 12px;padding-right: 18px;padding-bottom: 12px;padding-left: 18px;border-top-width:${ctaBorderSize};display: inline-block;border-bottom-width:${ctaBorderSize};border-left-width:${ctaBorderSize};border-top-style: solid;border-right-style:solid;border-bottom-style: solid;border-left-style: solid;border-top-color:${ctaBorderColor};border-right-color:${ctaBorderColor};border-bottom-color:${ctaBorderColor};border-right-width:${ctaBorderSize};text-decoration: none;background-color:${ctaButtonBackgroundColor};">${ctaLinkText} </a> </td>
+                                                <a href="${ctaLink}" target="_blank" class="primary-font button" style="border-radius: 32px; -webkit-text-size-adjust:100%;-ms-text-size-adjust: 100%;border-left-color:${ctaBorderColor};font-size: 16px;font-family: 'Roboto';color: #ffffff;padding-top: 12px;padding-right: 18px;padding-bottom: 12px;padding-left: 18px;border-top-width:${ctaBorderSize};display: inline-block;border-bottom-width:${ctaBorderSize};border-left-width:${ctaBorderSize};border-top-style: solid;border-right-style:solid;border-bottom-style: solid;border-left-style: solid;border-top-color:${ctaBorderColor};border-right-color:${ctaBorderColor};border-bottom-color:${ctaBorderColor};border-right-width:${ctaBorderSize};text-decoration: none;background-color:${ctaButtonBackgroundColor};">${ctaLinkText} </a> </td>
                                             </tr>
                                           </tbody>
                                         </table>
@@ -727,7 +714,7 @@ font-family: ${textFontFamily} !important;
                                                     <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;line-height:${twoArticlesSpacer2};font-size:${twoArticlesSpacer2};" height="${twoArticlesSpacer2}">&nbsp;</td>
                                                   </tr>
                                                   <tr>
-                                                    <td class="primary-font title" style="-moz-hyphens: none;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-ms-text-size-adjust: 100%;hyphens: none;text-align: left;font-family: ${textFontFamily};font-weight: bold;font-size: 16px;border-collapse: collapse;">
+                                                    <td class="primary-font title" style="-moz-hyphens: none;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-ms-text-size-adjust: 100%;hyphens: none;text-align: left;font-family: 'Roboto';font-weight: bold;font-size: 16px;border-collapse: collapse;">
                                                       <div class="mktoText" mktoname="Left Article Title" id="articleTitle">
                                                         LOREM IPSUM DOLOR SIT AMET
                                                       </div> </td>
@@ -736,7 +723,7 @@ font-family: ${textFontFamily} !important;
                                                     <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;line-height:${twoArticlesSpacer3};font-size:${twoArticlesSpacer3};" height="${twoArticlesSpacer3}">&nbsp;</td>
                                                   </tr>
                                                   <tr>
-                                                    <td class="secondary-font text" style="hyphens: none;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;-ms-text-size-adjust: 100%;color: #737373;text-align: left;font-family:${textFontFamily};font-size: 16px;line-height: 23px;border-collapse: collapse;">
+                                                    <td class="secondary-font text" style="hyphens: none;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;-ms-text-size-adjust: 100%;color: #737373;text-align: left;font-family:'Roboto';font-size: 16px;line-height: 23px;border-collapse: collapse;">
                                                       <div class="mktoText" mktoname="Left Text" id="text2">
                                                         Gumbo beet greens corn soko endive gumbo gourd. shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.
                                                       </div> </td>
@@ -749,7 +736,7 @@ font-family: ${textFontFamily} !important;
                                                       <table style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse; margin-top: 0; margin-right: auto; margin-bottom: 0; margin-left: auto;" align="left" border="0" cellpadding="0" cellspacing="0">
                                                         <tbody>
                                                           <tr>
-                                                            <td style="border-radius: 32px;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;" align="left" bgcolor="${twoArticlesButtonBackgroundColor}"> <a href="${twoArticlesLink}" target="_blank" class="primary-font button" style="border-radius: 32px; -webkit-text-size-adjust:100%;-ms-text-size-adjust: 100%;border-left-color:${twoArticlesBorderColor};font-size: 16px;font-family: ${textFontFamily};color: #ffffff;padding-top: 12px;padding-right: 18px;padding-bottom: 12px;padding-left: 18px;border-top-width:${twoArticlesBorderSize};display: inline-block;border-bottom-width:${twoArticlesBorderSize};border-left-width:${twoArticlesBorderSize};border-top-style:solid;border-right-style: solid;border-bottom-style: solid;border-left-style: solid;border-top-color:${twoArticlesBorderColor};border-right-color:${twoArticlesBorderColor};border-bottom-color:${twoArticlesBorderColor};border-right-width:${twoArticlesBorderSize};text-decoration: none;background-color:${twoArticlesButtonBackgroundColor};">${twoArticlesLinkText} </a> </td>
+                                                            <td style="border-radius: 32px;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;" align="left" bgcolor="${twoArticlesButtonBackgroundColor}"> <a href="${twoArticlesLink}" target="_blank" class="primary-font button" style="border-radius: 32px; -webkit-text-size-adjust:100%;-ms-text-size-adjust: 100%;border-left-color:${twoArticlesBorderColor};font-size: 16px;font-family: 'Roboto';color: #ffffff;padding-top: 12px;padding-right: 18px;padding-bottom: 12px;padding-left: 18px;border-top-width:${twoArticlesBorderSize};display: inline-block;border-bottom-width:${twoArticlesBorderSize};border-left-width:${twoArticlesBorderSize};border-top-style:solid;border-right-style: solid;border-bottom-style: solid;border-left-style: solid;border-top-color:${twoArticlesBorderColor};border-right-color:${twoArticlesBorderColor};border-bottom-color:${twoArticlesBorderColor};border-right-width:${twoArticlesBorderSize};text-decoration: none;background-color:${twoArticlesButtonBackgroundColor};">${twoArticlesLinkText} </a> </td>
                                                           </tr>
                                                         </tbody>
                                                       </table> </td>
@@ -783,7 +770,7 @@ font-family: ${textFontFamily} !important;
                                                     <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;line-height:${twoArticlesSpacer5};font-size:${twoArticlesSpacer5};" height="${twoArticlesSpacer5}">&nbsp;</td>
                                                   </tr>
                                                   <tr>
-                                                    <td class="primary-font title" style="-moz-hyphens: none;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-ms-text-size-adjust: 100%;hyphens: none;text-align: left;font-family: ${textFontFamily};font-weight: bold;font-size: 16px;border-collapse: collapse;">
+                                                    <td class="primary-font title" style="-moz-hyphens: none;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-ms-text-size-adjust: 100%;hyphens: none;text-align: left;font-family: 'Roboto';font-weight: bold;font-size: 16px;border-collapse: collapse;">
                                                       <div class="mktoText" mktoname="Right Article Title" id="articleTitle2">
                                                         LOREM IPSUM DOLOR SIT AMET
                                                       </div> </td>
@@ -792,7 +779,7 @@ font-family: ${textFontFamily} !important;
                                                     <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;line-height:${twoArticlesSpacer6};font-size:${twoArticlesSpacer6};" height="${twoArticlesSpacer6}">&nbsp;</td>
                                                   </tr>
                                                   <tr>
-                                                    <td class="secondary-font text" style="hyphens: none;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;-ms-text-size-adjust: 100%;color: #737373;text-align: left;font-family:${textFontFamily};font-size: 16px;line-height: 23px;border-collapse: collapse;">
+                                                    <td class="secondary-font text" style="hyphens: none;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;-ms-text-size-adjust: 100%;color: #737373;text-align: left;font-family:'Roboto';font-size: 16px;line-height: 23px;border-collapse: collapse;">
                                                       <div class="mktoText" mktoname="Right Text" id="text3">
                                                         Gumbo beet greens corn soko endive gumbo gourd. shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.
                                                       </div> </td>
@@ -805,7 +792,7 @@ font-family: ${textFontFamily} !important;
                                                       <table style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse; margin-top: 0; margin-right: auto; margin-bottom: 0; margin-left: auto;" align="left" border="0" cellpadding="0" cellspacing="0">
                                                         <tbody>
                                                           <tr>
-                                                            <td style=" border-radius: 32px;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;" align="left" bgcolor="${twoArticlesButtonBackgroundColor2}"> <a href="${twoArticlesLink2}" target="_blank" class="primary-font button" style="border-radius: 32px;-webkit-text-size-adjust:100%;-ms-text-size-adjust: 100%;border-left-color:${twoArticlesBorderColor2};font-size: 16px;font-family: ${textFontFamily};color: #ffffff;padding-top: 12px;padding-right: 18px;padding-bottom: 12px;padding-left: 18px;border-top-width:${twoArticlesBorderSize2};display:               inline-block;border-bottom-width:${twoArticlesBorderSize2};border-left-width:${twoArticlesBorderSize2};border-top-style:solid;border-right-style:solid;border-bottom-style:solid;border-left-style:solid;border-top-color:${twoArticlesBorderColor2};border-right-color:${twoArticlesBorderColor2};border-bottom-color:${twoArticlesBorderColor2};border-right-width:${twoArticlesBorderSize2};text-decoration:none;background-color:${twoArticlesButtonBackgroundColor2};">${twoArticlesLinkText2} </a> </td>
+                                                            <td style=" border-radius: 32px;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;" align="left" bgcolor="${twoArticlesButtonBackgroundColor2}"> <a href="${twoArticlesLink2}" target="_blank" class="primary-font button" style="border-radius: 32px;-webkit-text-size-adjust:100%;-ms-text-size-adjust: 100%;border-left-color:${twoArticlesBorderColor2};font-size: 16px;font-family: 'Roboto';color: #ffffff;padding-top: 12px;padding-right: 18px;padding-bottom: 12px;padding-left: 18px;border-top-width:${twoArticlesBorderSize2};display:               inline-block;border-bottom-width:${twoArticlesBorderSize2};border-left-width:${twoArticlesBorderSize2};border-top-style:solid;border-right-style:solid;border-bottom-style:solid;border-left-style:solid;border-top-color:${twoArticlesBorderColor2};border-right-color:${twoArticlesBorderColor2};border-bottom-color:${twoArticlesBorderColor2};border-right-width:${twoArticlesBorderSize2};text-decoration:none;background-color:${twoArticlesButtonBackgroundColor2};">${twoArticlesLinkText2} </a> </td>
                                                           </tr>
                                                         </tbody>
                                                       </table> </td>
@@ -828,16 +815,16 @@ font-family: ${textFontFamily} !important;
                     <table id="article" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" class="mktoModule m_article" mktoname="Article" mktoAddByDefault="false">
                       <tbody>
                         <tr>
-                          <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;font-family: ${textFontFamily};border-collapse: collapse;background-color:${articleBackgroundColor};" bgcolor="${articleBackgroundColor}" valign="top">
+                          <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;font-family: 'Roboto';border-collapse: collapse;background-color:${articleBackgroundColor};" bgcolor="${articleBackgroundColor}" valign="top">
                             <center>
                               <table class="table600" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse; margin-top: 0; margin-right: auto; margin-bottom: 0; margin-left: auto;" align="center" border="0" cellpadding="0" cellspacing="0" width="600">
                                 <tbody>
                                   <tr>
-                                    <td style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; font-family: ${textFontFamily}; border-collapse: collapse;">
+                                    <td style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; font-family: 'Roboto'; border-collapse: collapse;">
                                       <table class="table1-2" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="left" border="0" cellpadding="0" cellspacing="0" width="260">
                                         <tbody>
                                           <tr>
-                                            <td class="image" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; font-family: ${textFontFamily}; border-collapse: collapse;">
+                                            <td class="image" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; font-family: 'Roboto'; border-collapse: collapse;">
                                               <div style="display:inline-block" class="mktoImg" mktoname="Photo" id="photo" mktolockimgstyle="false">
                                                 <a><img alt="${articleAltText}" src="http://via.placeholder.com/200x150" style="-ms-interpolation-mode: bicubic; outline: none; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; text-decoration: none; border-top-width: 0; max-width: 100%; line-height: 100%; height: auto; width: 260px; display: block;" width="260" /></a>
                                               </div> </td>
@@ -847,40 +834,40 @@ font-family: ${textFontFamily} !important;
                                       <table class="table1-2" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="right" border="0" cellpadding="0" cellspacing="0" width="290">
                                         <tbody>
                                           <tr>
-                                            <td style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; font-family: ${textFontFamily}; border-collapse: collapse;">
+                                            <td style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; font-family: 'Roboto'; border-collapse: collapse;">
                                               <table class="contents" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="center" border="0" cellpadding="0" cellspacing="0">
                                                 <tbody>
                                                   <tr>
-                                                    <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;font-family: ${textFontFamily};border-collapse: collapse;line-height:${articleSpacer};font-size:${articleSpacer};" height="${articleSpacer}">&nbsp;</td>
+                                                    <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;font-family: 'Roboto';border-collapse: collapse;line-height:${articleSpacer};font-size:${articleSpacer};" height="${articleSpacer}">&nbsp;</td>
                                                   </tr>
                                                   <tr>
-                                                    <td class="primary-font title" style="display: ${showHeadline}; -moz-hyphens: none;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-ms-text-size-adjust: 100%;hyphens: none;font-family:${textFontFamily};font-size: 18px;font-weight: bold;color: #333333;border-collapse: collapse;">
+                                                    <td class="primary-font title" style="display: ${showHeadline}; -moz-hyphens: none;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-ms-text-size-adjust: 100%;hyphens: none;font-family:'Roboto';font-size: 18px;font-weight: bold;color: #333333;border-collapse: collapse;">
                                                       <div class="mktoText" mktoname="Right Title" id="title4">
                                                         Article Headline
                                                       </div> </td>
                                                   </tr>
                                                   <tr>
-                                                    <td class="primary-font author" style="display: ${showAuthor};-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;-ms-text-size-adjust: 100%;font-family:${textFontFamily};padding-left: 0;color: #333333;font-size: 12px;padding-top: 10px;padding-right: 0;padding-bottom: 10px;border-collapse: collapse;">
+                                                    <td class="primary-font author" style="display: ${showAuthor};-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;-ms-text-size-adjust: 100%;font-family:'Roboto';padding-left: 0;color: #333333;font-size: 12px;padding-top: 10px;padding-right: 0;padding-bottom: 10px;border-collapse: collapse;">
                                                       <div class="mktoText" mktoname="Right Author" id="author">
                                                         Article Author
                                                       </div> </td>
                                                   </tr>
                                                   <tr>
-                                                    <td class="primary-font text" style="-moz-hyphens: none;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-ms-text-size-adjust: 100%;hyphens: none;font-family:${textFontFamily};color: #333333;font-size: 16px;border-collapse: collapse;">
+                                                    <td class="primary-font text" style="-moz-hyphens: none;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-ms-text-size-adjust: 100%;hyphens: none;font-family:'Roboto';color: #333333;font-size: 16px;border-collapse: collapse;">
                                                       <div class="mktoText" mktoname="Right Text" id="article-text">
                                                         Lorem Ipsum adalah contoh teks atau dummy dalam industri percetakan dan penataan huruf atau typesetting...
                                                       </div> </td>
                                                   </tr>
                                                   <tr>
-                                                    <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;font-family: ${textFontFamily};border-collapse: collapse;line-height:${articleSpacer2};font-size:${articleSpacer2};" height="${articleSpacer2}">&nbsp;</td>
+                                                    <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;font-family: 'Roboto';border-collapse: collapse;line-height:${articleSpacer2};font-size:${articleSpacer2};" height="${articleSpacer2}">&nbsp;</td>
                                                   </tr>
                                                   <tr>
-                                                    <td class="cta" style="display: ${showArtButton}; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; font-family: ${textFontFamily}; border-collapse: collapse;">
+                                                    <td class="cta" style="display: ${showArtButton}; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; font-family: 'Roboto'; border-collapse: collapse;">
                                                       <center>
                                                         <table style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="left" border="0" cellpadding="0" cellspacing="0">
                                                           <tbody>
                                                             <tr>
-                                                              <td style="border-radius: 32px;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; font-family: ${textFontFamily}; border-collapse: collapse;" align="center" bgcolor="${articleButtonBackgroundColor}"> <a href="${articleLink}" target="_blank" class="primary-font button" style=" border-radius: 32px; -webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;display: inline-block;font-size: 16px;font-family:${textFontFamily};color: #ffffff;padding-top: 12px;padding-right: 18px;padding-bottom: 12px;padding-left:
+                                                              <td style="border-radius: 32px;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; font-family: 'Roboto'; border-collapse: collapse;" align="center" bgcolor="${articleButtonBackgroundColor}"> <a href="${articleLink}" target="_blank" class="primary-font button" style=" border-radius: 32px; -webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;display: inline-block;font-size: 16px;font-family:'Roboto';color: #ffffff;padding-top: 12px;padding-right: 18px;padding-bottom: 12px;padding-left:
 18px;border-top-width:${articleBorderSize};border-right-width:${articleBorderSize};background-color:${articleButtonBackgroundColor};border-left-width:${articleBorderSize};border-top-style: solid;border-right-style: solid;border-bottom-style: solid;border-left-style:
 solid;border-top-color:${articleBorderColor};border-right-color:${articleBorderColor};border-bottom-color:${articleBorderColor};border-left-color:${articleBorderColor};border-bottom-width:${articleBorderSize};text-decoration: none;">${articleLinkText}</a> </td>
                                                             </tr>
@@ -918,7 +905,7 @@ solid;border-top-color:${articleBorderColor};border-right-color:${articleBorderC
                                     <table style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" border="0" cellpadding="0" cellspacing="0" width="100%">
                                       <tbody>
                                         <tr>
-                                          <td class="primary-font name" style="-moz-hyphens: none;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-ms-text-size-adjust: 100%;hyphens: none;font-family: ${textFontFamily};color: #000;font-size: 16px;font-weight: bold;border-collapse: collapse;">
+                                          <td class="primary-font name" style="-moz-hyphens: none;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-ms-text-size-adjust: 100%;hyphens: none;font-family: 'Roboto';color: #000;font-size: 16px;font-weight: bold;border-collapse: collapse;">
                                             <div class="mktoText" mktoname="Name" id="name">
                                               Marco Rossi
                                             </div> </td>
@@ -927,7 +914,7 @@ solid;border-top-color:${articleBorderColor};border-right-color:${articleBorderC
                                           <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;line-height:${signatureSpacer2};font-size:${signatureSpacer2};" height="${signatureSpacer2}">&nbsp;</td>
                                         </tr>
                                         <tr>
-                                          <td class="primary-font role" style="-moz-hyphens: none;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-ms-text-size-adjust: 100%;hyphens: none;font-family: ${textFontFamily};color: #000;font-size: 16px;border-collapse: collapse;">
+                                          <td class="primary-font role" style="-moz-hyphens: none;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-ms-text-size-adjust: 100%;hyphens: none;font-family: 'Roboto';color: #000;font-size: 16px;border-collapse: collapse;">
                                             <div class="mktoText" mktoname="Role" id="role">
                                               Customer Experience
                                             </div> </td>
@@ -936,7 +923,7 @@ solid;border-top-color:${articleBorderColor};border-right-color:${articleBorderC
                                           <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;line-height:${signatureSpacer3};font-size:${signatureSpacer3};" height="${signatureSpacer3}">&nbsp;</td>
                                         </tr>
                                         <tr>
-                                          <td class="mail" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;"><a href="${signatureLink}" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;text-decoration: none;font-family: ${textFontFamily};font-size: 16px;color: #2cabe2;" class="primary-font">${signatureLinkText}</a></td>
+                                          <td class="mail" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;"><a href="${signatureLink}" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;text-decoration: none;font-family: 'Roboto';font-size: 16px;color: #2cabe2;" class="primary-font">${signatureLinkText}</a></td>
                                         </tr>
                                       </tbody>
                                     </table> </td>
@@ -1053,7 +1040,7 @@ solid;border-top-color:${articleBorderColor};border-right-color:${articleBorderC
                                                         <table style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" border="0" cellpadding="0" cellspacing="0" width="100%">
                                                           <tbody>
                                                             <tr>
-                                                              <td class="primary-font" style="-moz-hyphens: none;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-ms-text-size-adjust: 100%;hyphens: none;font-family: ${textFontFamily};color: #000;font-size: 16px;font-weight: bold;border-collapse: collapse;">
+                                                              <td class="primary-font" style="-moz-hyphens: none;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-ms-text-size-adjust: 100%;hyphens: none;font-family: 'Roboto';color: #000;font-size: 16px;font-weight: bold;border-collapse: collapse;">
                                                                 <div class="mktoText" mktoname="SupportName" id="SupportName">
                                                                   Support/Solution Name
                                                                 </div> </td>
@@ -1062,7 +1049,7 @@ solid;border-top-color:${articleBorderColor};border-right-color:${articleBorderC
                                                               <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;line-height:${commSectionSpacer2};font-size:${commSectionSpacer2};" height="${commSectionSpacer2}">&nbsp;</td>
                                                             </tr>
                                                             <tr>
-                                                              <td class="primary-font" style="-moz-hyphens: none;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-ms-text-size-adjust: 100%;hyphens: none;font-family: ${textFontFamily};color: #000;font-size: 16px;border-collapse: collapse;">
+                                                              <td class="primary-font" style="-moz-hyphens: none;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-ms-text-size-adjust: 100%;hyphens: none;font-family: 'Roboto';color: #000;font-size: 16px;border-collapse: collapse;">
                                                                 <div class="mktoText" mktoname="Support Phone" id="supportPhone">
                                                                   Phone Number:
                                                                 </div> </td>
@@ -1071,7 +1058,7 @@ solid;border-top-color:${articleBorderColor};border-right-color:${articleBorderC
                                                               <td class="primary-font" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;line-height:${commSectionSpacer3};font-size:${commSectionSpacer3};" height="${commSectionSpacer3}">&nbsp;</td>
                                                             </tr>
                                                             <tr>
-                                                              <td class="mail" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;"><a href="${commSectionLink}" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;text-decoration: none;font-family: ${textFontFamily};font-size: 16px;color: #2cabe2;">${commSectionLinkText}</a></td>
+                                                              <td class="mail" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;"><a href="${commSectionLink}" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;text-decoration: none;font-family: 'Roboto';font-size: 16px;color: #2cabe2;">${commSectionLinkText}</a></td>
                                                             </tr>
                                                             <tr class="stack-tablet" style="max-height:0px;overflow:hidden;padding-left: 0; overflow: hidden; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; float: left; margin-top: 0; margin-right: 0; margin-bottom: 0; mso-hide: all; display: none;">
                                                               <td style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;">&nbsp;</td>
