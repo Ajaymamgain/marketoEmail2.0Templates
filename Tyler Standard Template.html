@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" style="width: 100%;">
   <head>
-<!-- Added new Tagline image, increase size of container table for Logo section to 638px for Mike's spacing  -->
+<!-- Removing Community Module  -->
     <!-- Marketo Variable Definitions -->
     <meta class="mktoList" id="globalColorSelector" mktoName="Global Color Setting" default="#2A9FD8" values="#ffffff, #2A9FD8, #40528F, #8F9B49, #EEEEEE, #d3d3d3, #808080, #000000," mktomodulescope="false"/>
 
@@ -100,29 +100,6 @@
     <meta class="mktoString" id="contactsLink4" mktoname="Linkedin Icon Link" default="http://www.linkedin.com/company/tyler-technologies" mktomodulescope="true" />
     <meta class="mktoString" id="contactsLink5" mktoname="Youtube Icon Link" default="https://www.youtube.com/user/TylerTechnologies" mktomodulescope="true" />
     <meta class="mktoString" id="contactsLink6" mktoname="Instagram Icon Link" default="https://www.instagram.com/tylertechnologies" mktomodulescope="true" />
-    <!-- Social2 Footer Marketo Variable Definitions -->
-    <meta class="mktoList" id="social2BackgroundColor" mktoname="Community Module Background" default="#EEEEEE" values="#ffffff, #2A9FD8, #40528F, #8F9B49, #EEEEEE, #d3d3d3, #808080, #000000, ${globalColorSelector}" mktomodulescope="true" />
-    <meta class="mktoNumber" id="social2Spacer" mktoname="Top Spacer" default="40" min="1" max="300" units="px" step="1" mktomodulescope="true" />
-    <meta class="mktoNumber" id="social2Spacer2" mktoname="Bottom Spacer" default="40" min="1" max="300" units="px" step="1" mktomodulescope="true" />
-    <meta class="mktoList" id="commBorderColor" mktoname="Border Color" default="#808080" values="#ffffff, #2A9FD8, #40528F, #8F9B49, #EEEEEE, #d3d3d3, #808080, #000000, ${globalColorSelector}" mktomodulescope="true" />
-    <meta class="mktoNumber" id="commBorderSize" mktoname="Border Width" default="1" min="0" max="20" units="px" step="1" mktomodulescope="true" />
-
-    <meta class="mktoString" id="social2Link" mktoname="Community Logo Social Link" default="http://mylink" mktomodulescope="true" />
-    <meta class="mktoNumber" id="socialSpacer" mktoname="Top Spacer" default="20" min="1" max="300" units="px" step="1" mktomodulescope="true" />
-    <meta class="mktoList" id="social2ButtonBackgroundColor" mktoname="Right Button Background Color" default="${globalColorSelector}" values="#ffffff, #2A9FD8, #40528F, #8F9B49, #EEEEEE, #d3d3d3, #808080, #000000, ${globalColorSelector}"  mktomodulescope="true" />
-    <meta class="mktoList" id="social2BorderColor" mktoname="Right Button Border Color" default="${globalColorSelector}" values="#ffffff, #2A9FD8, #40528F, #8F9B49, #EEEEEE, #d3d3d3, #808080, #000000, ${globalColorSelector}" mktomodulescope="true" />
-    <meta class="mktoNumber" id="social2BorderSize" mktoname="Right Button Border Width" default="0" min="0" max="20" units="px" step="1" mktomodulescope="true" />
-    <meta class="mktoNumber" id="social2Spacer2" mktoname="Bottom Spacer" default="10" min="1" max="300" units="px" step="1" mktomodulescope="true" />
-    <meta class="mktoString" id="social2LinkText" mktoname="Right Button Text" default="Download" mktomodulescope="true" />
-    <meta class="mktoString" id="social2LinkBtn" mktoname="Right Button Link" default="http://mylink" mktomodulescope="true" />
-    <meta class="mktoBoolean" id="showCommButton" mktoname="Show Community Button?" false_value="none" true_value="inline-block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
-
-    <meta class="mktoNumber" id="commSectionSpacer2" mktoname="Spacer Below Name" default="5" min="1" max="300" units="px" step="1" mktomodulescope="true" />
-    <meta class="mktoNumber" id="commSectionSpacer3" mktoname="Spacer Below Role" default="5" min="1" max="300" units="px" step="1" mktomodulescope="true" />
-    <meta class="mktoNumber" id="commSectionSpacer4" mktoname="Bottom Spacer" default="10" min="1" max="300" units="px" step="1" mktomodulescope="true" />
-    <meta class="mktoString" id="commSectionLinkText" mktoname="Link Text" default="Add link text" mktomodulescope="true" />
-    <meta class="mktoString" id="commSectionLink" mktoname="Link" default="http://mylink" mktomodulescope="true" />
-
     <!-- Other Meta Tags -->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
@@ -505,11 +482,13 @@ font-family: 'Roboto' !important;
                                                 <td class="right-tagline"  style="display: inline-block; float: right; text-align: right;" -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse; >
                                                   <table>
                                                     <tr>
-                                                      <td class="mktoBoolean" id="showTagline" style=" display: ${showTagline}; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; line-height: 12px; -moz-hyphens: none; hyphens: none; border-collapse: collapse; ">
-                                                        &nbsp;&nbsp;
+                                                      <td class="mktoBoolean" id="showTagline" style=" display: ${showTagline}; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse; ">
+
                                                         <table>
                                                           <tr>
-                                                            <td style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; line-height: 15px; -moz-hyphens: none; hyphens: none; border-collapse: collapse; ">
+                                                            <!--outlook spacing fix -->
+                                                            <td width="5"></td>
+                                                            <td style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse; padding-top: 17px !important;">
                                                               <a href="https://www.tylertech.com/" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-decoration: none; color: #aaa;">
                                                                 <img alt="Empowering people who serve the public" src="http://na-sj24.marketo.com/rs/630-BEY-937/images/tyler_RGB_tag_line.png" width="auto" height="45" style=" float: right; text-align: right; outline: none; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; height: 45px; border-top-width: 0; max-width: 100%; line-height: 100%; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; display: inline-block;" mktoname="Tageline" mktolockimgsize="true" />
                                                               </a>&nbsp;&nbsp;
@@ -1008,89 +987,6 @@ solid;border-top-color:${articleBorderColor};border-right-color:${articleBorderC
                         </tr>
                       </tbody>
                     </table>
-                    <table id="social2" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" class="mktoModule m_social2" mktoname="Comunity Module" mktoAddByDefault="false">
-                      <tbody>
-                        <tr>
-                          <td class="bordered" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;background-color:${social2BackgroundColor};" bgcolor="${social2BackgroundColor}" valign="top">
-
-                              <table class="table600" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse; margin-top: 0; margin-right: auto; margin-bottom: 0; margin-left: auto;" align="center" border="0" cellpadding="0" cellspacing="0" width="600">
-                                <tbody>
-                                  <tr>
-                                    <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;line-height:${social2Spacer};font-size:${social2Spacer};" height="${social2Spacer}">&nbsp;</td>
-                                  </tr>
-                                  <tr >
-                                    <td style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse; margin: 5px;">
-                                        <table class="table3-3" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="right" border="0" cellpadding="0" cellspacing="0" width="320">
-                                          <tbody>
-                                            <tr>
-                                              <td class="cta" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;">
-                                                <table style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="left" border="0" cellpadding="0" cellspacing="0">
-                                                  <tbody>
-                                                    <tr>
-                                                      <td class="inner-content" style="hyphens: none;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;-ms-text-size-adjust: 100%;padding-left: 20px;border-collapse: collapse;">
-                                                        <table style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                          <tbody>
-                                                            <tr>
-                                                              <td class="primary-font" style="-moz-hyphens: none;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-ms-text-size-adjust: 100%;hyphens: none;font-family: 'Roboto';color: #000;font-size: 16px;font-weight: bold;border-collapse: collapse;">
-                                                                <div class="mktoText" mktoname="SupportName" id="SupportName">
-                                                                  Support/Solution Name
-                                                                </div> </td>
-                                                            </tr>
-                                                            <tr>
-                                                              <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;line-height:${commSectionSpacer2};font-size:${commSectionSpacer2};" height="${commSectionSpacer2}">&nbsp;</td>
-                                                            </tr>
-                                                            <tr>
-                                                              <td class="primary-font" style="-moz-hyphens: none;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-ms-text-size-adjust: 100%;hyphens: none;font-family: 'Roboto';color: #000;font-size: 16px;border-collapse: collapse;">
-                                                                <div class="mktoText" mktoname="Support Phone" id="supportPhone">
-                                                                  Phone Number:
-                                                                </div> </td>
-                                                            </tr>
-                                                            <tr>
-                                                              <td class="primary-font" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;line-height:${commSectionSpacer3};font-size:${commSectionSpacer3};" height="${commSectionSpacer3}">&nbsp;</td>
-                                                            </tr>
-                                                            <tr>
-                                                              <td class="mail" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;"><a href="${commSectionLink}" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;text-decoration: none;font-family: 'Roboto';font-size: 16px;color: #2cabe2;">${commSectionLinkText}</a></td>
-                                                            </tr>
-                                                            <tr class="stack-tablet" style="max-height:0px;overflow:hidden;padding-left: 0; overflow: hidden; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; float: left; margin-top: 0; margin-right: 0; margin-bottom: 0; mso-hide: all; display: none;">
-                                                              <td style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;">&nbsp;</td>
-                                                            </tr>
-                                                          </tbody>
-                                                        </table>
-                                                      </td>
-                                                    </tr>
-                                                    <tr class="stack-smartphone" style="max-height:0px;overflow:hidden;padding-left: 0; overflow: hidden; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; float: left; margin-top: 0; margin-right: 0; margin-bottom: 0; mso-hide: all; display: none;">
-                                                      <td style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;">&nbsp;</td>
-                                                    </tr>
-                                                  </tbody>
-                                                </table>
-                                              </td>
-                                            </tr>
-                                          </tbody>
-                                        </table>
-                                      </td>
-                                      <td style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;">
-                                        <table class="table3-3" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="right" border="0" cellpadding="0" cellspacing="0" width="320">
-                                          <tbody>
-                                            <tr>
-                                              <td class="center-tablet social" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; text-align: center; border-left-width:${commBorderSize};border-left-style: solid;border-left-color:${commBorderColor};padding-left: 20px;border-collapse: collapse;">
-                                                <a  href="${social2Link}" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-decoration: none; color: #aaa;"><img class="mktoImg" id="communityIcon" alt="Communtiy Logo" src="http://na-sj24.marketo.com/rs/630-BEY-937/images/Tyler-Community-Logo-RGB-203x69.png" style="height: auto; outline: none; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; border-top-width: 0; max-width: 100%; line-height: 100%; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; display: inline-block;" mktoname="Community Icon" mktolockimgsize="true" />
-                                                </a>&nbsp;&nbsp;
-                                              </td>
-                                            </tr>
-                                          </tbody>
-                                        </table>
-                                      </td>
-                                  </tr>
-                                  <tr>
-                                    <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;line-height:${social2Spacer2};font-size:${social2Spacer2};" height="${social2Spacer2}">&nbsp;</td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                            </center>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
 
 <!--place new modules below here -->
 
