@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" style="width: 100%;">
   <head>
-<!-- Removing Community Module  -->
+<!-- Updading spacing and added dynaimc spacer variable -->
     <!-- Marketo Variable Definitions -->
     <meta class="mktoList" id="globalColorSelector" mktoName="Global Color Setting" default="#2A9FD8" values="#ffffff, #2A9FD8, #40528F, #8F9B49, #EEEEEE, #d3d3d3, #808080, #000000," mktomodulescope="false"/>
 
@@ -16,25 +16,28 @@
     <meta class="mktoString" id="freeImageLink" mktoname="Image Link" default="Add Me!" mktomodulescope="true" />
     <meta class="mktoString" id="freeImageAltText" mktoname="Image Alt Text" default="Add Me!" mktomodulescope="true" />
     <!-- Title/Headline Marketo Variable Definitions -->
-    <meta class="mktoList" id="titleBackgroundColor" mktoname="Module Background" default="#ffffff" values="#ffffff, #2A9FD8, #40528F, #8F9B49, #EEEEEE, #d3d3d3, #808080, #000000, ${globalColorSelector}" mktomodulescope="true" />
-    <meta class="mktoNumber" id="titleSpacer" mktoname="Top Spacer" default="20" min="1" max="300" units="px" step="1" mktomodulescope="true" />
+    <meta class="mktoString" id="titleText" mktoname="Title Text" default="Main features of this product" mktomodulescope="true" />
+    <meta class="mktoList" id="titleBackgroundColor" mktoname="Title Background Color" default="#ffffff" values="#ffffff, #2A9FD8, #40528F, #8F9B49, #EEEEEE, #d3d3d3, #808080, #000000, ${globalColorSelector}" mktomodulescope="true" />
+    <meta class="mktoList" id="titleFontColor" mktoname="Text Color" default="#000000" values="#ffffff, #2A9FD8, #40528F, #8F9B49, #EEEEEE, #d3d3d3, #808080, #000000, ${globalColorSelector}" mktomodulescope="true" />
+    <meta class="mktoNumber" id="titleSpacer" mktoname="Top Spacer" default="30" min="1" max="300" units="px" step="1" mktomodulescope="true" />
     <meta class="mktoList" id="titleBorderColor" mktoname="Separator Border Color" default="#E0E0E0"  values="#ffffff, #2A9FD8, #40528F, #8F9B49, #EEEEEE, #d3d3d3, #808080, #000000, ${globalColorSelector}" mktomodulescope="true" />
     <meta class="mktoNumber" id="titleBorderSize" mktoname="Separator Border Width" default="1" min="0" max="20" units="px" step="1" mktomodulescope="true" />
-    <meta class="mktoNumber" id="titleSpacer2" mktoname="Bottom Spacer" default="5" min="1" max="300" units="px" step="1" mktomodulescope="true" />
+    <meta class="mktoNumber" id="titleSpacer2" mktoname="Bottom Spacer" default="15" min="1" max="300" units="px" step="1" mktomodulescope="true" />
     <meta class="mktoList" id="titleBorderColor2" mktoname="Separator Border Color" default="#cac9cf" values="#ffffff, #2A9FD8, #40528F, #8F9B49, #EEEEEE, #d3d3d3, #808080, #000000, ${globalColorSelector}" mktomodulescope="true" />
     <meta class="mktoNumber" id="titleBorderSize2" mktoname="Separator Border Width" default="1" min="0" max="20" units="px" step="1" mktomodulescope="true" />
+
     <!--One Column Text Marketo Variable Definitions -->
     <meta class="mktoList" id="freeTextBackgroundColor" mktoname="Background Color" default="#ffffff" values="#ffffff, #2A9FD8, #40528F, #8F9B49, #EEEEEE, #d3d3d3, #808080, #000000, ${globalColorSelector}" mktomodulescope="true" />
-    <meta class="mktoNumber" id="freeTextSpacer" mktoname="Space Before Text" default="40" min="1" max="300" units="px" step="1" mktomodulescope="true" />
-    <meta class="mktoNumber" id="freeTextSpacer2" mktoname="Space After Text" default="40" min="1" max="300" units="px" step="1" mktomodulescope="true" />
+    <meta class="mktoNumber" id="freeTextSpacer" mktoname="Space Before Text" default="15" min="1" max="300" units="px" step="1" mktomodulescope="true" />
+    <meta class="mktoNumber" id="freeTextSpacer2" mktoname="Space After Text" default="15" min="1" max="300" units="px" step="1" mktomodulescope="true" />
 
     <!--Button Marketo Variable Definitions -->
     <meta class="mktoList" id="ctaBackgroundColor" mktoname="Background Color" default="#ffffff" values="#ffffff, #2A9FD8, #40528F, #8F9B49, #EEEEEE, #d3d3d3, #808080, #000000, ${globalColorSelector}" mktomodulescope="true" />
     <meta class="mktoList" id="ctaButtonBackgroundColor" mktoname="Button Background Color" default="${globalColorSelector}" values="#ffffff, #2A9FD8, #40528F, #8F9B49, #EEEEEE, #d3d3d3, #808080, #000000, ${globalColorSelector}" mktomodulescope="true" />
     <meta class="mktoList" id="ctaBorderColor" mktoname="Button Border Color" default="${globalColorSelector}" values="#ffffff, #2A9FD8, #40528F, #8F9B49, #EEEEEE, #d3d3d3, #808080, #000000, ${globalColorSelector}" mktomodulescope="true" />
     <meta class="mktoNumber" id="ctaBorderSize" mktoname="Button Border Size" default="1" min="0" max="20" units="px" step="1" mktomodulescope="true" />
-    <meta class="mktoNumber" id="ctaSpacer" mktoname="Space Before Button" default="20" min="1" max="300" units="px" step="1" mktomodulescope="true" />
-    <meta class="mktoNumber" id="ctaSpacer2" mktoname="Space After Button" default="20" min="1" max="300" units="px" step="1" mktomodulescope="true" />
+    <meta class="mktoNumber" id="ctaSpacer" mktoname="Space Before Button" default="15" min="1" max="300" units="px" step="1" mktomodulescope="true" />
+    <meta class="mktoNumber" id="ctaSpacer2" mktoname="Space After Button" default="30" min="1" max="300" units="px" step="1" mktomodulescope="true" />
     <meta class="mktoString" id="ctaLink" mktoname="Button Link" default="http://mylink" mktomodulescope="true" />
     <meta class="mktoString" id="ctaLinkText" mktoname="Button Label" default="CALL TO ACTION" mktomodulescope="true" />
     <!--Separator Marketo Variable Definitions -->
@@ -56,14 +59,14 @@
     <meta class="mktoList" id="twoArticlesButtonBackgroundColor2" mktoname="Right Column Button Background Color" default="${globalColorSelector}" values="#ffffff, #2A9FD8, #40528F, #8F9B49, #EEEEEE, #d3d3d3, #808080, #000000, ${globalColorSelector}" mktomodulescope="true" />
     <meta class="mktoList" id="twoArticlesBorderColor2" mktoname="Right Column Button Border Color" default="${globalColorSelector}" values="#ffffff, #2A9FD8, #40528F, #8F9B49, #EEEEEE, #d3d3d3, #808080, #000000, ${globalColorSelector}" mktomodulescope="true" />
     <meta class="mktoNumber" id="twoArticlesBorderSize2" mktoname="Right Column Button Border Size" default="1" min="0" max="20" units="px" step="1" mktomodulescope="true" />
-    <meta class="mktoNumber" id="twoArticlesSpacer" mktoname="Space Over Columns" default="40" min="1" max="300" units="px" step="1" mktomodulescope="true" />
-    <meta class="mktoNumber" id="twoArticlesSpacer2" mktoname="Left Column Space Below Image" default="20" min="1" max="300" units="px" step="1" mktomodulescope="true" />
+    <meta class="mktoNumber" id="twoArticlesSpacer" mktoname="Space Over Columns" default="15" min="1" max="300" units="px" step="1" mktomodulescope="true" />
+    <meta class="mktoNumber" id="twoArticlesSpacer2" mktoname="Left Column Space Below Image" default="15" min="1" max="300" units="px" step="1" mktomodulescope="true" />
     <meta class="mktoNumber" id="twoArticlesSpacer3" mktoname="Left Column Space Below Title" default="15" min="1" max="300" units="px" step="1" mktomodulescope="true" />
-    <meta class="mktoNumber" id="twoArticlesSpacer4" mktoname="Left Column Space Below Text" default="20" min="1" max="300" units="px" step="1" mktomodulescope="true" />
-    <meta class="mktoNumber" id="twoArticlesSpacer5" mktoname="Right Column Space Below Image" default="20" min="1" max="300" units="px" step="1" mktomodulescope="true" />
+    <meta class="mktoNumber" id="twoArticlesSpacer4" mktoname="Left Column Space Below Text" default="15" min="1" max="300" units="px" step="1" mktomodulescope="true" />
+    <meta class="mktoNumber" id="twoArticlesSpacer5" mktoname="Right Column Space Below Image" default="15" min="1" max="300" units="px" step="1" mktomodulescope="true" />
     <meta class="mktoNumber" id="twoArticlesSpacer6" mktoname="Right Column Space Below Title" default="15" min="1" max="300" units="px" step="1" mktomodulescope="true" />
-    <meta class="mktoNumber" id="twoArticlesSpacer7" mktoname="Right Column Space Below Text" default="20" min="1" max="300" units="px" step="1" mktomodulescope="true" />
-    <meta class="mktoNumber" id="twoArticlesSpacer8" mktoname="Space Below Columns" default="40" min="1" max="300" units="px" step="1" mktomodulescope="true" />
+    <meta class="mktoNumber" id="twoArticlesSpacer7" mktoname="Right Column Space Below Text" default="15" min="1" max="300" units="px" step="1" mktomodulescope="true" />
+    <meta class="mktoNumber" id="twoArticlesSpacer8" mktoname="Space Below Columns" default="30" min="1" max="300" units="px" step="1" mktomodulescope="true" />
 
     <!-- Article Marketo Variable Definitions -->
     <meta class="mktoBoolean" id="showHeadline" mktoname="Show Headline?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
@@ -81,12 +84,12 @@
 
     <!-- Signature Marketo Variable Definitions -->
     <meta class="mktolist" id="signatureBackgroundColor" mktoname="Module Background" default="#ffffff" values="#ffffff, #2A9FD8, #40528F, #8F9B49, #EEEEEE, #d3d3d3, #808080, #000000, ${globalColorSelector}" mktomodulescope="true" />
-    <meta class="mktoNumber" id="signatureSpacer" mktoname="Top Spacer" default="10" min="1" max="300" units="px" step="1" mktomodulescope="true" />
+    <meta class="mktoNumber" id="signatureSpacer" mktoname="Top Spacer" default="15" min="1" max="300" units="px" step="1" mktomodulescope="true" />
     <meta class="mktoList" id="signatureBorderColor" mktoname="Border Color" default="#808080" values="#ffffff, #2A9FD8, #40528F, #8F9B49, #EEEEEE, #d3d3d3, #808080, #000000, ${globalColorSelector}" mktomodulescope="true" />
     <meta class="mktoNumber" id="signatureBorderSize" mktoname="Border Width" default="1" min="0" max="20" units="px" step="1" mktomodulescope="true" />
     <meta class="mktoNumber" id="signatureSpacer2" mktoname="Spacer Below Name" default="5" min="1" max="300" units="px" step="1" mktomodulescope="true" />
     <meta class="mktoNumber" id="signatureSpacer3" mktoname="Spacer Below Role" default="5" min="1" max="300" units="px" step="1" mktomodulescope="true" />
-    <meta class="mktoNumber" id="signatureSpacer4" mktoname="Bottom Spacer" default="10" min="1" max="300" units="px" step="1" mktomodulescope="true" />
+    <meta class="mktoNumber" id="signatureSpacer4" mktoname="Bottom Spacer" default="15" min="1" max="300" units="px" step="1" mktomodulescope="true" />
     <meta class="mktoString" id="signatureLinkText" mktoname="Link Text" default="marco.rossi@geologo.net" mktomodulescope="true" />
     <meta class="mktoString" id="signatureLink" mktoname="Link" default="http://mylink" mktomodulescope="true" />
     <!-- Social Footer Marketo Variable Definitions -->
@@ -550,9 +553,9 @@ font-family: 'Roboto' !important;
                                       <table class="table3-3" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" border="0" cellpadding="0" cellspacing="0" width="600">
                                         <tbody>
                                           <tr>
-                                            <td class="primary-font title" style="-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;-ms-text-size-adjust: 100%;margin-bottom: 10px;font-family:'Roboto';font-weight: bold;margin-left: 0;font-size: 24px;text-align: center;padding-top: 10px;padding-right: 0;padding-bottom: 10px;padding-left: 0;margin-top: 10px;margin-right: 0; border-collapse: collapse;">
-                                              <div class="mktoText" mktoname="Title" id="title2">
-                                                Main features of this product
+                                            <td class="primary-font title" style="-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;-ms-text-size-adjust: 100%;margin-bottom: 10px;font-family:'Roboto';font-weight: bold;margin-left: 0;font-size: 24px; color:${titleFontColor}; text-align: center;padding-top: 10px;padding-right: 0;padding-bottom: 10px;padding-left: 0;margin-top: 10px;margin-right: 0; border-collapse: collapse;">
+                                              <div mktoname="Title" >
+                                                ${titleText}
                                               </div> </td>
                                           </tr>
                                         </tbody>
@@ -908,14 +911,14 @@ solid;border-top-color:${articleBorderColor};border-right-color:${articleBorderC
                         </tr>
                       </tbody>
                     </table>
-                    <table id="blankSpace3" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" class="mktoModule m_blankSpace" mktoname="Blank Space3">
+                    <table id="blankSpace" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" class="mktoModule m_blankSpace" mktoname="Blank Space">
                       <tbody>
                         <tr>
                           <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;background-color:${blankSpaceBackgroundColor3};" bgcolor="${blankSpaceBackgroundColor3}" valign="top">
                             <table class="table600" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse; margin-top: 0; margin-right: auto; margin-bottom: 0; margin-left: auto;" align="center" border="0" cellpadding="0" cellspacing="0" width="600">
                               <tbody>
                                 <tr>
-                                  <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;line-height:15px;font-size:15px;" height="15px">&nbsp;</td>
+                                  <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;line-height:${spacerSpacer}px;font-size:${spacerSpacer}px;" height="${spacerSpacer}px">&nbsp;</td>
                                 </tr>
                               </tbody>
                             </table> </td>
@@ -936,7 +939,7 @@ solid;border-top-color:${articleBorderColor};border-right-color:${articleBorderC
                                     <table class="table-inner" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="center" border="0" cellpadding="0" cellspacing="0" width="560">
                                       <tbody>
                                         <tr>
-                                          <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;line-height:15px;font-size:30px;" height="30px">&nbsp;</td>
+                                          <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;line-height:30px;font-size:30px;" height="30px">&nbsp;</td>
                                         </tr>
                                         <tr>
                                           <td class="logo"  style="display:inline-block; float: left; text-align: left; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; outline: none; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; text-decoration: none; border-top-width: 0; border-collapse: collapse;">
