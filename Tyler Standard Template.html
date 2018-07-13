@@ -18,8 +18,9 @@
     <meta class="mktoNumber" id="spacerSpacer" mktoname="Height" default="5" min="1" max="300" units="px" step="1" mktomodulescope="true" />
 
     <!--Logo Marketo Variable Definitions -->
-    <meta class="mktoBoolean" id="showTagline" mktoname="Show Tagline?" false_value="none" true_value="inline-block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
-
+    <meta class="mktoList" id="logoBackgroundColor" mktoname="Logo Background Color" default="${White}" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
+    <meta class="mktoBoolean" id="taglineColor" mktoname="Tagline Color?" false_value="http://na-sj24.marketo.com/rs/630-BEY-937/images/tyler_White_tag_line.png" true_value="http://na-sj24.marketo.com/rs/630-BEY-937/images/tyler_RGB_tag_line_noMargin-5px.png" false_value_name="White" true_value_name="Color" mktomodulescope="true" />
+    <meta class="mktoBoolean" id="logoColor" mktoname="White or Color?" false_value="http://na-sj24.marketo.com/rs/630-BEY-937/images/tyler_logo_white.png" true_value="http://na-sj24.marketo.com/rs/630-BEY-937/images/tyler_logo_RGB.png" false_value_name="White" true_value_name="Color" mktomodulescope="true" />
     <!--Image Marketo Variable Definitions -->
     <meta class="mktoString" id="freeImageLink" mktoname="Image Link" default="Add Me!" mktomodulescope="true" />
     <meta class="mktoString" id="freeImageAltText" mktoname="Image Alt Text" default="Add Me!" mktomodulescope="true" />
@@ -478,7 +479,7 @@ font-family: 'Roboto' !important;
                     <table id="header" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" class="mktoModule m_header" mktoname="Logo Section" mktoAddByDefault="true">
                         <tbody>
                           <tr>
-                            <td class="bordered" style="-moz-hyphens: none;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-ms-text-size-adjust: 100%;hyphens: none;border-bottom-width: 1px;border-bottom-style: solid;border-bottom-color: #f0eff4;border-collapse: collapse;background-color:#ffffff;" bgcolor="#ffffff" valign="top">
+                            <td class="bordered" style="-moz-hyphens: none;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-ms-text-size-adjust: 100%;hyphens: none;border-bottom-width: 1px;border-bottom-style: solid;border-bottom-color: #f0eff4;border-collapse: collapse;background-color:${logoBackgroundColor};" bgcolor="${logoBackgroundColor}" valign="top">
                               <center>
                                 <table class="table600" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse; margin-top: 0; margin-right: auto; margin-bottom: 0; margin-left: auto;" align="center" border="0" cellpadding="0" cellspacing="0" width="600">
                                   <tbody>
@@ -490,12 +491,12 @@ font-family: 'Roboto' !important;
                                         <table class="table-inner" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="center" border="0" cellpadding="0" cellspacing="0" width="638">
                                           <tbody>
                                               <tr>
-                                                <td class="logo"  style="display:inline-block; float: left; text-align: left; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; outline: none; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; text-decoration: none; border-top-width: 0; border-collapse: collapse;">
+                                                <td class="logo" style="display:inline-block; float: left; text-align: left; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; outline: none; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; text-decoration: none; border-top-width: 0; border-collapse: collapse; " >
                                                   <table>
                                                     <tr>
                                                       <td style=" -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;">
                                                           <div style="display:inline;">
-                                                            <a href="https://www.tylertech.com/"><img src="http://na-sj24.marketo.com/rs/630-BEY-937/images/tyler_logo_RGB.png" alt="Logo" width="auto" height="80" style=" width: auto; height: 80px; -ms-interpolation-mode: bicubic; outline: none; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; text-decoration: none; border-top-width: 0; width: auto; height: 80px; max-width: 100%; line-height: 100%;"  /></a>
+                                                            <a href="https://www.tylertech.com/"><img src="${logoColor}" alt=" Tyler Technologies Logo" width="auto" height="60" style=" width: auto; height: 60px; -ms-interpolation-mode: bicubic; outline: none; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; text-decoration: none; border-top-width: 0; width: auto; height: 60px; max-width: 100%; line-height: 100%;"  /></a>
                                                           </div>
                                                       </td>
                                                     </tr>
@@ -504,14 +505,14 @@ font-family: 'Roboto' !important;
                                                 <td class="right-tagline"  style="display: inline-block; float: right; text-align: right;" -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse; >
                                                   <table>
                                                     <tr>
-                                                      <td class="mktoBoolean" id="showTagline" style=" display: ${showTagline}; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;">
+                                                      <td  style=" display: inline-block; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;">
 
-                                                        <table cellpadding="15" >
+                                                        <table cellpadding="2" >
                                                           <tr>
 <!--this fix got he correct spacing on outlook -->
-                                                            <td style=" -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;">
+                                                            <td class="mktoBoolean" id="taglineColor" style=" -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;">
                                                               <a href="https://www.tylertech.com/" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-decoration: none; color: #aaa;">
-                                                                <img alt="Empowering people who serve the public" src="http://na-sj24.marketo.com/rs/630-BEY-937/images/tyler_RGB_tag_line_noMargin-5px.png" width="auto" height="45" style=" float: right; text-align: right; outline: none; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; height: 45px; border-top-width: 0; max-width: 100%; line-height: 100%; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; display: inline-block;" mktoname="Tageline" mktolockimgsize="true" />
+                                                                <img alt="Empowering people who serve the public" src="${taglineColor}" width="auto" height="45" style=" float: right; text-align: right; outline: none; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; height: 45px; border-top-width: 0; max-width: 100%; line-height: 100%; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; display: inline-block;" mktoname="Tageline" mktolockimgsize="true" />
                                                               </a>&nbsp;&nbsp;
                                                             </td>
                                                           </tr>
