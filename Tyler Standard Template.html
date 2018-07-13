@@ -1,12 +1,20 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" style="width: 100%;">
   <head>
-<!-- Added Three col feature, set icons to 75x75, added color list -->
+<!-- Creating color names for color selection picklist -->
     <!-- Marketo Variable Definitions -->
     <meta class="mktoList" id="globalColorSelector" mktoName="Global Color Setting" default="#2A9FD8" values="#ffffff, #2A9FD8, #40528F, #8F9B49, #EEEEEE, #d3d3d3, #808080, #000000," mktomodulescope="false"/>
-
+    <!-- using Boolean to hide hex values/lock the colors, set false_value to white for previews -->
+    <meta class="mktoBoolean" id="White" mktoName="White" default="true" false_value="#ffffff" true_value="#ffffff"  false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
+    <meta class="mktoBoolean" id="SummerSky" mktoName="SummerSky" default="true" false_value="#ffffff" true_value="#2A9FD8"  false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
+    <meta class="mktoBoolean" id="Blue" mktoName="Blue" false_value="#ffffff" true_value="#40528F" default="true" false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
+    <meta class="mktoBoolean" id="Green" mktoName="Green" false_value="#ffffff" true_value="#8F9B49" default="true" false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
+    <meta class="mktoBoolean" id="LightGrey" mktoName="LightGrey" false_value="#ffffff" true_value="#EEEEEE" default="true" false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
+    <meta class="mktoBoolean" id="MediumGrey" mktoName="MediumGrey" false_value="#ffffff" true_value="#d3d3d3" default="true" false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
+    <meta class="mktoBoolean" id="DarkGrey" mktoName="DarkGrey" false_value="#ffffff" true_value="#808080" default="true" false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
+    <meta class="mktoBoolean" id="Black" mktoName="Black" false_value="#ffffff" true_value="#000000" default="true" false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
     <!--Spacer Marketo Variable Definitions -->
-    <meta class="mktoList" id="spacerBackgroundColor" mktoname="Background Color" default="#ffffff" values="#ffffff, #2A9FD8, #40528F, #8F9B49, #EEEEEE, #d3d3d3, #808080, #000000, ${globalColorSelector}" mktomodulescope="true" />
+    <meta class="mktoList" id="spacerBackgroundColor" mktoname="Background Color" default="${White}" values="${White}, #2A9FD8, #40528F, #8F9B49, #EEEEEE, #d3d3d3, #808080, #000000, ${globalColorSelector}" mktomodulescope="true" />
     <meta class="mktoNumber" id="spacerSpacer" mktoname="Height" default="5" min="1" max="300" units="px" step="1" mktomodulescope="true" />
 
     <!--Logo Marketo Variable Definitions -->
@@ -17,23 +25,23 @@
     <meta class="mktoString" id="freeImageAltText" mktoname="Image Alt Text" default="Add Me!" mktomodulescope="true" />
     <!-- Title/Headline Marketo Variable Definitions -->
     <meta class="mktoString" id="titleText" mktoname="Title Text" default="Main features of this product" mktomodulescope="true" />
-    <meta class="mktoList" id="titleBackgroundColor" mktoname="Title Background Color" default="#ffffff" values="#ffffff, #2A9FD8, #40528F, #8F9B49, #EEEEEE, #d3d3d3, #808080, #000000, ${globalColorSelector}" mktomodulescope="true" />
-    <meta class="mktoList" id="titleFontColor" mktoname="Text Color" default="#000000" values="#ffffff, #2A9FD8, #40528F, #8F9B49, #EEEEEE, #d3d3d3, #808080, #000000, ${globalColorSelector}" mktomodulescope="true" />
+    <meta class="mktoList" id="titleBackgroundColor" mktoname="Title Background Color" default="${White}" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
+    <meta class="mktoList" id="titleFontColor" mktoname="Text Color" default="${Black}" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
     <meta class="mktoNumber" id="titleSpacer" mktoname="Top Spacer" default="30" min="1" max="300" units="px" step="1" mktomodulescope="true" />
-    <meta class="mktoList" id="titleBorderColor" mktoname="Separator Border Color" default="#E0E0E0"  values="#ffffff, #2A9FD8, #40528F, #8F9B49, #EEEEEE, #d3d3d3, #808080, #000000, ${globalColorSelector}" mktomodulescope="true" />
+    <meta class="mktoList" id="titleBorderColor" mktoname="Separator Border Color" default="#E0E0E0"  values="${White}, #2A9FD8, #40528F, #8F9B49, #EEEEEE, #d3d3d3, #808080, #000000, ${globalColorSelector}" mktomodulescope="true" />
     <meta class="mktoNumber" id="titleBorderSize" mktoname="Separator Border Width" default="1" min="0" max="20" units="px" step="1" mktomodulescope="true" />
     <meta class="mktoNumber" id="titleSpacer2" mktoname="Bottom Spacer" default="15" min="1" max="300" units="px" step="1" mktomodulescope="true" />
-    <meta class="mktoList" id="titleBorderColor2" mktoname="Separator Border Color" default="#cac9cf" values="#ffffff, #2A9FD8, #40528F, #8F9B49, #EEEEEE, #d3d3d3, #808080, #000000, ${globalColorSelector}" mktomodulescope="true" />
+    <meta class="mktoList" id="titleBorderColor2" mktoname="Separator Border Color" default="#cac9cf" values="${White}, #2A9FD8, #40528F, #8F9B49, #EEEEEE, #d3d3d3, #808080, #000000, ${globalColorSelector}" mktomodulescope="true" />
     <meta class="mktoNumber" id="titleBorderSize2" mktoname="Separator Border Width" default="1" min="0" max="20" units="px" step="1" mktomodulescope="true" />
 
     <!--One Column Text Marketo Variable Definitions -->
-    <meta class="mktoList" id="freeTextBackgroundColor" mktoname="Background Color" default="#ffffff" values="#ffffff, #2A9FD8, #40528F, #8F9B49, #EEEEEE, #d3d3d3, #808080, #000000, ${globalColorSelector}" mktomodulescope="true" />
+    <meta class="mktoList" id="freeTextBackgroundColor" mktoname="Background Color" default="#ffffff" values="${White}, #2A9FD8, #40528F, #8F9B49, #EEEEEE, #d3d3d3, #808080, #000000, ${globalColorSelector}" mktomodulescope="true" />
     <meta class="mktoNumber" id="freeTextSpacer" mktoname="Space Before Text" default="15" min="1" max="300" units="px" step="1" mktomodulescope="true" />
     <meta class="mktoNumber" id="freeTextSpacer2" mktoname="Space After Text" default="15" min="1" max="300" units="px" step="1" mktomodulescope="true" />
 
     <!--Button Marketo Variable Definitions -->
-    <meta class="mktoList" id="ctaBackgroundColor" mktoname="Background Color" default="#ffffff" values="#ffffff, #2A9FD8, #40528F, #8F9B49, #EEEEEE, #d3d3d3, #808080, #000000, ${globalColorSelector}" mktomodulescope="true" />
-    <meta class="mktoList" id="ctaButtonBackgroundColor" mktoname="Button Background Color" default="${globalColorSelector}" values="#ffffff, #2A9FD8, #40528F, #8F9B49, #EEEEEE, #d3d3d3, #808080, #000000, ${globalColorSelector}" mktomodulescope="true" />
+    <meta class="mktoList" id="ctaBackgroundColor" mktoname="Background Color" default="${White}" values="${White}, #2A9FD8, #40528F, #8F9B49, #EEEEEE, #d3d3d3, #808080, #000000, ${globalColorSelector}" mktomodulescope="true" />
+    <meta class="mktoList" id="ctaButtonBackgroundColor" mktoname="Button Background Color" default="${globalColorSelector}" values="${White}, #2A9FD8, #40528F, #8F9B49, #EEEEEE, #d3d3d3, #808080, #000000, ${globalColorSelector}" mktomodulescope="true" />
     <meta class="mktoList" id="ctaBorderColor" mktoname="Button Border Color" default="${globalColorSelector}" values="#ffffff, #2A9FD8, #40528F, #8F9B49, #EEEEEE, #d3d3d3, #808080, #000000, ${globalColorSelector}" mktomodulescope="true" />
     <meta class="mktoNumber" id="ctaBorderSize" mktoname="Button Border Size" default="1" min="0" max="20" units="px" step="1" mktomodulescope="true" />
     <meta class="mktoNumber" id="ctaSpacer" mktoname="Space Before Button" default="15" min="1" max="300" units="px" step="1" mktomodulescope="true" />
