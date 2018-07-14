@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" style="width: 100%;">
   <head>
-<!-- Creating color names for color selection picklist -->
+<!-- Bug Fixes, unlocked footer logo image -->
     <!-- Marketo Variable Definitions -->
     <!-- using Boolean to hide hex values/lock the colors, set false_value to white for previews -->
     <meta class="mktoBoolean" id="White" mktoName="White" default="true" false_value="#ffffff" true_value="#ffffff"  false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
@@ -19,8 +19,8 @@
 
     <!--Logo Marketo Variable Definitions -->
     <meta class="mktoList" id="logoBackgroundColor" mktoname="Logo Background Color" default="${White}" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
-    <meta class="mktoBoolean" id="taglineColor" mktoname="Tagline Color?" false_value="http://na-sj24.marketo.com/rs/630-BEY-937/images/tyler_White_tag_line.png" true_value="http://na-sj24.marketo.com/rs/630-BEY-937/images/tyler_RGB_tag_line_noMargin-5px.png" false_value_name="White" true_value_name="Color" mktomodulescope="true" />
-    <meta class="mktoBoolean" id="logoColor" mktoname="White or Color?" false_value="http://na-sj24.marketo.com/rs/630-BEY-937/images/tyler_logo_white.png" true_value="http://na-sj24.marketo.com/rs/630-BEY-937/images/tyler_logo_RGB.png" false_value_name="White" true_value_name="Color" mktomodulescope="true" />
+    <meta class="mktoBoolean" id="taglineColor" mktoname="Tagline Color?"default="true" false_value="http://na-sj24.marketo.com/rs/630-BEY-937/images/tyler_White_tag_line.png" true_value="http://na-sj24.marketo.com/rs/630-BEY-937/images/tyler_RGB_tag_line_noMargin-5px.png" false_value_name="White" true_value_name="Color" mktomodulescope="true" />
+    <meta class="mktoBoolean" id="logoColor" mktoname="White or Color?"default="true" false_value="http://na-sj24.marketo.com/rs/630-BEY-937/images/tyler_logo_white.png" true_value="http://na-sj24.marketo.com/rs/630-BEY-937/images/tyler_logo_RGB.png" false_value_name="White" true_value_name="Color" mktomodulescope="true" />
     <!--Image Marketo Variable Definitions -->
     <meta class="mktoString" id="freeImageLink" mktoname="Image Link" default="Add Me!" mktomodulescope="true" />
     <meta class="mktoString" id="freeImageAltText" mktoname="Image Alt Text" default="Add Me!" mktomodulescope="true" />
@@ -497,6 +497,7 @@ font-family: 'Roboto' !important;
                                                       <td style=" -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;">
                                                           <div style="display:inline;">
                                                             <a href="https://www.tylertech.com/"><img src="${logoColor}" alt=" Tyler Technologies Logo" width="auto" height="60" style=" width: auto; height: 60px; -ms-interpolation-mode: bicubic; outline: none; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; text-decoration: none; border-top-width: 0; width: auto; height: 60px; max-width: 100%; line-height: 100%;"  /></a>
+
                                                           </div>
                                                       </td>
                                                     </tr>
@@ -945,7 +946,7 @@ solid;border-top-color:${articleBorderColor};border-right-color:${articleBorderC
                         </tr>
                       </tbody>
                     </table>
-                    <table id="features" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" class="mktoModule m_features" mktoname="Features">
+                    <table id="features" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" class="mktoModule m_features" mktoname="Features" mktoAddByDefault="false" >
                       <tbody>
                         <tr>
                           <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;background-color:${featuresBackgroundColor};" bgcolor="${featuresBackgroundColor}" valign="top">
@@ -1128,7 +1129,7 @@ solid;border-top-color:${articleBorderColor};border-right-color:${articleBorderC
                                             <table>
                                               <tr>
                                                 <td  id="showFooterLogo" style=" display: ${showFooterLogo}; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;">
-                                                    <div style="display:inline;" >
+                                                    <div class="mktoImg" mktoname="Footer Logo" id="footerLogo" mktolockimgsize="true" style="display:inline;" >
                                                       <a href="https://www.tylertech.com/"><img src="http://na-sj24.marketo.com/rs/630-BEY-937/images/tyler_logo_wht.png" alt="Tyler Logo" width="auto" height="50" style="-ms-interpolation-mode: bicubic; outline: none; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; text-decoration: none; border-top-width: 0; width: auto; height: 50px; max-width: 100%; line-height: 100%;"  /></a>
                                                     </div>
                                                 </td>
