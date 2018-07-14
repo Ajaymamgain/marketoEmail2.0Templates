@@ -102,9 +102,11 @@
     <meta class="mktoString" id="signatureLinkText" mktoname="Link Text" default="marco.rossi@geologo.net" mktomodulescope="true" />
     <meta class="mktoString" id="signatureLink" mktoname="Link" default="http://mylink" mktomodulescope="true" />
     <!-- Social Footer Marketo Variable Definitions -->
-    <meta class="mktoBoolean" id="showFooterLogo" mktoname="Show Footer Logo?" default="true" false_value="none" true_value="inline-block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
-    <meta class="mktoList" id="blankSpaceBackgroundColor3" mktoname="Module Background" default="${White}" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
     <meta class="mktoList" id="contactsBackgroundColor" mktoname="Social Module Background" default="${DarkGrey}" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
+    <meta class="mktoBoolean" id="showFooterLogo" mktoname="Show Footer Logo?" default="true" false_value="none" true_value="inline-block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
+    <meta class="mktoString" id="footerLogoLink" mktoname="Footer Logo Link" default="https://www.tylertech.com/" mktomodulescope="true" />
+    <meta class="mktoString" id="footerLogoAltText" mktoname="Footer Logo Alt Text" default="Tyler Technologies Logo" mktomodulescope="true" />
+    <meta class="mktoList" id="blankSpaceBackgroundColor3" mktoname="Module Background" default="${White}" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
     <meta class="mktoBoolean" id="showSocial" mktoname="Show Social Icons?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
     <meta class="mktoString" id="contactsLink" mktoname="Community Icon Link" default="https://tylercommunity.tylertech.com/" mktomodulescope="true" />
     <meta class="mktoString" id="contactsLink2" mktoname="Twitter Icon Link" default="http://www.twitter.com/tylertech" mktomodulescope="true" />
@@ -241,7 +243,7 @@ font-family: 'Roboto' !important;
       }
 
       table.table-inner {
-        width: 86% !important;
+        width: 100% !important;
       }
 
       table.table1-2 {
@@ -353,7 +355,7 @@ font-family: 'Roboto' !important;
       }
 
       table.table-inner {
-        width: 80% !important;
+        width: 100% !important;
         float: none !important;
       }
 
@@ -446,6 +448,7 @@ font-family: 'Roboto' !important;
           width: 100% !important;
           display: block !important;
           text-align: center !important;
+          border: 1px solid red !important;
         }
       #footer-container {
         text-align: center !important;
@@ -1122,39 +1125,39 @@ solid;border-top-color:${articleBorderColor};border-right-color:${articleBorderC
                                     <table class="table-inner" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="center" border="0" cellpadding="0" cellspacing="0" width="560">
                                       <tbody>
                                         <tr>
-                                          <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;line-height:30px;font-size:30px;" height="30px">&nbsp;</td>
+                                          <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;line-height:15px;font-size:15px;" height="15px">&nbsp;</td>
                                         </tr>
                                         <tr>
                                           <td class="logo"  style="display:inline-block; float: left; text-align: left; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; outline: none; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; text-decoration: none; border-top-width: 0; border-collapse: collapse;">
-                                            <table style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="left" border="0" cellpadding="0" cellspacing="0">
+                                            <table style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="center" border="0" cellpadding="0" cellspacing="0">
                                               <tr>
                                                 <td  id="showFooterLogo" style=" display: ${showFooterLogo}; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;">
-                                                    <div class="mktoImg" mktoname="Footer Logo" id="footerLogo" mktolockimgsize="true" style="display:inline;" >
-                                                      <a href="https://www.tylertech.com/"><img src="http://na-sj24.marketo.com/rs/630-BEY-937/images/tyler_logo_wht.png" alt="Tyler Logo" width="auto" height="50" style="-ms-interpolation-mode: bicubic; outline: none; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; text-decoration: none; border-top-width: 0; width: auto; height: 50px; max-width: 100%; line-height: 100%;"  /></a>
+                                                    <div  style="display:inline;" >
+                                                      <a href="${footerLogoLink}"><img class="mktoImg" mktoname="Footer Logo" id="footerLogo" mktolockimgsize="true" src="http://na-sj24.marketo.com/rs/630-BEY-937/images/tyler_logo_wht.png" alt="${footerLogoAltText}" align="center" width="auto" height="60" style="-ms-interpolation-mode: bicubic; outline: none; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; text-decoration: none; border-top-width: 0; width: auto; height: 60px; max-width: 100%; line-height: 100%;"  /></a>
                                                     </div>
                                                 </td>
                                               </tr>
                                             </table>
                                           </td>
                                           <td class="right-social-icons"  style="display: inline-block; float: right; text-align: right; line-height: 50px;" -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse; >
-                                            <table style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="right" border="0" cellpadding="0" cellspacing="0">
+                                            <table style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="center" border="0" cellpadding="10" cellspacing="0">
                                               <tr>
                                                 <td id="showSocial" style=" display: ${showSocial}; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;">
                                                   <a href="${contactsLink2}" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-decoration: none; color: #aaa;">
-                                                    <img id="twitterIcon" alt="Twitter con" src="http://na-sj24.marketo.com/rs/630-BEY-937/images/iconmonstr-twitter-5-32.png" style=" text-align: right; height: auto; outline: none; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; border-top-width: 0; max-width: 100%; line-height: 100%; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; display: inline-block;" mktoname="Twitter Icon" mktolockimgsize="true" />
+                                                    <img id="twitterIcon" alt="Twitter con" src="http://na-sj24.marketo.com/rs/630-BEY-937/images/iconmonstr-twitter-5-240.png" width="auto" height="36" style=" text-align: right; height: 36; outline: none; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; border-top-width: 0; max-width: 100%; line-height: 100%; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; display: inline-block;" mktoname="Twitter Icon" mktolockimgsize="true" />
                                                   </a>&nbsp;&nbsp;
                                                   <a href="${contactsLink3}" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-decoration: none; color: #aaa;">
 
-                                                    <img id="facebookIcon" alt="Facebook Icon" src="http://na-sj24.marketo.com/rs/630-BEY-937/images/iconmonstr-facebook-5-32.png" style=" text-align: right; height: auto; outline: none; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; border-top-width: 0; max-width: 100%; line-height: 100%; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; display: inline-block;" mktoname="Facebook Icon" mktolockimgsize="true" />
+                                                    <img id="facebookIcon" alt="Facebook Icon" src="http://na-sj24.marketo.com/rs/630-BEY-937/images/iconmonstr-facebook-5-240.png" width="auto" height="36" style=" text-align: right; height: 36; outline: none; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; border-top-width: 0; max-width: 100%; line-height: 100%; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; display: inline-block;" mktoname="Facebook Icon" mktolockimgsize="true" />
                                                   </a>&nbsp;&nbsp;
                                                   <a href="${contactsLink4}" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-decoration: none; color: #aaa;">
-                                                    <img  id="linkedinIcon" alt="Linkedin Icon" src="http://na-sj24.marketo.com/rs/630-BEY-937/images/iconmonstr-linkedin-5-32.png" style=" text-align: right; height: auto; outline: none; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; border-top-width: 0; max-width: 100%; line-height: 100%; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; display: inline-block;" mktoname="Linkedin Icon" mktolockimgsize="true" />
+                                                    <img  id="linkedinIcon" alt="Linkedin Icon" src="http://na-sj24.marketo.com/rs/630-BEY-937/images/iconmonstr-linkedin-5-240.png" width="auto" height="36" style=" text-align: right; height: 36; outline: none; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; border-top-width: 0; max-width: 100%; line-height: 100%; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; display: inline-block;" mktoname="Linkedin Icon" mktolockimgsize="true" />
                                                   </a>&nbsp;&nbsp;
                                                   <a href="${contactsLink5}" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-decoration: none; color: #aaa;">
-                                                  <img id="youtubeIcon" alt="Youtube Icon" src="http://na-sj24.marketo.com/rs/630-BEY-937/images/iconmonstr-youtube-5-32.png" style="text-align: right; height: auto; outline: none; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; border-top-width: 0; max-width: 100%; line-height: 100%; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; display: inline-block;" mktoname="Youtube Icon" mktolockimgsize="true" />
+                                                  <img id="youtubeIcon" alt="Youtube Icon" src="http://na-sj24.marketo.com/rs/630-BEY-937/images/iconmonstr-youtube-5-240.png" width="auto" height="36" style="text-align: right; height: 36; outline: none; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; border-top-width: 0; max-width: 100%; line-height: 100%; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; display: inline-block;" mktoname="Youtube Icon" mktolockimgsize="true" />
                                                   </a>&nbsp;&nbsp;
                                                   <a href="${contactsLink6}" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-decoration: none; color: #aaa;">
-                                                    <img id="instagramIcon" alt="Instagram Icon" src="http://na-sj24.marketo.com/rs/630-BEY-937/images/iconmonstr-instagram-10-32.png" style="text-align: right; height: auto; outline: none; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; border-top-width: 0; max-width: 100%; line-height: 100%; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; display: inline-block;" mktoname="Instagram Icon" mktolockimgsize="true" />
+                                                    <img id="instagramIcon" alt="Instagram Icon" src="http://na-sj24.marketo.com/rs/630-BEY-937/images/iconmonstr-instagram-10-240.png" width="auto" height="36" style="text-align: right; height: 36; outline: none; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; border-top-width: 0; max-width: 100%; line-height: 100%; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; display: inline-block;" mktoname="Instagram Icon" mktolockimgsize="true" />
                                                   </a>
                                                 </td>
                                               </tr>
@@ -1165,7 +1168,7 @@ solid;border-top-color:${articleBorderColor};border-right-color:${articleBorderC
                                     </table> </td>
                                 </tr>
                                 <tr>
-                                  <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;line-height:30px;font-size:30px;" height="30px">&nbsp;</td>
+                                  <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;line-height:15px;font-size:15px;" height="15px">&nbsp;</td>
                                 </tr>
                               </tbody>
                             </table> </td>
