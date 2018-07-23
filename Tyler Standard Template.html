@@ -25,7 +25,8 @@
     <meta class="mktoString" id="freeImageAltText" mktoname="Image Alt Text" default="Add Me!" mktomodulescope="true" />
     <!-- Title/Headline Marketo Variable Definitions -->
     <meta class="mktoString" id="titleText" mktoname="Title Text" default="Main features of this product" mktomodulescope="true" />
-    <meta class="mktoList" id="titleBackgroundColor" mktoname="Title Background Color" default="${White}" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
+    <meta class="mktoList" id="titleAlignment" mktoname="Title Alignment" default="center" values="left, right, center" mktomodulescope="true" />
+    <meta class="mktoList" id="titleFontSize" mktoname="Title Text Size" default="34px" values="24px, 34px, 40px" mktomodulescope="true" />
     <meta class="mktoList" id="titleFontColor" mktoname="Text Color" default="${Black}" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
     <meta class="mktoNumber" id="titleSpacer" mktoname="Top Spacer" default="30" min="1" max="300" units="px" step="1" mktomodulescope="true" />
     <meta class="mktoList" id="titleBorderColor" mktoname="Separator Border Color" default="${DarkGrey}"  values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
@@ -33,7 +34,11 @@
     <meta class="mktoNumber" id="titleSpacer2" mktoname="Bottom Spacer" default="15" min="1" max="300" units="px" step="1" mktomodulescope="true" />
     <meta class="mktoList" id="titleBorderColor2" mktoname="Separator Border Color" default="#cac9cf" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
     <meta class="mktoNumber" id="titleBorderSize2" mktoname="Separator Border Width" default="1" min="0" max="20" units="px" step="1" mktomodulescope="true" />
-
+    <meta class="mktoBoolean" id="showSubtitle" mktoname="Show Subtitle?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
+    <meta class="mktoString" id="subTitleText" mktoname="Subtitle Text" default="Sub features of this product" mktomodulescope="true" />
+    <meta class="mktoList" id="subTitleAlignment" mktoname="Subtitle Alignment" default="center" values="left, right, center" mktomodulescope="true" />
+    <meta class="mktoList" id="subTitleFontColor" mktoname="Subtitle Text Color" default="${Black}" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
+    <meta class="mktoList" id="subtitleFontSize" mktoname="Subtitle Text Size" default="26px" values="20px, 26px, 32px" mktomodulescope="true" />
     <!--One Column Text Marketo Variable Definitions -->
     <meta class="mktoList" id="freeTextBackgroundColor" mktoname="Background Color" default="${White}" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
     <meta class="mktoNumber" id="freeTextSpacer" mktoname="Space Before Text" default="15" min="1" max="300" units="px" step="1" mktomodulescope="true" />
@@ -579,7 +584,7 @@ font-family: 'Roboto' !important;
                     <table id="title" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" class="mktoModule m_title" mktoname="Title">
                       <tbody>
                         <tr>
-                          <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;background-color:${titleBackgroundColor};" bgcolor="${titleBackgroundColor}" valign="top">
+                          <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;background-color:#ffffff;" bgcolor="#ffffff" valign="top">
                             <center>
                               <table class="table600" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse; margin-top: 0; margin-right: auto; margin-bottom: 0; margin-left: auto;" align="center" border="0" cellpadding="0" cellspacing="0" width="600">
                                 <tbody>
@@ -591,9 +596,22 @@ font-family: 'Roboto' !important;
                                       <table class="table3-3" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" border="0" cellpadding="0" cellspacing="0" width="600">
                                         <tbody>
                                           <tr>
-                                            <td class="primary-font title" style="-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;-ms-text-size-adjust: 100%;margin-bottom: 10px;font-family:'Roboto';font-weight: bold;margin-left: 0;font-size: 24px; color:${titleFontColor}; text-align: center;padding-top: 10px;padding-right: 0;padding-bottom: 10px;padding-left: 0;margin-top: 10px;margin-right: 0; border-collapse: collapse;">
+                                            <td class="primary-font title" style="-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;-ms-text-size-adjust: 100%;margin-bottom: 10px;font-family:'Roboto';font-weight: bold;margin-left: 0;font-size: ${titleFontSize}; color:${titleFontColor}; text-align: ${titleAlignment};padding-top: 10px;padding-right: 0;padding-bottom: 1px;padding-left: 0;margin-top: 10px;margin-right: 0; border-collapse: collapse;">
                                               <div mktoname="Title" >
                                                 ${titleText}
+                                              </div> </td>
+                                          </tr>
+                                        </tbody>
+                                      </table> </td>
+                                  </tr>
+                                  <tr style="display: ${showSubtitle};">
+                                    <td style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;">
+                                      <table class="table3-3" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" border="0" cellpadding="0" cellspacing="0" width="600">
+                                        <tbody>
+                                          <tr>
+                                            <td class="primary-font subTitle" style="-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;-ms-text-size-adjust: 100%;margin-bottom: 10px;font-family:'Roboto';font-weight: bold;margin-left: 0;font-size: ${subtitleFontSize}; color:${subTitleFontColor}; text-align: ${subTitleAlignment};padding-top: 1px;padding-right: 0;padding-bottom: 10px;padding-left: 0;margin-top: 10px;margin-right: 0; border-collapse: collapse;">
+                                              <div mktoname="Subtitle" >
+                                                ${subTitleText}
                                               </div> </td>
                                           </tr>
                                         </tbody>
@@ -1199,10 +1217,5 @@ solid;border-top-color:${articleBorderColor};border-right-color:${articleBorderC
         </tr>
       </tbody>
     </table>
-    <style data-ignore-inlining>@media print{ #_t { background-image: url('https://abs1spvs.emltrk.com/abs1spvs?p&d=${lead.Email}');}} div.OutlookMessageHeader {background-image:url('https://abs1spvs.emltrk.com/abs1spvs?f&d=${lead.Email}')} table.moz-email-headers-table {background-image:url('https://abs1spvs.emltrk.com/abs1spvs?f&d=${lead.Email}')} blockquote #_t {background-image:url('https://abs1spvs.emltrk.com/abs1spvs?f&d=${lead.Email}')} #MailContainerBody #_t {background-image:url('https://abs1spvs.emltrk.com/abs1spvs?f&d=${lead.Email}')}</style><div id="_t"></div>
-<img src="https://abs1spvs.emltrk.com/abs1spvs?d=${lead.Email}" width="1" height="1" border="0" alt="" />
-
-<style data-ignore-inlining>@media print{ #_t { background-image: url('https://abs1spvs.emltrk.com/abs1spvs?p&d=${lead.Email}');}} div.OutlookMessageHeader {background-image:url('https://abs1spvs.emltrk.com/abs1spvs?f&d=${lead.Email}')} table.moz-email-headers-table {background-image:url('https://abs1spvs.emltrk.com/abs1spvs?f&d=${lead.Email}')} blockquote #_t {background-image:url('https://abs1spvs.emltrk.com/abs1spvs?f&d=${lead.Email}')} #MailContainerBody #_t {background-image:url('https://abs1spvs.emltrk.com/abs1spvs?f&d=${lead.Email}')}</style><div id="_t"></div>
-<img src="https://abs1spvs.emltrk.com/abs1spvs?d=${lead.Email}" width="1" height="1" border="0" alt="" />
   </body>
 </html>
