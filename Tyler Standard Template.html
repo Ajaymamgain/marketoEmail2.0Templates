@@ -83,8 +83,11 @@
 
     <!-- Article Marketo Variable Definitions -->
     <meta class="mktoBoolean" id="showHeadline" mktoname="Show Headline?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
+    <meta class="mktoString" id="articleTitleText" mktoname="Headline Text" default="Headline:Add Me!" mktomodulescope="true" />
     <meta class="mktoBoolean" id="showAuthor" mktoname="Show Author?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
+    <meta class="mktoString" id="articleSubtitleText" mktoname="Subline Text" default="Subline:Add Me!" mktomodulescope="true" />
     <meta class="mktoBoolean" id="showArtButton" mktoname="Show Button?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
+    <meta class="mktoString" id="articleText" mktoname="Body Text" default="Use less than 100 characters in this section or three lines. Remove the headline and subline, use 200 characters or 6 lines" mktomodulescope="true" />
     <meta class="mktoString" id="articleAltText" mktoname="Image Alt Text" default="Add Me!" mktomodulescope="true" />
     <meta class="mktoString" id="articleLinkText" mktoname="Right Button Text" default="READ MORE" mktomodulescope="true" />
     <meta class="mktoString" id="articleLink" mktoname="Right Button Link" default="http://mylink" mktomodulescope="true" />
@@ -836,7 +839,7 @@ font-family: 'Roboto' !important;
                         </tr>
                       </tbody>
                     </table>
-                    <table id="article" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" class="mktoModule m_article" mktoname="Article" mktoAddByDefault="false">
+                    <table id="article" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" class="mktoModule m_article" mktoname="Article" mktoAddByDefault="true">
                       <tbody>
                         <tr>
                           <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;font-family: 'Roboto';border-collapse: collapse;background-color:${articleBackgroundColor};" bgcolor="${articleBackgroundColor}" valign="top">
@@ -865,21 +868,19 @@ font-family: 'Roboto' !important;
                                                     <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;font-family: 'Roboto';border-collapse: collapse;line-height:${articleSpacer};font-size:${articleSpacer};" height="${articleSpacer}">&nbsp;</td>
                                                   </tr>
                                                   <tr>
-                                                    <td class="primary-font title" style="display: ${showHeadline}; -moz-hyphens: none;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-ms-text-size-adjust: 100%;hyphens: none;font-family:'Roboto';font-size: 18px;font-weight: bold;color: #212121;border-collapse: collapse;">
-                                                      <div class="mktoText" mktoname="Right Title" id="title4">
-                                                        Article Headline
+                                                    <td class="primary-font title" style="display: ${showHeadline}; -moz-hyphens: none;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-ms-text-size-adjust: 100%;hyphens: none;font-family:'Roboto';font-size: 18px;font-weight: bold;color: #212121;border-collapse: collapse; padding-bottom: 1px;">
+                                                      <div >
+                                                        ${articleTitleText}
                                                       </div> </td>
-                                                  </tr>
-                                                  <tr>
-                                                    <td class="primary-font author" style="display: ${showAuthor};-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;-ms-text-size-adjust: 100%;font-family:'Roboto';padding-left: 0;color: #212121;font-size: 12px;padding-top: 10px;padding-right: 0;padding-bottom: 10px;border-collapse: collapse;">
-                                                      <div class="mktoText" mktoname="Right Author" id="author">
-                                                        Article Author
-                                                      </div> </td>
+                                                      <td class="primary-font author" style="display: ${showAuthor};-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;-ms-text-size-adjust: 100%;font-family:'Roboto';padding-left: 0;color: #212121;font-size: 12px;padding-top: 2.5px;padding-right: 0;padding-bottom: 5px;border-collapse: collapse;">
+                                                        <div >
+                                                          ${articleSubtitleText}
+                                                        </div> </td>
                                                   </tr>
                                                   <tr>
                                                     <td class="primary-font text" style="-moz-hyphens: none;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-ms-text-size-adjust: 100%;hyphens: none;font-family:'Roboto';color: #212121;line-height: 23px; font-size: 16px;border-collapse: collapse;">
-                                                      <div class="mktoText" mktoname="Right Text" id="article-text">
-                                                        Lorem Ipsum adalah contoh teks atau dummy dalam industri percetakan dan penataan huruf atau typesetting...
+                                                      <div>
+                                                        ${articleText}
                                                       </div> </td>
                                                   </tr>
                                                   <tr>
