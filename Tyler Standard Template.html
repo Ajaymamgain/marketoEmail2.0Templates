@@ -75,7 +75,6 @@
     <meta class="mktoString" id="rightArticleText" mktoname="Right Article Text" default="Gumbo beet greens corn soko endive gumbo gourd. shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini." mktomodulescope="true" />
     <meta class="mktoString" id="twoArticlesLink2" mktoname="Right Button Link" default="http://mylink" mktomodulescope="true" />
     <meta class="mktoString" id="twoArticlesLinkText2" mktoname="Right Button Label" default="CALL TO ACTION" mktomodulescope="true" />
-
     <meta class="mktoList" id="twoArticlesBackgroundColor" mktoname="Background Color" default="${White}" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
     <meta class="mktoList" id="twoArticlesButtonBackgroundColor" mktoname="Left Column Button Background Color" default="${SummerSky}" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${Orange}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
     <meta class="mktoList" id="twoArticlesBorderColor" mktoname="Left Column Button Border Color" default="#2A9FD8" values="${White}, ${SummerSky}, ${Blue}, ${Green},${Orange},  ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
@@ -93,13 +92,14 @@
     <meta class="mktoNumber" id="twoArticlesSpacer8" mktoname="Space Below Columns" default="30" min="1" max="300" units="px" step="1" mktomodulescope="true" />
 
     <!-- Article Marketo Variable Definitions -->
+    <meta class="mktoString" id="articleAltText" mktoname="Image Alt Text" default="Add Me!" mktomodulescope="true" />
+    <meta class="mktoString" id="articleImgLink" mktoname="Image Link" default="Add Me!" mktomodulescope="true" />
     <meta class="mktoBoolean" id="showHeadline" mktoname="Show Headline?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
     <meta class="mktoString" id="articleTitleText" mktoname="Headline Text" default="Headline:Add Me!" mktomodulescope="true" />
     <meta class="mktoBoolean" id="showAuthor" mktoname="Show Author?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
     <meta class="mktoString" id="articleSubtitleText" mktoname="Subline Text" default="Subline:Add Me!" mktomodulescope="true" />
     <meta class="mktoBoolean" id="showArtButton" mktoname="Show Button?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
     <meta class="mktoString" id="articleText" mktoname="Body Text" default="Use less than 100 characters in this section or three lines. Remove the headline and subline, use 200 characters or 6 lines" mktomodulescope="true" />
-    <meta class="mktoString" id="articleAltText" mktoname="Image Alt Text" default="Add Me!" mktomodulescope="true" />
     <meta class="mktoString" id="articleLinkText" mktoname="Right Button Text" default="READ MORE" mktomodulescope="true" />
     <meta class="mktoString" id="articleLink" mktoname="Right Button Link" default="http://mylink" mktomodulescope="true" />
     <meta class="mktoList" id="articleBackgroundColor" mktoname="Module Background" default="${White}" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
@@ -867,7 +867,7 @@ font-family: 'Roboto' !important;
                                           <tr>
                                             <td class="image" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; font-family: 'Roboto'; border-collapse: collapse;">
                                               <div style="display:inline-block" class="mktoImg" mktoname="Photo" id="photo" mktolockimgstyle="false">
-                                                <a><img alt="${articleAltText}" src="http://via.placeholder.com/200x150" style="-ms-interpolation-mode: bicubic; outline: none; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; text-decoration: none; border-top-width: 0; max-width: 100%; line-height: 100%; height: auto; width: 260px; display: block;" width="260" /></a>
+                                                <a href="${articleImgLink}"><img alt="${articleAltText}" src="http://via.placeholder.com/200x150" style="-ms-interpolation-mode: bicubic; outline: none; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; text-decoration: none; border-top-width: 0; max-width: 100%; line-height: 100%; height: auto; width: 260px; display: block;" width="260" /></a>
                                               </div> </td>
                                           </tr>
                                         </tbody>
@@ -883,7 +883,7 @@ font-family: 'Roboto' !important;
                                                   </tr>
                                                   <tr>
                                                     <td class="primary-font title" style="display: ${showHeadline}; -moz-hyphens: none;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-ms-text-size-adjust: 100%;hyphens: none;font-family:'Roboto';font-size: 18px;font-weight: bold;color: #212121;border-collapse: collapse; padding-bottom: 1px;">
-                                                      <div >
+                                                      <div>
                                                         ${articleTitleText}
                                                       </div> </td>
                                                   </tr>
