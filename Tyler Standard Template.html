@@ -114,11 +114,13 @@
     <meta class="mktoNumber" id="signatureSpacer" mktoname="Top Spacer" default="15" min="1" max="300" units="px" step="1" mktomodulescope="true" />
     <meta class="mktoList" id="signatureBorderColor" mktoname="Border Color" default="#000000" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
     <meta class="mktoNumber" id="signatureBorderSize" mktoname="Border Width" default="1" min="0" max="20" units="px" step="1" mktomodulescope="true" />
+    <meta class="mktoString" id="signatureName" mktoname="Sales Rep Name" default="Marco Rossi" mktomodulescope="true" />
+    <meta class="mktoString" id="signatureTitle" mktoname="Sales Rep Title" default="Account Executive" mktomodulescope="true" />
+    <meta class="mktoString" id="signatureEmail" mktoname="Email Address" default="marco.rossi@geologo.net" mktomodulescope="true" />
     <meta class="mktoNumber" id="signatureSpacer2" mktoname="Spacer Below Name" default="5" min="1" max="300" units="px" step="1" mktomodulescope="true" />
     <meta class="mktoNumber" id="signatureSpacer3" mktoname="Spacer Below Role" default="5" min="1" max="300" units="px" step="1" mktomodulescope="true" />
     <meta class="mktoNumber" id="signatureSpacer4" mktoname="Bottom Spacer" default="15" min="1" max="300" units="px" step="1" mktomodulescope="true" />
-    <meta class="mktoString" id="signatureLinkText" mktoname="Link Text" default="marco.rossi@geologo.net" mktomodulescope="true" />
-    <meta class="mktoString" id="signatureLink" mktoname="Link" default="http://mylink" mktomodulescope="true" />
+
     <!-- Social Footer Marketo Variable Definitions -->
     <meta class="mktoList" id="contactsBackgroundColor" mktoname="Social Module Background" default="#808080" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
     <meta class="mktoBoolean" id="showFooterLogo" mktoname="Show Footer Logo?" default="true" false_value="none" true_value="inline-block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
@@ -947,8 +949,8 @@ solid;border-top-color:${articleBorderColor};border-right-color:${articleBorderC
                                       <tbody>
                                         <tr>
                                           <td class="primary-font name" style="-moz-hyphens: none;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-ms-text-size-adjust: 100%;hyphens: none;font-family: 'Roboto';color: #212121;font-size: 16px;font-weight: bold;border-collapse: collapse;">
-                                            <div class="mktoText" mktoname="Name" id="name">
-                                              Marco Rossi
+                                            <div>
+                                              ${signatureName}
                                             </div> </td>
                                         </tr>
                                         <tr>
@@ -956,15 +958,15 @@ solid;border-top-color:${articleBorderColor};border-right-color:${articleBorderC
                                         </tr>
                                         <tr>
                                           <td class="primary-font role" style="-moz-hyphens: none;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-ms-text-size-adjust: 100%;hyphens: none;font-family: 'Roboto';color: #212121;font-size: 16px;border-collapse: collapse;">
-                                            <div class="mktoText" mktoname="Role" id="role">
-                                              Customer Experience
+                                            <div >
+                                              ${signatureTitle}
                                             </div> </td>
                                         </tr>
                                         <tr>
                                           <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;line-height:${signatureSpacer3};font-size:${signatureSpacer3};" height="${signatureSpacer3}">&nbsp;</td>
                                         </tr>
                                         <tr>
-                                          <td class="mail" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;"><a href="${signatureLink}" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;text-decoration: none;font-family: 'Roboto';font-size: 16px;color: #2cabe2;" class="primary-font">${signatureLinkText}</a></td>
+                                          <td class="mail" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;"><a href="mailto:${signatureEmail}" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;text-decoration: none;font-family: 'Roboto';font-size: 16px;color: #2cabe2;" class="primary-font">${signatureEmail}</a></td>
                                         </tr>
                                       </tbody>
                                     </table> </td>
