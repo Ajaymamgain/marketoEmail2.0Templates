@@ -1678,3 +1678,141 @@ mktoname="Instagram Icon" mktolockimgsize="true" />
 </body>
 
 </html>
+
+Fixed a couple of plurals.
+
+diff --git a/app/models/albums_artists.rb b/app/models/albums_artists.rb
+index 0f279f0..b234085 100644
+--- a/app/models/albums_artists.rb
++++ b/app/models/albums_artists.rb
+@@ -1,4 +1,4 @@
+-class AlbumsArtist < ApplicationRecord
++class AlbumsArtists < ApplicationRecord
+   belongs_to :album
+   belongs_to :artist
+ end
+diff --git a/app/models/artist.rb b/app/models/artist.rb
+index 863fcac..96c32fa 100644
+--- a/app/models/artist.rb
++++ b/app/models/artist.rb
+@@ -1,3 +1,3 @@
+ class Artist < ApplicationRecord
+-  has_and_belongs_to_many :album
++  has_and_belongs_to_many :albums
+ end
+
+Added some dropdowns for albums, artists, and labels.
+
+diff --git a/app/views/albums/_form.html.erb b/app/views/albums/_form.html.erb
+index ceca09e..213b862 100644
+--- a/app/views/albums/_form.html.erb
++++ b/app/views/albums/_form.html.erb
+@@ -18,7 +18,7 @@
+
+   <div class="field">
+     <%= form.label :artist_id %><br>
+-    <%= form.collection_select(:artist_id, @artist, :id, :name) %>
++    <%= form.select(:artist_id, Artist.all.collect {|p| [ p.name, p.id ]}) %>
+   </div>
+
+   <div class="field">
+@@ -38,12 +38,7 @@
+
+   <div class="field">
+     <%= form.label :label_id %>
+-    <%= form.text_field :label_id %>
+-  </div>
+-
+-  <div class="field">
+-    <%= form.label :label_id %>
+-
++    <%= form.select(:label_id, Label.all.collect {|p| [ p.name, p.id ]}) %>
+   </div>
+
+   <div class="actions">
+diff --git a/app/views/artists/_form.html.erb b/app/views/artists/_form.html.erb
+index c55d15a..7aef67d 100644
+--- a/app/views/artists/_form.html.erb
++++ b/app/views/artists/_form.html.erb
+@@ -19,7 +19,10 @@
+
+   <div class="field">
+     <%= form.label :album_id %>
+-    <%= form.text_field :album_id %>
++    <% if Album.all != [] %>
++    <%= form.select("album", "id", Album.all.collect {|p| [ p.name, p.id ]}) %>
++    <% end %>
++
+   </div>
+
+   <div class="actions">
+
+Iterating on albums and artists
+
+diff --git a/app/views/artists/index.html.erb b/app/views/artists/index.html.erb
+index 22c77e0..216554a 100644
+--- a/app/views/artists/index.html.erb
++++ b/app/views/artists/index.html.erb
+@@ -17,7 +17,9 @@
+       <tr>
+         <td><%= artist.name %></td>
+         <td><%= artist.started %></td>
+-        <td><%= artist.album.title %></td>
++        <% artist.albums.each do |album| %>
++            <td><%= album.title %></td>
++        <% end %>
+         <td><%= link_to 'Show', artist %></td>
+         <td><%= link_to 'Edit', edit_artist_path(artist) %></td>
+         <td><%= link_to 'Destroy', artist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+diff --git a/app/views/artists/show.html.erb b/app/views/artists/show.html.erb
+index a738727..8fd697b 100644
+--- a/app/views/artists/show.html.erb
++++ b/app/views/artists/show.html.erb
+@@ -5,7 +5,7 @@
+   <%= @artist.name %>
+ </p>
+ <ul>
+-  <% @artist.album.each do |album| %>
++  <% @artist.albums.each do |album| %>
+     <li><%= album.title %></li>
+   <% end %>
+ </ul>
+@@ -15,10 +15,6 @@
+   <%= @artist.started %>
+ </p>
+
+-<p>
+-  <strong>Album:</strong>
+-  <%= @artist.album %>
+-</p>
+
+ <%= link_to 'Edit', edit_artist_path(@artist) %> |
+ <%= link_to 'Back', artists_path %>
+
+This reflects the migration:
+    rails generate migration RemoveAlbumFromArtist album_id:integer
+
+diff --git a/db/schema.rb b/db/schema.rb
+index 2810f87..4fb01c7 100644
+--- a/db/schema.rb
++++ b/db/schema.rb
+@@ -10,7 +10,7 @@
+ #
+ # It's strongly recommended that you check this file into your version control system.
+
+-ActiveRecord::Schema.define(version: 2018_07_14_163136) do
++ActiveRecord::Schema.define(version: 2018_07_16_143302) do
+
+   create_table "albums", force: :cascade do |t|
+     t.string "title"
+@@ -35,10 +35,8 @@ ActiveRecord::Schema.define(version: 2018_07_14_163136) do
+   create_table "artists", force: :cascade do |t|
+     t.string "name"
+     t.integer "started"
+-    t.integer "album_id"
+     t.datetime "created_at", null: false
+     t.datetime "updated_at", null: false
+-    t.index ["album_id"], name: "index_artists_on_album_id"
+   end
+
+   create_table "labels", force: :cascade do |t|
