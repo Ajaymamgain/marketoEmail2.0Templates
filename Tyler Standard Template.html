@@ -39,11 +39,8 @@
     <meta class="mktoList" id="heroCTAButtonBackgroundColor" mktoname="Button Background Color" default="#ffffff" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${Orange}" mktomodulescope="true" />
     <meta class="mktoList" id="heroCTABorderColor" mktoname="Button Border Color" default="#ffffff" values="${White}, ${SummerSky}, ${Blue}, ${Green},${Orange}" mktomodulescope="true" />
     <meta class="mktoNumber" id="heroCTABorderSize" mktoname="Button Border Size" default="1" min="0" max="20" units="px" step="1" mktomodulescope="true" />
-    <meta class="mktoNumber" id="heroCTASpacer" mktoname="Space Before Button" default="15" min="1" max="300" units="px" step="1" mktomodulescope="true" />
-    <meta class="mktoNumber" id="15px" mktoname="Space After Button" default="15" min="1" max="300" units="px" step="1" mktomodulescope="true" />
     <meta class="mktoString" id="heroCTALink" mktoname="Button Link" default="http://mylink" mktomodulescope="true" />
     <meta class="mktoString" id="heroCTALinkText" mktoname="Button Label" default="CALL TO ACTION" mktomodulescope="true" />
-    <meta class="mktoNumber" id="heroCTABottomSpacer" mktoname="Bottom Spacer" default="15" min="1" max="300" units="px" step="1" mktomodulescope="true" />
 
     <!--Image Marketo Variable Definitions -->
     <meta class="mktoString" id="freeImageLink" mktoname="Image Link" default="Add Me!" mktomodulescope="true" />
@@ -650,7 +647,7 @@ font-family: 'Roboto' Arial, Helvetica, sans-serif !important;
                                                         <table class="table600" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse; margin-top: 0; margin-right: auto; margin-bottom: 0; margin-left: auto;" align="center" border="0" cellpadding="0" cellspacing="0" width="600">
                                                           <tbody>
                                                             <tr>
-                                                              <td class="" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;line-height:${ctaSpacer};font-size:${ctaSpacer};" height="${ctaSpacer}">&nbsp;</td>
+                                                              <td class="" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;line-height:15px;font-size:15px;" height="15px">&nbsp;</td>
                                                             </tr>
                                                               <tr style="outline: medium none;">
                                                                 <td class="cta" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse; align:center;" align="center">
@@ -659,7 +656,7 @@ font-family: 'Roboto' Arial, Helvetica, sans-serif !important;
                                                                       <tbody>
                                                                         <tr>
                                                                           <td style="border-radius: 32px; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;" align="center" bgcolor="${heroCTATitleFontColor}">
-                                                                            <a href="${heroCTALink}" target="_blank" class="primary-font button" style="border-radius: 32px; -webkit-text-size-adjust:100%;-ms-text-size-adjust: 100%;border-left-color:${heroCTABorderColor};font-size: 16px;font-family: 'Roboto';color: ${heroCTABackgroundColor};padding-top: 12px;padding-right: 18px;padding-bottom: 12px;padding-left: 18px;border-top-width:${heroCTABorderSize};display: inline-block;border-bottom-width:${heroCTABorderSize};border-left-width:${heroCTABorderSize};border-top-style: solid;border-right-style:solid;border-bottom-style: solid;border-left-style: solid;border-top-color:${heroCTATitleFontColor};border-right-color:${heroCTATitleFontColor};border-bottom-color:${heroCTATitleFontColor};border-right-width:${heroCTABorderSize};text-decoration: none;background-color:${heroCTATitleFontColor};">${heroCTALinkText} </a> </td>
+                                                                            <a href="${heroCTALink}" target="_blank" class="primary-font button" style="border-radius: 32px; -webkit-text-size-adjust:100%;-ms-text-size-adjust: 100%;border-left-color:${heroCTABorderColor};font-size: 16px;font-family: 'Roboto';color: ${heroCTABackgroundColor};padding-top: 12px;padding-right: 18px;padding-bottom: 12px;padding-left: 18px;border-top-width:1px;display: inline-block;border-bottom-width:1px;border-left-width:1px;border-top-style: solid;border-right-style:solid;border-bottom-style: solid;border-left-style: solid;border-top-color:${heroCTATitleFontColor};border-right-color:${heroCTATitleFontColor};border-bottom-color:${heroCTATitleFontColor};border-right-width:1px;text-decoration: none;background-color:${heroCTATitleFontColor};">${heroCTALinkText} </a> </td>
                                                                         </tr>
                                                                       </tbody>
                                                                     </table>
@@ -686,7 +683,7 @@ font-family: 'Roboto' Arial, Helvetica, sans-serif !important;
                                       </table> </td>
                                   </tr>
                                   <tr>
-                                    <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;line-height:${heroCTABottomSpacer};font-size:${heroCTABottomSpacer};" height="${heroCTABottomSpacer}">&nbsp;</td>
+                                    <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;line-height:15px;font-size:15px;" height="15px">&nbsp;</td>
                                   </tr>
 
                                 </tbody>
