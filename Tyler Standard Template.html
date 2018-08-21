@@ -22,7 +22,7 @@
     <meta class="mktoBoolean" id="showCTAHeadline" mktoname="Show Headline?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
     <meta class="mktoBoolean" id="showCTAText" mktoname="Show Text?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
     <meta class="mktoBoolean" id="showCTAButton" mktoname="Show Button?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
-    <meta class="mktoList" id="heroCTABackgroundColor" mktoname="Background Color" default="#8F9B49" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${DarkGrey}" mktomodulescope="true" />
+    <meta class="mktoList" id="heroCTABackgroundColor" mktoname="Background Color" default="#40528F" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${DarkGrey}" mktomodulescope="true" />
 
       <!-- CTA Headline Marketo Variable Definitions -->
     <meta class="mktoString" id="heroCTATitleText" mktoname="Heading Text" default="Integer posuere erat a ante venenatis dapibus." mktomodulescope="true" />
@@ -592,7 +592,7 @@ font-family: Arial, Helvetica, sans-serif !important;
                           </tr>
                         </tbody>
                     </table>
-                    <table id="heroCTA" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" class="mktoModule m_title" mktoname="Email Title with CTA" mktoAddByDefault="false">
+                    <table id="heroCTA" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" class="mktoModule m_title" mktoname="Email Title with CTA" mktoAddByDefault="true">
                       <tbody>
                         <tr>
                           <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;background-color:${heroCTABackgroundColor};" bgcolor="${heroCTABackgroundColor}" valign="top">
@@ -682,7 +682,7 @@ font-family: Arial, Helvetica, sans-serif !important;
                                     <td style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;">
                                       <center>
                                         <div class="mktoImg" mktoname="Main Image" id="single" mktolockimgsize="true">
-                                          <a class="mktoImgLink" mktoname="Main Image Link" href="${freeImageLink}" target="_blank"> <img Alt="${freeImageAltText}" style="-ms-interpolation-mode: bicubic; outline: none; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; text-decoration: none; border-top-width: 0; display: block; max-width: 100%; line-height: 100%; width: 100%; height: auto; max-width: 640px;" height="auto" width="640" src="http://via.placeholder.com/640x300" /> </a>
+                                          <a class="mktoImgLink" mktoname="Main Image Link" href="${freeImageLink}" target="_blank"> <img Alt="${freeImageAltText}" style="-ms-interpolation-mode: bicubic; outline: none; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; text-decoration: none; border-top-width: 0; display: block; max-width: 100%; line-height: 100%; width: 100%; height: auto; max-width: 640px;" height="auto" width="640" src="http://na-sj24.marketo.com/rs/630-BEY-937/images/Skyline-Australia-City-Blue.jpg" /> </a>
                                         </div>
                                       </center> </td>
                                   </tr>
@@ -692,7 +692,7 @@ font-family: Arial, Helvetica, sans-serif !important;
                         </tr>
                       </tbody>
                     </table>
-                    <table id="title" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" class="mktoModule m_title" mktoname="Heading">
+                    <table id="title" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" class="mktoModule m_title" mktoname="Heading" mktoAddByDefault="false">
                       <tbody>
                         <tr>
                           <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;background-color:#ffffff;" bgcolor="#ffffff" valign="top">
@@ -731,7 +731,7 @@ font-family: Arial, Helvetica, sans-serif !important;
                         </tr>
                       </tbody>
                     </table>
-                    <table class="mktoModule m_free-text" id="free-text" idstyle="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" mktoname="Text">
+                    <table class="mktoModule m_free-text" id="free-text" idstyle="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" mktoname="Text" mktoAddByDefault="false">
                       <tbody>
                         <tr>
                           <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;background-color:${freeTextBackgroundColor};" bgcolor="${freeTextBackgroundColor}" valign="top">
@@ -756,7 +756,7 @@ font-family: Arial, Helvetica, sans-serif !important;
                         </tr>
                       </tbody>
                     </table>
-                    <table class="mktoModule m_CTA" id="CTA" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" mktoname="Button">
+                    <table class="mktoModule m_CTA" id="CTA" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" mktoname="Button" mktoAddByDefault="false">
                       <tbody>
                         <tr>
                           <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;background-color:${ctaBackgroundColor};" bgcolor="${ctaBackgroundColor}" valign="top">
@@ -947,7 +947,7 @@ font-family: Arial, Helvetica, sans-serif !important;
                         </tr>
                       </tbody>
                     </table>
-                    <table class="m_article" id="article" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" class="mktoModule m_article" mktoname="Article" mktoAddByDefault="false">
+                    <table class="m_article" id="article" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" class="mktoModule m_article" mktoAddByDefault="false" mktoname="Article" >
                       <tbody>
                           <tr>
                             <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none; background-color: #ffffff; border-collapse: collapse;line-height:30px;font-size:30px;" height="30px">&nbsp;</td>
@@ -1382,7 +1382,7 @@ solid;border-top-color:${articleBorderColor};border-right-color:${articleBorderC
                       </tbody>
                     </table>
 
-                    <table id="footer" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" class="mktoModule m_contacts" mktoname="Footer">
+                    <table id="footer" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" class="mktoModule m_contacts" mktoname="Footer" mktoAddByDefault="true">
                       <tbody>
                         <tr>
                           <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;background-color:${contactsBackgroundColor};" bgcolor="${contactsBackgroundColor}" valign="top">
