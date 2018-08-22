@@ -14,12 +14,12 @@
     <meta class="mktoBoolean" id="Black" mktoName="Black" false_value="#ffffff" true_value="#212121" default="true" false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
     <!-- Hero with Overlay Marketo Variable Definitions -->
 
-    <meta class="mktoImg" id="heroBackgroundImage" mktoname="Background Image" default="http://na-sj24.marketo.com/rs/630-BEY-937/images/Skyline-City-Depth-of-Field-No-Fade.jpg" mktomodulescope="true" />
-    <meta class="mktoColor" id="heroBackgroundColor" mktoname="Module Background" default="#40528F" mktomodulescope="true" />
+    <meta class="mktoImg" id="heroBackgroundImage" mktoname="Background Image" default="http://na-sj24.marketo.com/rs/630-BEY-937/images/Connected-Communities-Night-City-No-Fade.jpg" mktomodulescope="true" />
+    <meta class="mktolist" id="heroBackgroundColor" mktoname="Module Background" default="#40528F" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${Orange}" mktomodulescope="true" />
     <meta class="mktoString" id="heroLogoLink" mktoname="Logo Link" default="https://www.tylertech.com/" mktomodulescope="true" />
     <meta class="mktoString" id="heroLogoAltText" mktoname="Logo Alt Text" default="Tyler Technologies Logo" mktomodulescope="true" />
     <meta class="mktoList" id="heroButtonBackgroundColor" mktoname="Button Background Color" default="#40528F" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${Orange}"  mktomodulescope="true" />
-    <meta class="mktoColor" id="heroBorderColor" mktoname="Button Border Color" default="#40528F" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${Orange}" mktomodulescope="true" />
+    <meta class="mktolist" id="heroBorderColor" mktoname="Button Border Color" default="#40528F" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${Orange}" mktomodulescope="true" />
     <meta class="mktoString" id="heroLinkText" mktoname="Button Text" default="Call to action" mktomodulescope="true" />
     <meta class="mktoString" id="heroLink" mktoname="Button Link" default="http://mylink" mktomodulescope="true" />
 
@@ -701,7 +701,7 @@ font-family: Arial, Helvetica, sans-serif !important;
                       <tbody>
                         <tr>
                           <td class="background" style="-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;-ms-text-size-adjust: 100%;padding-bottom: 0;padding-left: 0;background-repeat: no-repeat;background-position: center center;background:${heroBackgroundImage};background-color:${heroBackgroundColor};padding-top:
-0;padding-right: 0;background-image:${heroBackgroundImage};border-collapse: collapse;" background="${heroBackgroundImage}" bgcolor="${heroBackgroundColor}" valign="top" width="800">
+0;padding-right: 0;background-image:${heroBackgroundImage};border-collapse: collapse;" background="${heroBackgroundImage}" bgcolor="${heroBackgroundColor}" valign="top" width="600">
                             <center>
                               <!--[if gte mso 9]>
                     <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:650px;height:636px">
@@ -711,7 +711,7 @@ font-family: Arial, Helvetica, sans-serif !important;
                               <table class="table600" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse; margin-top: 0; margin-right: auto; margin-bottom: 0; margin-left: auto;" align="center" border="0" cellpadding="0" cellspacing="0" width="600">
                                 <tbody>
                                   <tr>
-                                    <td style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;" height="156">&nbsp;</td>
+                                    <td style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;" height="50">&nbsp;</td>
                                   </tr>
                                   <tr>
                                     <td style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;">
@@ -763,7 +763,7 @@ font-family: Arial, Helvetica, sans-serif !important;
                                       </table> </td>
                                   </tr>
                                   <tr>
-                                    <td style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;" height="156">&nbsp;</td>
+                                    <td style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;" height="50">&nbsp;</td>
                                   </tr>
                                 </tbody>
                               </table>
@@ -1486,11 +1486,17 @@ solid;border-top-color:${articleBorderColor};border-right-color:${articleBorderC
                         </tr>
                       </tbody>
                     </table>
-
+                    <!--[if gte mso 9]>
+                <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:650px;height:636px">
+                <v:fill type="frame" src="http://na-sj24.marketo.com/rs/630-BEY-937/images/blue-circles-background.png" color="http://na-sj24.marketo.com/rs/630-BEY-937/images/blue-circles-background.png" />
+                <v:textbox style="mso-fit-shape-to-text:true" inset="0,0,0,0">
+                <![endif]-->
                     <table id="footer" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" class="mktoModule m_contacts" mktoname="Footer" mktoAddByDefault="true">
                       <tbody>
                         <tr>
-                          <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;background-color:${contactsBackgroundColor};" bgcolor="${contactsBackgroundColor}" valign="top">
+                          <td class="background" style="-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;-ms-text-size-adjust: 100%;padding-bottom: 0;padding-left: 0;background-repeat: no-repeat;background-position: center center;background: ; background-color:#808080;padding-top:
+                            0;padding-right: 0;background-image:http://na-sj24.marketo.com/rs/630-BEY-937/images/blue-circles-background.png; border-collapse: collapse;" background="http://na-sj24.marketo.com/rs/630-BEY-937/images/blue-circles-background.png" bgcolor="#808080" valign="top" width="600">
+                            <center>
                             <table class="table600" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse; margin-top: 0; margin-right: auto; margin-bottom: 0; margin-left: auto;" align="center" border="0" cellpadding="0" cellspacing="0" width="600">
                               <tbody>
                                 <tr>
@@ -1507,7 +1513,7 @@ solid;border-top-color:${articleBorderColor};border-right-color:${articleBorderC
                                           <td class="logo"  style="display:inline-block; float: left; text-align: left; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; outline: none; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; text-decoration: none; border-top-width: 0; border-collapse: collapse;">
                                             <table style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="center" border="0" cellpadding="0" cellspacing="0">
                                               <tr>
-                                                <td  id="showFooterLogo" style=" display: ${showFooterLogo}; padding-bottom: 10px; margin-bottom: 10px; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;">
+                                                <td  style="display:inline-block; padding-bottom: 10px; margin-bottom: 10px; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;">
                                                     <div  style="display:inline;" >
                                                       <a href="${footerLogoLink}"><img class="mktoImg" mktoname="Footer Logo" id="footerLogo" mktolockimgsize="true" src="http://na-sj24.marketo.com/rs/630-BEY-937/images/tyler_logo_wht.png" alt="${footerLogoAltText}" align="center" width="auto" height="40" style="-ms-interpolation-mode: bicubic; outline: none; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; text-decoration: none; border-top-width: 0; width: auto; height: 40px; max-width: 100%; line-height: 100%;"  /></a>
                                                     </div>
@@ -1518,7 +1524,7 @@ solid;border-top-color:${articleBorderColor};border-right-color:${articleBorderC
                                           <td class="right-social-icons"  style="display: inline-block; float: right; text-align: right; line-height: 35px;" -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse; >
                                             <table style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="center" border="0" cellpadding="3" cellspacing="0">
                                               <tr>
-                                                <td id="showSocial" style=" display: ${showSocial}; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;">
+                                                <td style=" display:inline-block; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;">
                                                   <a href="${contactsLink2}" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-decoration: none; color: #aaa;">
                                                     <img id="twitterIcon" alt="Twitter Icon" src="http://na-sj24.marketo.com/rs/630-BEY-937/images/iconmonstr-twitter-5-240.png" width="auto" height="26" style=" text-align: right; height: 26; outline: none; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; border-top-width: 0; max-width: 100%; line-height: 100%; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; display: inline-block;" mktoname="Twitter Icon" mktolockimgsize="true" />
                                                   </a>&nbsp;&nbsp;
@@ -1547,11 +1553,15 @@ solid;border-top-color:${articleBorderColor};border-right-color:${articleBorderC
                                   <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;line-height:1px;font-size:1px; " height="1px">&nbsp;</td>
                                 </tr>
                               </tbody>
-                            </table> </td>
+                            </table>
+                          </td>
                         </tr>
                       </tbody>
                     </table>
-
+                    <!--[if gte mso 9]>
+                  </v:textbox>
+                  </v:rect>
+                  <![endif]-->
                     <!--place new modules below here -->
                   </td>
                 </tr>
