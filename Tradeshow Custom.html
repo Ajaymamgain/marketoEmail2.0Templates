@@ -205,7 +205,27 @@ font-family: Arial, Helvetica, sans-serif !important;
       a:active {
         text-decoration: underline;
       }
-
+        .mktoText table, .mktoText span, .mktoText img, .mktoText div {
+          display: none !important;
+        }
+        .mktoText h1, .mktoText h2, .mktoText h3, .mktoText h4, .mktoText h5 {
+          font-weight: 500 !important;
+        }
+        .mktoText h1 {
+          font-size: 32px !important;
+        }
+        .mktoText h2 {
+          font-size: 28px !important;
+        }
+        .mktoText h3 {
+          font-size: 24px !important;
+        }
+        .mktoText h4 {
+          font-size: 18px !important;
+        }
+        .mktoText h5 {
+          font-size: 16px !important;
+        }
     }
 
     /*endcommon*/
@@ -808,8 +828,10 @@ font-family: Arial, Helvetica, sans-serif !important;
                                   </tr>
                                   <tr>
                                     <td class="secondary-font text" style="-moz-hyphens: none;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-ms-text-size-adjust: 100%;hyphens: none;font-family:'Roboto', Arial, sans-serif;font-size: 16px;line-height: 23px;color: #212121;border-collapse: collapse;">
-                                      <div>
-                                        ${freeText}
+                                      <div class="mktoText" mktoname="FreeText" id="freeText">
+                                         <p>
+                                           It is recommended to use less than 400 characters in this section or three lines, followed by a button. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum officiis dolorum, nulla, mollitia ducimus iure modi perferendis tenetur ea illum veniam aut sapiente deserunt repellendus. Excepturi illo numquam sint harum.
+                                        </p>
                                       </div> </td>
                                   </tr>
                                   <tr>
