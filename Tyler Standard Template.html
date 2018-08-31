@@ -106,6 +106,9 @@
     <meta class="mktoString" id="signatureName" mktoname="Sales Rep Name" default="Marco Rossi" mktomodulescope="true" />
     <meta class="mktoString" id="signatureTitle" mktoname="Sales Rep Title" default="Account Executive" mktomodulescope="true" />
     <meta class="mktoString" id="signatureEmail" mktoname="Email Address" default="marco.rossi@geologo.net" mktomodulescope="true" />
+    <meta class="mktoString" id="signaturePhone" mktoname="Phone Number" default="555-555-5555 ex 55-5555" mktomodulescope="true" />
+    <meta class="mktoBoolean" id="showHeadshot" mktoname="Show Headshot" default="true" false_value="none" true_value="inline-block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
+
 
     <!-- Features Marketo Variable Definitions -->
     <meta class="mktoList" id="featuresBackgroundColor" mktoname="Module Background" default="${MediumGrey}" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
@@ -1434,7 +1437,7 @@ solid;border-top-color:${articleBorderColor};border-right-color:${articleBorderC
                                                                            <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;line-height:7px;font-size:7px;" height="7px">&nbsp;</td>
                                                                          </tr>
                                                                          <tr>
-                                                                           <td class="mail" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;"><a href="mailto:${signatureEmail}" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;text-decoration: none;font-family:'Roboto', Arial, sans-serif;font-size: 12px;color: #2cabe2;" class="primary-font">Sharon.Hoffmanlongname@tylertech.com</a></td>
+                                                                           <td class="mail" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;"><a href="mailto:${signatureEmail}" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;text-decoration: none;font-family:'Roboto', Arial, sans-serif;font-size: 12px;color: #2cabe2;" class="primary-font">${signatureEmail}</a></td>
                                                                          </tr>
                                                                          <tr>
                                                                            <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;line-height:7px;font-size:7px;" height="7px">&nbsp;</td>
@@ -1442,7 +1445,7 @@ solid;border-top-color:${articleBorderColor};border-right-color:${articleBorderC
                                                                          <tr>
                                                                            <td class="primary-font phone" style="-moz-hyphens: none;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-ms-text-size-adjust: 100%;hyphens: none;font-family:'Roboto', Arial, sans-serif;color: #212121;font-size: 12px; border-collapse: collapse;">
                                                                              <div>
-                                                                               ${signaturePhone}303-555-5555 ex 55-5555
+                                                                               ${signaturePhone}
                                                                              </div> </td>
                                                                          </tr>
                                                                          <tr>
