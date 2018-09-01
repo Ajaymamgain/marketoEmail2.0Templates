@@ -103,11 +103,16 @@
     <!-- Signature Marketo Variable Definitions -->
     <meta class="mktolist" id="signatureBackgroundColor" mktoname="Module Background" default="${White}" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
     <meta class="mktoList" id="signatureBorderColor" mktoname="Border Color" default="#000000" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
-    <meta class="mktoString" id="signatureName" mktoname="Sales Rep Name" default="Marco Rossi" mktomodulescope="true" />
-    <meta class="mktoString" id="signatureTitle" mktoname="Sales Rep Title" default="Account Executive" mktomodulescope="true" />
-    <meta class="mktoString" id="signatureEmail" mktoname="Email Address" default="marco.rossi@geologo.net" mktomodulescope="true" />
-    <meta class="mktoString" id="signaturePhone" mktoname="Phone Number" default="555-555-5555 ex 55-5555" mktomodulescope="true" />
     <meta class="mktoBoolean" id="showHeadshot" mktoname="Show Headshot" default="true" false_value="none" true_value="inline-block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
+    <meta class="mktoString" id="signatureName" mktoname="Sales Rep Name" default="Bruce Graham" mktomodulescope="true" />
+    <meta class="mktoString" id="signatureTitle" mktoname="Sales Rep Title" default="Chief Strategy Officer & President, Courts & Justice Division" mktomodulescope="true" />
+    <meta class="mktoString" id="signatureEmail" mktoname="Email Address" default="Bruce.Graham@tylertech.com" mktomodulescope="true" />
+    <meta class="mktoString" id="signaturePhone" mktoname="Phone Number" default="555-555-5555 ex 55-5555" mktomodulescope="true" />
+    <meta class="mktoBoolean" id="showSignatureTwitter" mktoname="Show Twitter" default="true" false_value="none" true_value="inline-block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
+    <meta class="mktoString" id="signatureTwitterLink" mktoname="Twitter Icon Link" default="http://www.twitter.com/tylertech" mktomodulescope="true" />
+    <meta class="mktoBoolean" id="showSignatureLinkedin" mktoname="Show Linkedin" default="true" false_value="none" true_value="inline-block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
+    <meta class="mktoString" id="signatureLinkedinLink" mktoname="Linkedin Icon Link" default="http://www.linkedin.com/company/tyler-technologies" mktomodulescope="true" />
+
 
 
     <!-- Features Marketo Variable Definitions -->
@@ -1403,7 +1408,7 @@ solid;border-top-color:${articleBorderColor};border-right-color:${articleBorderC
                                                           <tr>
                                                             <td style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;">
                                                               <!--Signiture Photo -->
-                                                               <table  class="table3-3"style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="left" border="0" cellpadding="0" cellspacing="0" width="75">
+                                                               <table  class="table3-3" style="display: ${showHeadshot}; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="left" border="0" cellpadding="0" cellspacing="0" width="75">
                                                                  <tr>
                                                                      <td class="photo" style="border-radius: 50%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; height: 60px; width: 60px; padding-right: 1px; padding-left: 15px; border-collapse: collapse;" height="60" width="60">
                                                                        <div style="border-radius: 50%; display:inline-block" class="mktoImg" mktoname="Avatar" id="avatar" mktolockimgsize="true">
@@ -1430,7 +1435,7 @@ solid;border-top-color:${articleBorderColor};border-right-color:${articleBorderC
                                                                          <tr>
                                                                            <td class="primary-font role" style="-moz-hyphens: none;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-ms-text-size-adjust: 100%;hyphens: none;font-family:'Roboto', Arial, sans-serif;color: #212121;font-size: 12px;border-collapse: collapse;">
                                                                              <div >
-                                                                               President and CEO of Data and Insights Division
+                                                                               ${signatureTitle}
                                                                              </div> </td>
                                                                          </tr>
                                                                          <tr>
@@ -1453,10 +1458,10 @@ solid;border-top-color:${articleBorderColor};border-right-color:${articleBorderC
                                                                          </tr>
                                                                          <tr>
                                                                            <td class="" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse; width: 30px; height: 30px" height="30px" width="30px">
-                                                                             <a href="${contactsLink2}" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-decoration: none; color: #aaa;">
+                                                                             <a href="${signatureTwitterLink}" style="display: ${showSignatureTwitter}; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-decoration: none; color: #aaa;">
                                                                                <img id="twitterIcon" alt="Twitter Icon" src="http://na-sj24.marketo.com/rs/630-BEY-937/images/signiture-twitter-1-32.png" width="auto" height="15" style=" text-align: left; height: 26; outline: none; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; border-top-width: 0; max-width: 100%; line-height: 100%; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; display: inline-block;" mktoname="Twitter Icon" mktolockimgsize="true" />
                                                                              </a>&nbsp;&nbsp;
-                                                                             <a href="${contactsLink6}" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-decoration: none; color: #aaa;">
+                                                                             <a href="${signatureLinkedinLink}" style="display: ${showSignatureLinkedin};-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-decoration: none; color: #aaa;">
                                                                                <img id="linkedinIcon" alt="Linkedin Icon" src="http://na-sj24.marketo.com/rs/630-BEY-937/images/signiture-linkedin-1-32.png" width="auto" height="15" style="text-align: left; height: 26; outline: none; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; border-top-width: 0; max-width: 100%; line-height: 100%; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; display: inline-block;" mktoname="Instagram Icon" mktolockimgsize="true" />
                                                                              </a>
                                                                            </td>
