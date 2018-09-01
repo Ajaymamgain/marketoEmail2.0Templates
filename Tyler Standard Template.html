@@ -105,7 +105,9 @@
     <meta class="mktoList" id="signatureBorderColor" mktoname="Border Color" default="#000000" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
     <meta class="mktoBoolean" id="showHeadshot" mktoname="Show Headshot" default="true" false_value="none" true_value="inline-block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
     <meta class="mktoString" id="signatureName" mktoname="Sales Rep Name" default="Bruce Graham" mktomodulescope="true" />
-    <meta class="mktoString" id="signatureTitle" mktoname="Sales Rep Title" default="Chief Strategy Officer & President, Courts & Justice Division" mktomodulescope="true" />
+    <meta class="mktoString" id="signatureTitleLine1" mktoname="Sales Rep Title" default="Chief Strategy Officer & President," mktomodulescope="true" />
+    <meta class="mktoString" id="signatureTitleLine2" mktoname="Sales Rep Division" default="Courts & Justice Division (Optional)" mktomodulescope="true" />
+
     <meta class="mktoString" id="signatureEmail" mktoname="Email Address" default="Bruce.Graham@tylertech.com" mktomodulescope="true" />
     <meta class="mktoString" id="signaturePhone" mktoname="Phone Number" default="555-555-5555 ex 55-5555" mktomodulescope="true" />
     <meta class="mktoBoolean" id="showSignatureTwitter" mktoname="Show Twitter" default="true" false_value="none" true_value="inline-block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
@@ -1435,8 +1437,12 @@ solid;border-top-color:${articleBorderColor};border-right-color:${articleBorderC
                                                                          <tr>
                                                                            <td class="primary-font role" style="-moz-hyphens: none;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-ms-text-size-adjust: 100%;hyphens: none;font-family:'Roboto', Arial, sans-serif;color: #212121;font-size: 12px;border-collapse: collapse;">
                                                                              <div >
-                                                                               ${signatureTitle}
-                                                                             </div> </td>
+                                                                               ${signatureTitleLine1}
+                                                                             </div>
+                                                                              <div >
+                                                                                ${signatureTitleLine2}
+                                                                              </div>
+                                                                           </td>
                                                                          </tr>
                                                                          <tr>
                                                                            <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;line-height:7px;font-size:7px;" height="7px">&nbsp;</td>
