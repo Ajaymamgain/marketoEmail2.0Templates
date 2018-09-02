@@ -103,7 +103,7 @@
     <!-- Signature Marketo Variable Definitions -->
     <meta class="mktolist" id="signatureBackgroundColor" mktoname="Module Background" default="${White}" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
     <meta class="mktoList" id="signatureBorderColor" mktoname="Border Color" default="#000000" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
-    <meta class="mktoBoolean" id="showHeadshot" mktoname="Show Headshot" default="true" false_value="none" true_value="inline-block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
+    <meta class="mktoBoolean" id="showHeadshot" mktoname="Show Headshot" default="false" false_value="http://na-sj24.marketo.com/rs/630-BEY-937/images/Headshot_BruceGraham_Circle.jpg" true_value="http://na-sj24.marketo.com/rs/630-BEY-937/images/Talking-Ts.png" false_value_name="Headshot" true_value_name="Talking Ts" mktomodulescope="true" />
     <meta class="mktoString" id="signatureName" mktoname="Sales Rep Name" default="Bruce Graham" mktomodulescope="true" />
     <meta class="mktoString" id="signatureTitleLine1" mktoname="Sales Rep Title" default="Chief Strategy Officer & President," mktomodulescope="true" />
     <meta class="mktoString" id="signatureTitleLine2" mktoname="Sales Rep Division" default="Courts & Justice Division (Optional)" mktomodulescope="true" />
@@ -362,6 +362,13 @@ font-family: Arial, Helvetica, sans-serif !important;
         clear: both;
         margin-top: 5px;
       }
+      table.table3-3left {
+        width: 100% !important;
+        text-align: left !important;
+        clear: both;
+        margin-top: 5px;
+        float: left;
+      }
 
       table.logo {
         width: 100% !important;
@@ -494,6 +501,13 @@ font-family: Arial, Helvetica, sans-serif !important;
         clear: both;
         margin-top: 5px;
       }
+        table.table3-3left {
+          width: 100% !important;
+          text-align: left !important;
+          clear: both;
+          margin-top: 5px;
+          float: left;
+        }
 
       table.logo {
         width: 100% !important;
@@ -1058,12 +1072,12 @@ font-family: Arial, Helvetica, sans-serif !important;
                                                     <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;font-family:'Roboto', Arial, sans-serif;border-collapse: collapse;line-height:30px;font-size:30px;" height="30px">&nbsp;</td>
                                                   </tr>
                                                   <tr>
-                                                    <td class="cta" style="display: ${showArtButton}; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; font-family: 'Roboto', Arial, sans-serif;  border-collapse: collapse;">
+                                                    <td class="cta" style=" -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; font-family: 'Roboto', Arial, sans-serif;  border-collapse: collapse;">
                                                       <center>
                                                         <table style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="left" border="0" cellpadding="0" cellspacing="0">
                                                           <tbody>
                                                             <tr>
-                                                              <td style="font-weight: 500; text-transform: uppercase; border-radius: 32px;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; font-family: 'Roboto', Arial, sans-serif;  border-collapse: collapse;" align="center" bgcolor="${articleButtonBackgroundColor}"> <a href="${articleLink}" target="_blank" class="primary-font button" style="font-weight: 500; text-transform: uppercase; border-radius: 32px; -webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;display: inline-block;font-size: 16px;font-family:'Roboto', Arial, sans-serif;color: #ffffff;padding-top: 12px;padding-right: 18px;padding-bottom: 12px;padding-left:
+                                                              <td style="display: ${showArtButton}; font-weight: 500; text-transform: uppercase; border-radius: 32px;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; font-family: 'Roboto', Arial, sans-serif;  border-collapse: collapse;" align="center" bgcolor="${articleButtonBackgroundColor}"> <a href="${articleLink}" target="_blank" class="primary-font button" style="font-weight: 500; text-transform: uppercase; border-radius: 32px; -webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;display: inline-block;font-size: 16px;font-family:'Roboto', Arial, sans-serif;color: #ffffff;padding-top: 12px;padding-right: 18px;padding-bottom: 12px;padding-left:
 18px;border-top-width:1px;border-right-width:1px;background-color:${articleButtonBackgroundColor};border-left-width:1px;border-top-style: solid;border-right-style: solid;border-bottom-style: solid;border-left-style:
 solid;border-top-color:${articleBorderColor};border-right-color:${articleBorderColor};border-bottom-color:${articleBorderColor};border-left-color:${articleBorderColor};border-bottom-width:1px;text-decoration: none;">${articleLinkText}</a> </td>
                                                             </tr>
@@ -1408,19 +1422,21 @@ solid;border-top-color:${articleBorderColor};border-right-color:${articleBorderC
                                                           </tr>
                                                           <!--Container Row -->
                                                           <tr>
-                                                            <td style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;">
+                                                            <td style=" display:inline-block; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;">
                                                               <!--Signiture Photo -->
-                                                               <table  class="table3-3" style="display: ${showHeadshot}; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="left" border="0" cellpadding="0" cellspacing="0" width="75">
+                                                               <table  class="table3-3" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="left" border="0" cellpadding="0" cellspacing="0" width="75">
                                                                  <tr>
                                                                      <td class="photo" style="border-radius: 50%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; height: 60px; width: 60px; padding-right: 1px; padding-left: 15px; border-collapse: collapse;" height="60" width="60">
                                                                        <div style="border-radius: 50%; display:inline-block" class="mktoImg" mktoname="Avatar" id="avatar" mktolockimgsize="true">
-                                                                         <a><img src="http://na-sj24.marketo.com/rs/630-BEY-937/images/Headshot_BruceGraham_Circle.jpg" alt="Avatar" style=" border-radius: 50%; -ms-interpolation-mode: bicubic; outline: none; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; text-decoration: none; border-top-width: 0; width: 60; height: 60; max-width: 100%; display: block; line-height: 100%;" height="60" width="60" /></a>
+                                                                         <a><img src="${showHeadshot}" alt="Avatar" style=" border-radius: 50%; -ms-interpolation-mode: bicubic; outline: none; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; text-decoration: none; border-top-width: 0; width: 60; height: 60; max-width: 100%; display: block; line-height: 100%;" height="60" width="60" /></a>
                                                                        </div>
                                                                      </td>
                                                                  </tr>
                                                                </table>
+                                                             </td>
+                                                             <td style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;">
                                                                <!--Signiture Details -->
-                                                               <table class="table3-3" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="left" border="0" cellpadding="0" cellspacing="0" width="239">
+                                                               <table class="table3-3left" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="left" border="0" cellpadding="0" cellspacing="0" width="239">
                                                                  <tr>
                                                                    <td class="inner-content" style="hyphens: none;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;-ms-text-size-adjust: 100%;padding-left: 10px; border-collapse: collapse;">
                                                                      <table style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" border="0" cellpadding="0" cellspacing="0" width="100%">
