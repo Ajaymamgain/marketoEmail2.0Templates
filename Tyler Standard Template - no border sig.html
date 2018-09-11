@@ -100,6 +100,15 @@
     <meta class="mktoList" id="articleButtonBackgroundColor" mktoname="Right Button Background Color" default="#2A9FD8" values="${White}, ${SummerSky}, ${Blue}, ${Green},${Orange}" mktomodulescope="true" />
     <meta class="mktoList" id="articleBorderColor" mktoname="Right Button Border Color" default="${SummerSky}" values="#2A9FD8, ${SummerSky}, ${Blue}, ${Green},${Orange}" mktomodulescope="true" />
 
+    <!-- Promo Footer Marketo Variable Definitions  -->
+    <meta class="mktoString" id="promoAltText" mktoname="Logo Alt Text" default="Add Me!" mktomodulescope="true" />
+    <meta class="mktoString" id="promoImgLink" mktoname="Logo Link" default="Add Me!" mktomodulescope="true" />
+    <meta class="mktoBoolean" id="showPromoHeadline" mktoname="Show Promo Headline?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
+    <meta class="mktoString" id="promoTitleText" mktoname="Promo Title Text" default="LOREM IPSUM DOLOR SIT AMET" mktomodulescope="true" />
+    <meta class="mktoBoolean" id="showPromoSubTitle" mktoname="Show Promo   Subline?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
+    <meta class="mktoString" id="promoSubtitleText" mktoname="Promo Subline Text" default="Subline:Add Me!" mktomodulescope="true" />
+    <meta class="mktoString" id="promoText" mktoname="Promo Body Text" default="Use less than 100 characters in this section or three lines. Remove the headline and subline, use 200 characters or 6 lines" mktomodulescope="true" />
+
     <!-- Signature Marketo Variable Definitions -->
     <meta class="mktoBoolean" id="showSignatureLeft" mktoname="Show Left Signature" default="false" false_value="" true_value="none" false_value_name="Show" true_value_name="Hide" mktomodulescope="true" />
     <meta class="mktoBoolean" id="showSignatureRight" mktoname="Show Right Signature" default="false" false_value="" true_value="none" false_value_name="Show" true_value_name="Hide" mktomodulescope="true" />
@@ -1116,6 +1125,85 @@ solid;border-top-color:${articleBorderColor};border-right-color:${articleBorderC
                         </tr>
                       </tbody>
                     </table>
+
+                    <table class="m_promoFooter" id="promoFooter" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" class="mktoModule m_promoFooter" mktoAddByDefault="false" mktoname="Promo Footer" >
+                      <tbody>
+                          <tr>
+                            <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none; background-color: #ffffff; border-collapse: collapse;line-height:15px;font-size:15px;" height="15px">&nbsp;</td>
+                          </tr>
+                        <tr>
+                          <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;font-family:'Roboto', Arial, sans-serif;border-collapse: collapse;background-color:${articleBackgroundColor};" bgcolor="${articleBackgroundColor}" valign="top">
+                            <center>
+                              <table class="table600" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse; margin-top: 0; margin-right: auto; margin-bottom: 0; margin-left: auto;" align="center" border="0" cellpadding="0" cellspacing="0" width="600">
+                                <tbody>
+                                  <tr>
+                                    <td style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; font-family: 'Roboto', Arial, sans-serif;  border-collapse: collapse;">
+                                      <table class="table3-3left" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="left" border="0" cellpadding="0" cellspacing="0" width="360">
+                                        <tbody>
+                                          <tr>
+                                            <td style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; font-family: 'Roboto', Arial, sans-serif;  border-collapse: collapse;">
+                                              <table class="contents" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="left" border="0" cellpadding="0" cellspacing="0">
+                                                <tbody>
+                                                  <tr>
+                                                    <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;font-family:'Roboto', Arial, sans-serif;border-collapse: collapse;line-height:15px;font-size:15px;" height="15px">&nbsp;</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="primary-font title" style="display: ${showPromoHeadline}; -moz-hyphens: none;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-ms-text-size-adjust: 100%;hyphens: none;font-family:'Roboto', Arial, sans-serif;font-size: 16px;font-weight: bold;color: #212121;border-collapse: collapse; padding-bottom: 5px;">
+                                                      <div>
+                                                        ${promoTitleText}
+                                                      </div> </td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td class="primary-font subtitle" style="display: ${showPromoSubTitle};-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;-ms-text-size-adjust: 100%;font-family:'Roboto', Arial, sans-serif;padding-left: 0;color: #212121;font-size: 12px;padding-top: 5px;padding-right: 0;padding-bottom: 1px;border-collapse: collapse;">
+                                                        <div >
+                                                          ${promoSubtitleText}
+                                                        </div> </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;line-height:15px;font-size:15px;" height="15px">&nbsp;</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="primary-font text" style="-moz-hyphens: none;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-ms-text-size-adjust: 100%;hyphens: none;font-family:'Roboto', Arial, sans-serif;color: #212121;line-height: 23px; font-size: 16px;border-collapse: collapse;">
+                                                      <div>
+                                                        ${promoText}
+                                                      </div> </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;font-family:'Roboto', Arial, sans-serif;border-collapse: collapse;line-height:15px;font-size:15px;" height="15px">&nbsp;</td>
+                                                  </tr>
+                                                </tbody>
+                                              </table> </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                      <table class="table1-3" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="right" border="0" cellpadding="0" cellspacing="0" >
+                                        <tbody>
+                                          <tr>
+                                            <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none; background-color: #ffffff; border-collapse: collapse;line-height:17px;font-size:17px;" height="17px">&nbsp;</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="logo" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; text-align: right; -moz-hyphens: none; hyphens: none; font-family: 'Roboto', Arial, sans-serif;  border-collapse: collapse;" align="right" width="179">
+                                              <div style="display:inline-block" class="mktoImg" mktoname="Photo" id="promoLogo" mktolockimgstyle="false">
+                                                <a href="${promoImgLink}"><img alt="${promoAltText}" src="https://empower.tylertech.com/rs/015-NUU-525/images/tyler_logo_RGB--Template-Small.png" style="-ms-interpolation-mode: bicubic; outline: none; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; text-decoration: none; border-top-width: 0; max-width: 100%; line-height: 100%; height: 40px; width: auto; display: block;" width="auto" height="40"/></a>
+                                              </div> </td>
+                                          </tr>
+                                          <tr>
+                                            <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none; background-color: #ffffff; border-collapse: collapse;line-height:17px;font-size:17px;" height="17px">&nbsp;</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </center> </td>
+                        </tr>
+                        <tr>
+                          <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none; background-color: #ffffff; border-collapse: collapse;line-height:15px;font-size:15px;" height="15px">&nbsp;</td>
+                        </tr>
+                      </tbody>
+                    </table>
+
 
                     <table id="features" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" class="mktoModule m_features" mktoname="Features" mktoAddByDefault="false" >
                       <tbody>
