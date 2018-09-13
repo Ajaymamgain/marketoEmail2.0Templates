@@ -102,19 +102,32 @@
     <meta class="mktoList" id="articleBackgroundColor" mktoname="Module Background" default="${White}" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
     <meta class="mktoList" id="articleButtonBackgroundColor" mktoname="Right Button Background Color" default="#2A9FD8" values="${White}, ${SummerSky}, ${Blue}, ${Green},${Orange}" mktomodulescope="true" />
     <meta class="mktoList" id="articleBorderColor" mktoname="Right Button Border Color" default="${SummerSky}" values="#2A9FD8, ${SummerSky}, ${Blue}, ${Green},${Orange}" mktomodulescope="true" />
+
     <!-- Signature Marketo Variable Definitions -->
-    <meta class="mktolist" id="signatureBackgroundColor" mktoname="Module Background" default="${White}" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
-    <meta class="mktoList" id="signatureBorderColor" mktoname="Border Color" default="#000000" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
-    <meta class="mktoBoolean" id="showHeadshot" mktoname="Show Headshot" default="false" false_value="http://na-sj24.marketo.com/rs/630-BEY-937/images/Headshot_BruceGraham_Circle.jpg" true_value="http://na-sj24.marketo.com/rs/630-BEY-937/images/Talking-Ts-Signature-ONLY.png" false_value_name="Headshot" true_value_name="Talking Ts" mktomodulescope="true" />
-    <meta class="mktoString" id="signatureName" mktoname="Sales Rep Name" default="Bruce Graham" mktomodulescope="true" />
-    <meta class="mktoString" id="signatureTitleLine1" mktoname="Sales Rep Title" default="Chief Strategy Officer & President," mktomodulescope="true" />
-    <meta class="mktoString" id="signatureTitleLine2" mktoname="Sales Rep Division" default="" mktomodulescope="true" />
-    <meta class="mktoString" id="signatureEmail" mktoname="Email Address" default="Bruce.Graham@tylertech.com" mktomodulescope="true" />
-    <meta class="mktoString" id="signaturePhone" mktoname="Phone Number" default="555-555-5555 ex 55-5555" mktomodulescope="true" />
-    <meta class="mktoBoolean" id="showSignatureTwitter" mktoname="Show Twitter" default="true" false_value="none" true_value="inline-block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
-    <meta class="mktoString" id="signatureTwitterLink" mktoname="Twitter Icon Link" default="http://www.twitter.com/tylertech" mktomodulescope="true" />
-    <meta class="mktoBoolean" id="showSignatureLinkedin" mktoname="Show Linkedin" default="true" false_value="none" true_value="inline-block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
-    <meta class="mktoString" id="signatureLinkedinLink" mktoname="Linkedin Icon Link" default="http://www.linkedin.com/company/tyler-technologies" mktomodulescope="true"/>
+    <meta class="mktoBoolean" id="showSignatureLeft" mktoname="Show Left Signature" default="false" false_value="" true_value="none" false_value_name="Show" true_value_name="Hide" mktomodulescope="true" />
+    <meta class="mktoBoolean" id="showSignatureRight" mktoname="Show Right Signature" default="false" false_value="" true_value="none" false_value_name="Show" true_value_name="Hide" mktomodulescope="true" />
+    <!--Left Signature -->
+    <meta class="mktoBoolean" id="showLeftHeadshot" mktoname="Left Headshot or Ts" default="true" false_value="http://templates.marketo.net/shop1/testimonial1.png" true_value="http://na-sj24.marketo.com/rs/630-BEY-937/images/Talking-Ts-Signature-ONLY.png" false_value_name="Headshot" true_value_name="Talking Ts" mktomodulescope="true" />
+    <meta class="mktoString" id="signatureLeftName" mktoname="Left Sales Rep Name" default="Molly Marketer" mktomodulescope="true" />
+    <meta class="mktoString" id="signatureLeftTitleLine1" mktoname="Left Sales Rep Title" default="Director, Marketing" mktomodulescope="true" />
+    <meta class="mktoString" id="signatureLeftEmail" mktoname="Left Email Address" default="First.Last@tylertech.com" mktomodulescope="true" />
+    <meta class="mktoString" id="signatureLeftPhone" mktoname="Left Phone Number" default="555-555-5555 ex 55-5555" mktomodulescope="true" />
+    <meta class="mktoBoolean" id="showSignatureLeftTwitter" mktoname="Show Left Twitter Icon" default="true" false_value="none" true_value="inline-block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
+    <meta class="mktoString" id="signatureLeftTwitterLink" mktoname="Left Sales Rep Twitter Link" default="http://www.twitter.com/tylertech" mktomodulescope="true" />
+    <meta class="mktoBoolean" id="showSignatureLeftLinkedin" mktoname="Show Left Linkedin Icon" default="true" false_value="none" true_value="inline-block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
+    <meta class="mktoString" id="signatureLeftLinkedinLink" mktoname="Left Sales Rep Linkedin Link" default="http://www.linkedin.com/company/tyler-technologies" mktomodulescope="true" />
+    <!--Right Signature -->
+    <meta class="mktoBoolean" id="showRightHeadshot" mktoname="Right Headshot or Ts" default="false" false_value="http://templates.marketo.net/shop1/testimonial2.png" true_value="http://na-sj24.marketo.com/rs/630-BEY-937/images/Talking-Ts-Signature-ONLY.png" false_value_name="Headshot" true_value_name="Talking Ts" mktomodulescope="true" />
+    <meta class="mktoString" id="signatureRightName" mktoname="Right Sales Rep Name" default="John Salesman" mktomodulescope="true" />
+    <meta class="mktoString" id="signatureRightTitleLine1" mktoname="Right Sales Rep Title" default="Chief Sales Rep" mktomodulescope="true" />
+    <meta class="mktoString" id="signatureRightEmail" mktoname="Right Email Address" default="First.Last@tylertech.com" mktomodulescope="true" />
+    <meta class="mktoString" id="signatureRightPhone" mktoname="Right Phone Number" default="555-555-5555 ex 55-5555" mktomodulescope="true" />
+    <meta class="mktoBoolean" id="showSignatureRightTwitter" mktoname="Show Right Twitter Icon" default="true" false_value="none" true_value="inline-block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
+    <meta class="mktoString" id="signatureRightTwitterLink" mktoname="Right Sales Rep Twitter Link" default="http://www.twitter.com/tylertech" mktomodulescope="true" />
+    <meta class="mktoBoolean" id="showSignatureRightLinkedin" mktoname="Show Right Linkedin Icon" default="true" false_value="none" true_value="inline-block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
+    <meta class="mktoString" id="signatureRightLinkedinLink" mktoname="Right Sales Rep Linkedin Link" default="http://www.linkedin.com/company/tyler-technologies" mktomodulescope="true" />
+
+
     <!-- Features Marketo Variable Definitions -->
     <meta class="mktoList" id="featuresBackgroundColor" mktoname="Module Background" default="${MediumGrey}" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
     <!-- Feature Left Marketo Variable Definitions -->
@@ -210,12 +223,6 @@ font-family: Arial, Helvetica, sans-serif !important;
       .mktoText h5 {
         font-size: 16px !important;
       }
-    /*startcommon*/
-    @import url('https://fonts.googleapis.com/css?family=Roboto');
-    @media only screen and (max-width: 800px) {
-      table#boxing {
-        width: 100% !important;
-      }
       a:link {
         text-decoration: none;
       }
@@ -228,7 +235,12 @@ font-family: Arial, Helvetica, sans-serif !important;
       a:active {
         text-decoration: underline;
       }
-    }
+    /*startcommon*/
+    @import url('https://fonts.googleapis.com/css?family=Roboto');
+    @media only screen and (max-width: 800px) {
+      table#boxing {
+        width: 100% !important;
+      }
 
     }
     /*endcommon*/
@@ -399,6 +411,12 @@ font-family: Arial, Helvetica, sans-serif !important;
         .right-tagline {
             display: none !important;
         }
+        .sigBreak {
+            margin: 0 auto !important;
+            display: block !important;
+            width: 100% !important;
+
+        }
       /*endtablet*/
     }
     @media only screen and (max-width: 479px) {
@@ -515,6 +533,12 @@ font-family: Arial, Helvetica, sans-serif !important;
       .m_article .imageArt img {
         width: 290px !important;
         height: auto !important;
+      }
+      .sigBreak {
+          margin: 0 auto !important;
+          display: block !important;
+          width: 100% !important;
+
       }
       /*endmobile*/
     }

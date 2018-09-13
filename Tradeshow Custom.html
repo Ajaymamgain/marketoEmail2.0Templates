@@ -125,8 +125,6 @@
     <meta class="mktoBoolean" id="showSignatureRightLinkedin" mktoname="Show Right Linkedin Icon" default="true" false_value="none" true_value="inline-block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
     <meta class="mktoString" id="signatureRightLinkedinLink" mktoname="Right Sales Rep Linkedin Link" default="http://www.linkedin.com/company/tyler-technologies" mktomodulescope="true" />
 
-
-
     <!-- Features Marketo Variable Definitions -->
     <meta class="mktoList" id="featuresBackgroundColor" mktoname="Module Background" default="${MediumGrey}" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
     <!-- Feature Left Marketo Variable Definitions -->
@@ -234,27 +232,28 @@ font-family: Arial, Helvetica, sans-serif !important;
     .mktoText h5 {
       font-size: 16px !important;
     }
+    a:link {
+      text-decoration: none;
+    }
+
+    a:visited {
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    a:active {
+      text-decoration: underline;
+    }
     /*startcommon*/
     @import url('https://fonts.googleapis.com/css?family=Roboto');
     @media only screen and (max-width: 800px) {
       table#boxing {
         width: 100% !important;
       }
-      a:link {
-        text-decoration: none;
-      }
 
-      a:visited {
-        text-decoration: none;
-      }
-
-      a:hover {
-        text-decoration: underline;
-      }
-
-      a:active {
-        text-decoration: underline;
-      }
     }
 
     /*endcommon*/
