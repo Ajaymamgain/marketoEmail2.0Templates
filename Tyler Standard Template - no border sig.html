@@ -12,14 +12,16 @@
     <meta class="mktoBoolean" id="MediumGrey" mktoName="MediumGrey" false_value="#ffffff" true_value="#d3d3d3" default="true" false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
     <meta class="mktoBoolean" id="DarkGrey" mktoName="DarkGrey" false_value="#ffffff" true_value="#808080" default="true" false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
     <meta class="mktoBoolean" id="Black" mktoName="Black" false_value="#ffffff" true_value="#212121" default="true" false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
-
+    <meta class="mktoBoolean" id="BlueGradient" mktoName="BlueGradient" false_value="#ffffff" true_value="#212121" default="true" false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
+    <meta class="mktoBoolean" id="GreenGradient" mktoName="GreenGradient" false_value="#ffffff" true_value="#212121" default="true" false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
+    <meta class="mktoBoolean" id="BlackGradient" mktoName="BlackGradient" false_value="#ffffff" true_value="#212121" default="true" false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
     <!-- Hero with Overlay Marketo Variable Definitions -->
     <meta class="mktoImg" id="heroBackgroundImage" mktoname="Background Image" default="http://na-sj24.marketo.com/rs/630-BEY-937/images/169-Community-Neighborhood-Houses-Suburbs.jpg" mktomodulescope="true" />
     <meta class="mktolist" id="heroImagePosition" mktoname="Image Position" default="top top" values="top top, center center" mktomodulescope="true" />
     <meta class="mktolist" id="heroBackgroundColor" mktoname="Module Background" default="#40528F" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${Orange}" mktomodulescope="true" />
     <meta class="mktoString" id="heroLogoLink" mktoname="Logo Link" default="https://www.tylertech.com/" mktomodulescope="true" />
     <meta class="mktoString" id="heroLogoAltText" mktoname="Logo Alt Text" default="Tyler Technologies Logo" mktomodulescope="true" />
-    <meta class="mktoList" id="heroButtonBackgroundColor" mktoname="Button Background Color" default="#e2702e" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${Orange}"  mktomodulescope="true" />
+    <meta class="mktoList" id="heroButtonBackgroundColor" mktoname="Hero Button Color" default="#ffffff" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${Orange}"  mktomodulescope="true" />
     <meta class="mktolist" id="heroBorderColor" mktoname="Button Border Color" default="#e2702e" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${Orange}" mktomodulescope="true" />
     <meta class="mktoString" id="heroLinkText" mktoname="Button Text" default="Call to action" mktomodulescope="true" />
     <meta class="mktoString" id="heroLink" mktoname="Button Link" default="http://mylink" mktomodulescope="true" />
@@ -646,7 +648,7 @@ font-family: Arial, Helvetica, sans-serif !important;
   <body style="margin-bottom: 0; -webkit-text-size-adjust: 100%; padding-bottom: 0; min-width: 100%; margin-top: 0; margin-right: 0; -ms-text-size-adjust: 100%; margin-left: 0; padding-top: 10px; padding-right: 0; padding-left: 0; width: 100%; background-color: #f5f5f5;">
             <!--[if mso]>
         <style type="text/css">
-        body, table, td, div, a {font-family: Arial, Helvetica, sans-serif !important;}
+        body, table, td, div, a, p, h1, h2, h3, h4, h5 {font-family: Arial, Helvetica, sans-serif !important;}
         </style>
         <![endif]-->
     <div style="display:none; white-space:nowrap; font:15px courier; line-height:1px;">
@@ -697,6 +699,57 @@ font-family: Arial, Helvetica, sans-serif !important;
                           </tr>
                         </tbody>
                     </table>
+                      <table id="hero" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" class="mktoModule m_hero" mktoname="Hero" mktoAddByDefault="false">
+                        <tbody>
+                          <tr>
+                            <td class="background" style="-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;-ms-text-size-adjust: 100%;padding-bottom: 0;padding-left: 0;background-repeat: no-repeat;background-position: ${heroImagePosition}; background:${heroBackgroundImage};background-color:${heroBackgroundColor};padding-top:
+  0;padding-right: 0;background-image:${heroBackgroundImage};border-collapse: collapse;" background="${heroBackgroundImage}" bgcolor="${heroBackgroundColor}" valign="top" border="0" width="640">
+                              <center>
+                                <!--[if gte mso 9]>
+                      <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:650px;height:636px">
+  					<v:fill type="frame" src="${heroBackgroundImage}" color="${heroBackgroundColor}" />
+  					<v:textbox style="mso-fit-shape-to-text:true" inset="0,0,0,0">
+  					<![endif]-->
+                                    <table class="table640" cellpadding="10" cellspacing="0" border="0" align="center" width="640" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse; border: none; margin-top: 0; margin-right: auto; margin-bottom: 0; margin-left: auto; width: 640px; text-align:center; background: -moz-linear-gradient(top, rgba(30,87,153,0.25) 0%, rgba(64,82,143,1) 100%); background: -webkit-linear-gradient(top, rgba(30,87,153,0.25) 0%,rgba(64,82,143,1) 100%); background: linear-gradient(to bottom, rgba(30,87,153,0.25) 0%,rgba(64,82,143,1) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#401e5799', endColorstr='#40528f',GradientType=0 );" >
+                                      <tr>
+                                        <td style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse; text-align: center; " align="center" border="0" >
+                                          <h1 class="primary-font mktoText" mktoname="Main Title" id="mainTitle" style="hyphens: none;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;-ms-text-size-adjust: 100%;font-family:'Roboto', Arial, sans-serif; font-size: 36px; font-weight: 900;text-align: center;color: #ffffff;border-collapse: collapse;">
+                                            Maecenas faucibus mollis interdum. Donec sed odio dui.
+                                          </h1>
+                                          <p class="primary-font mktoText" mktoname="Subtitle" id="subtitle" style="padding-left: 10px; padding-right: 10px; hyphens: none;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;-ms-text-size-adjust: 100%;text-align: center;font-weight: 300;color: #ffffff;font-family:'Roboto', Arial, sans-serif;font-size: 18px;border-collapse: collapse;">
+                                            Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet fermentum.
+                                          </p>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <table style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse; margin-top: 0; margin-right: auto; margin-bottom: 0; margin-left: auto; align: center; " align="center" border="0" cellpadding="0" cellspacing="0">
+                                            <tbody>
+                                              <tr>
+                                                <td style="font-weight: 500; font-family:'Roboto', Arial, sans-serif; text-transform: uppercase; border-radius: 32px; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;" align="center" bgcolor="${heroButtonBackgroundColor}">
+
+                                                  <a href="${heroLink}" target="_blank" class="primary-font button" style="font-weight: 500; text-transform: uppercase; border-radius: 32px; -webkit-text-size-adjust:100%;-ms-text-size-adjust: 100%;border-left-color:${heroButtonBackgroundColor};font-size: 16px;color: ${heroBackgroundColor};padding-top: 12px;padding-right: 18px;padding-bottom: 12px;padding-left: 18px;border-top-width:1px;display: inline-block;border-bottom-width:1px;border-left-width:1px;border-top-style: solid;border-right-style:solid;border-bottom-style: solid;border-left-style: solid;border-top-color:${heroButtonBackgroundColor};border-right-color:${heroButtonBackgroundColor};border-bottom-color:${heroButtonBackgroundColor};border-right-width:1px;text-decoration: none;background-color:${heroButtonBackgroundColor};">${heroCTALinkText} </a>
+
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;line-height:15px;font-size:15px;" height="15px">&nbsp;</td>
+                                      </tr>
+                                    </table>
+
+                                <!--[if gte mso 9]>
+                      </v:textbox>
+                      </v:rect>
+                      <![endif]-->
+                              </center>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
                     <table id="heroCTA" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" class="mktoModule m_title" mktoname="Email Title with CTA" mktoAddByDefault="true">
                       <tbody>
                         <tr>
@@ -789,84 +842,7 @@ font-family: Arial, Helvetica, sans-serif !important;
                         </tr>
                       </tbody>
                     </table>
-                      <table id="hero" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" class="mktoModule m_hero" mktoname="Hero" mktoAddByDefault="false">
-                        <tbody>
-                          <tr>
-                            <td class="background" style="-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;-ms-text-size-adjust: 100%;padding-bottom: 0;padding-left: 0;background-repeat: no-repeat;background-position: ${heroImagePosition}; background:${heroBackgroundImage};background-color:${heroBackgroundColor};padding-top:
-  0;padding-right: 0;background-image:${heroBackgroundImage};border-collapse: collapse;" background="${heroBackgroundImage}" bgcolor="${heroBackgroundColor}" valign="top" width="600">
-                              <center>
-                                <!--[if gte mso 9]>
-                      <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:650px;height:636px">
-  					<v:fill type="frame" src="${heroBackgroundImage}" color="${heroBackgroundColor}" />
-  					<v:textbox style="mso-fit-shape-to-text:true" inset="0,0,0,0">
-  					<![endif]-->
-                                <table class="table600" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse; margin-top: 0; margin-right: auto; margin-bottom: 0; margin-left: auto;" align="center" border="0" cellpadding="0" cellspacing="0" width="600">
-                                  <tbody>
-                                    <tr>
-                                      <td style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;" height="50">&nbsp;</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;">
-                                        <table class="contents" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse; width: 100%;" align="center" border="0" cellpadding="0" cellspacing="0">
-                                          <tbody>
-                                            <tr>
-                                              <td class="primary-font title" style="hyphens: none;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;-ms-text-size-adjust: 100%;font-family:'Roboto', Arial, sans-serif; font-size: 36px; font-weight: 700;text-align: center;color: #ffffff;border-collapse: collapse;">
-                                                <div class="mktoText" mktoname="Main Title" id="mainTitle">
-                                                  NEW OFFERING
-                                                </div> </td>
-                                            </tr>
-                                            <tr>
-                                              <td style="-webkit-hyphens: none; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -ms-text-size-adjust: 100%; -moz-hyphens: none; hyphens: none; font-weight: bold; text-align: center; border-collapse: collapse;" height="25">&nbsp;</td>
-                                            </tr>
-                                            <tr>
-                                              <td class="secondary-font subtitle" style="hyphens: none;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;-ms-text-size-adjust: 100%;text-align: center;font-weight: 400;color: #ffffff;font-family:'Roboto', Arial, sans-serif;font-size: 18px;border-collapse: collapse;">
-                                                <div class="mktoText" mktoname="Subtitle" id="subtitle">
-                                                  Join today!
-                                                </div> </td>
-                                            </tr>
-                                            <tr>
-                                              <td style="-webkit-hyphens: none; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -ms-text-size-adjust: 100%; -moz-hyphens: none; hyphens: none; font-weight: bold; text-align: center; border-collapse: collapse;" height="25">&nbsp;</td>
-                                            </tr>
-                                            <tr>
-                                              <td class="overlaylogo" style="hyphens: none;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;-ms-text-size-adjust: 100%;font-weight: bold;text-align: center;color: #ffffff;font-size: 79px;font-family:'Roboto', Arial, sans-serif;border-collapse: collapse;">
-                                                <div>
-                                                  <a href="${heroLogoLink}"><img class="mktoImg" mktoname="Logo" id="overlayherologo" mktolockimgsize="true" src="http://na-sj24.marketo.com/rs/630-BEY-937/images/NewWorld_erp_Product_Suite_logo_WHITE.png" alt="${heroLogoAltText}" width="auto" height="60" style=" width: auto; height: 60px; -ms-interpolation-mode: bicubic; outline: none; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; text-decoration: none; border-top-width: 0; width: auto; height: 60px; max-width: 100%; line-height: 100%;"  /></a>
-                                                </div> </td>
-                                            </tr>
-                                            <tr>
-                                              <td style="-webkit-hyphens: none; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -ms-text-size-adjust: 100%; -moz-hyphens: none; hyphens: none; font-weight: bold; text-align: center; border-collapse: collapse;" height="30">&nbsp;</td>
-                                            </tr>
-                                            <tr>
-                                              <td class="cta" style="-webkit-hyphens: none; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -ms-text-size-adjust: 100%; -moz-hyphens: none; hyphens: none; font-weight: bold; text-align: center; border-collapse: collapse;">
-                                                <center>
-                                                  <table style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse; margin-top: 0; margin-right: auto; margin-bottom: 0; margin-left: auto;" align="center" border="0" cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                      <tr>
-                                                        <td style=" font-weight: 500; font-family:'Roboto', Arial, sans-serif; text-transform: uppercase; border-radius: 32px;-webkit-hyphens: none; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -ms-text-size-adjust: 100%; -moz-hyphens: none; hyphens: none; font-weight: 700; text-align: center; border-collapse: collapse;" align="center" bgcolor="${heroButtonBackgroundColor}">
-                                                          <a href="${heroLink}" target="_blank" class="primary-font button" style=" font-weight: 500; font-family:'Roboto', Arial, sans-serif; text-transform: uppercase; border-radius: 32px; -webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;border-left-color:${heroButtonBackgroundColor};border-bottom-color:${heroButtonBackgroundColor};color: #ffffff;padding-top: 12px;padding-right: 18px;padding-bottom: 12px;padding-left: 18px;
-                                                          border-top-width:1px;display:inline-block;border-bottom-width:1px;border-left-width:1px;border-top-style: solid;border-right-style: solid;border-bottom-style: solid;border-left-style: solid;border-top-color:${heroButtonBackgroundColor};border-right-color:${heroButtonBackgroundColor};border-right-width:1px;text-decoration: none;font-size:
-                                                          24px;background-color:${heroButtonBackgroundColor};">${heroLinkText}</a> </td>
-                                                      </tr>
-                                                    </tbody>
-                                                  </table>
-                                                </center> </td>
-                                            </tr>
-                                          </tbody>
-                                        </table> </td>
-                                    </tr>
-                                    <tr>
-                                      <td style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;" height="50">&nbsp;</td>
-                                    </tr>
-                                  </tbody>
-                                </table>
-                                <!--[if gte mso 9]>
-                      </v:textbox>
-                      </v:rect>
-                      <![endif]-->
-                              </center></td>
-                          </tr>
-                        </tbody>
-                      </table>
+
                     <table class="mktoModule m_free-image" id="free-image" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" mktoname="Hero Image" mktoAddByDefault="false">
                       <tbody>
                         <tr>
