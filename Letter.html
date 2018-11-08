@@ -1,549 +1,661 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" style="width: 100%;">
-  <head>
-    <!-- Marketo Variable Definitions -->
-    <!-- using Boolean to hide hex values/lock the colors, set false_value to white for previews -->
-    <meta class="mktoString" id="trackingToken" mktoname="Limus Tracking Token" default="{{my.LitmusTracking}}" mktomodulescope="false" />
-    <meta class="mktoBoolean" id="White" mktoname="White" default="true" false_value="#ffffff" true_value="#ffffff" false_value_name="Off" true_value_name="On" mktomodulescope="false" />
-    <meta class="mktoBoolean" id="SummerSky" mktoname="SummerSky" default="true" false_value="#ffffff" true_value="#2A9FD8" false_value_name="Off" true_value_name="On" mktomodulescope="false" />
-    <meta class="mktoBoolean" id="Blue" mktoname="Blue" false_value="#ffffff" true_value="#40528F" default="true" false_value_name="Off" true_value_name="On" mktomodulescope="false" />
-    <meta class="mktoBoolean" id="Green" mktoname="Green" false_value="#ffffff" true_value="#8F9B49" default="true" false_value_name="Off" true_value_name="On" mktomodulescope="false" />
-    <meta class="mktoBoolean" id="Orange" mktoname="Orange" false_value="#ffffff" true_value="#e2702e" default="true" false_value_name="Off" true_value_name="On" mktomodulescope="false" />
-    <meta class="mktoBoolean" id="LightGrey" mktoname="LightGrey" false_value="#ffffff" true_value="#EEEEEE" default="true" false_value_name="Off" true_value_name="On" mktomodulescope="false" />
-    <meta class="mktoBoolean" id="MediumGrey" mktoname="MediumGrey" false_value="#ffffff" true_value="#d3d3d3" default="true" false_value_name="Off" true_value_name="On" mktomodulescope="false" />
-    <meta class="mktoBoolean" id="DarkGrey" mktoname="DarkGrey" false_value="#ffffff" true_value="#808080" default="true" false_value_name="Off" true_value_name="On" mktomodulescope="false" />
-    <meta class="mktoBoolean" id="Black" mktoname="Black" false_value="#ffffff" true_value="#212121" default="true" false_value_name="Off" true_value_name="On" mktomodulescope="false" />
-    <!--Logo Marketo Variable Definitions -->
-    <meta class="mktoList" id="logoBackgroundColor" mktoname="Logo Background Color" default="${White}" values="${White}, ${Blue}, ${Green}" mktomodulescope="true" />
-    <meta class="mktoString" id="logoLink" mktoname="Logo Link" default="https://www.tylertech.com/" mktomodulescope="true" />
-    <meta class="mktoString" id="logoAltText" mktoname="Logo Alt Text" default="Tyler Technologies Logo" mktomodulescope="true" />
-    <!--CTAHero -->
-    <!--Show/Hide Rows -->
-    <meta class="mktoBoolean" id="showCTAHeadline" mktoname="Show Headline?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
-    <meta class="mktoBoolean" id="showCTAText" mktoname="Show Text?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
-    <meta class="mktoBoolean" id="showCTAButton" mktoname="Show Button?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
-    <meta class="mktoList" id="heroCTABackgroundColor" mktoname="Background Color" default="#40528F" values="${White}, ${Blue}, ${Green}, ${Black}" mktomodulescope="true" />
-    <!-- CTA Headline Marketo Variable Definitions -->
-    <meta class="mktoString" id="heroCTATitleText" mktoname="Heading Text" default="Integer posuere erat a ante venenatis dapibus." mktomodulescope="true" />
-    <meta class="mktoList" id="heroCTATitleFontColor" mktoname="Text and Button Color" default="#ffffff" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
-    <!--Headline Text Marketo Variable Definitions -->
-    <meta class="mktoString" id="heroCTAText" mktoname="Heading Text" default="Curabitur blandit tempus porttitor.
- Donec ullamcorper nulla non metus auctor fringilla.
- Donec sed odio dui." mktomodulescope="true" />
-    <!--Headline Button Marketo Variable Definitions -->
-    <meta class="mktoList" id="heroCTAButtonBackgroundColor" mktoname="Button Background Color" default="#ffffff" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${Orange}" mktomodulescope="true" />
-    <meta class="mktoList" id="heroCTABorderColor" mktoname="Button Border Color" default="#ffffff" values="${White}, ${SummerSky}, ${Blue}, ${Green},${Orange}" mktomodulescope="true" />
-    <meta class="mktoString" id="heroCTALink" mktoname="Button Link" default="http://mylink" mktomodulescope="true" />
-    <meta class="mktoString" id="heroCTALinkText" mktoname="Button Label" default="CALL TO ACTION" mktomodulescope="true" />
-    <!--Image Marketo Variable Definitions -->
-    <meta class="mktoString" id="freeImageLink" mktoname="Image Link" default="Add Me!" mktomodulescope="true" />
-    <meta class="mktoString" id="freeImageAltText" mktoname="Image Alt Text" default="Add Me!" mktomodulescope="true" />
-    <!-- Title/Headline Marketo Variable Definitions -->
-    <meta class="mktoString" id="titleText" mktoname="Heading Text" default="Tyler aquires two more technology companies!" mktomodulescope="true" />
-    <meta class="mktoList" id="titleAlignment" mktoname="Heading Alignment" default="center" values="left, right, center" mktomodulescope="true" />
-    <meta class="mktoList" id="titleFontSize" mktoname="Heading Text Size" default="34px" values="24px, 34px, 40px" mktomodulescope="true" />
-    <meta class="mktoList" id="titleFontColor" mktoname="Text Color" default="#212121" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
-    <meta class="mktoList" id="titleBorderColor" mktoname="Separator Border Color" default="${DarkGrey}" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
-    <meta class="mktoList" id="titleBorderColor2" mktoname="Separator Border Color" default="#cac9cf" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
-    <meta class="mktoBoolean" id="showSubtitle" mktoname="Show Subtitle?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
-    <meta class="mktoString" id="subTitleText" mktoname="Subheading Text" default="Sub features of this product" mktomodulescope="true" />
-    <meta class="mktoList" id="subTitleAlignment" mktoname="Subheading Alignment" default="center" values="left, right, center" mktomodulescope="true" />
-    <meta class="mktoList" id="subTitleFontColor" mktoname="Subheading Text Color" default="#212121" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
-    <meta class="mktoList" id="subtitleFontSize" mktoname="Subheading Text Size" default="26px" values="20px, 26px, 32px" mktomodulescope="true" />
-    <!--One Column Text Marketo Variable Definitions -->
-    <meta class="mktoList" id="freeTextBackgroundColor" mktoname="Background Color" default="${White}" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
-    <meta class="mktoString" id="freeText" mktoname="Free Text" default="It is recommended to use less than 400 characters in this section or three lines, followed by a button.
- Lorem ipsum dolor sit amet, consectetur adipisicing elit.
- Harum officiis dolorum, nulla, mollitia ducimus iure modi perferendis tenetur ea illum veniam aut sapiente deserunt repellendus.
- Excepturi illo numquam sint harum." mktomodulescope="true" />
-    <!--Button Marketo Variable Definitions -->
-    <meta class="mktoList" id="ctaBackgroundColor" mktoname="Background Color" default="${White}" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${Orange}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
-    <meta class="mktoList" id="ctaButtonBackgroundColor" mktoname="Button Background Color" default="#2A9FD8" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${Orange}" mktomodulescope="true" />
-    <meta class="mktoList" id="ctaBorderColor" mktoname="Button Border Color" default="#2A9FD8" values="${White}, ${SummerSky}, ${Blue}, ${Green},${Orange}" mktomodulescope="true" />
-    <meta class="mktoString" id="ctaLink" mktoname="Button Link" default="http://mylink" mktomodulescope="true" />
-    <meta class="mktoString" id="ctaLinkText" mktoname="Button Label" default="CALL TO ACTION" mktomodulescope="true" />
-    <!--Two Column Marketo Variable Definitions -->
-    <meta class="mktoBoolean" id="showButtons" mktoname="Show Buttons?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
-    <!--Two Column Left Article -->
-    <meta class="mktoString" id="twoArticlesLeftAltText" mktoname="Left Image Alt Text" default="Add Me!" mktomodulescope="true" />
-    <meta class="mktoString" id="twoArticlesLeftlink" mktoname="Left Image Link" default="Add Me!" mktomodulescope="true" />
-    <meta class="mktoString" id="leftArticleTitle" mktoname="Left Article Title" default="LOREM IPSUM DOLOR SIT AMET" mktomodulescope="true" />
-    <meta class="mktoString" id="leftArticleText" mktoname="Left Article Text" default="Gumbo beet greens corn soko endive gumbo gourd.
- shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
- Dandelion cucumber earthnut pea peanut soko zucchini." mktomodulescope="true" />
-    <meta class="mktoString" id="twoArticlesLink" mktoname="Left Button Link" default="http://mylink" mktomodulescope="true" />
-    <meta class="mktoString" id="twoArticlesLinkText" mktoname="Left Button Label" default="CALL TO ACTION" mktomodulescope="true" />
-    <!--Two Column Right Article -->
-    <meta class="mktoString" id="twoArticlesRightAltText" mktoname="Right Image Alt Text" default="Add Me!" mktomodulescope="true" />
-    <meta class="mktoString" id="twoArticlesRightLink" mktoname="Right Image Link" default="Add Me!" mktomodulescope="true" />
-    <meta class="mktoString" id="rightArticleTitle" mktoname="Right Article Title" default="LOREM IPSUM DOLOR SIT AMET" mktomodulescope="true" />
-    <meta class="mktoString" id="rightArticleText" mktoname="Right Article Text" default="Gumbo beet greens corn soko endive gumbo gourd.
- shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
- Dandelion cucumber earthnut pea peanut soko zucchini." mktomodulescope="true" />
-    <meta class="mktoString" id="twoArticlesLink2" mktoname="Right Button Link" default="http://mylink" mktomodulescope="true" />
-    <meta class="mktoString" id="twoArticlesLinkText2" mktoname="Right Button Label" default="CALL TO ACTION" mktomodulescope="true" />
-    <meta class="mktoList" id="twoArticlesBackgroundColor" mktoname="Background Color" default="${White}" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
-    <meta class="mktoList" id="twoArticlesButtonBackgroundColor" mktoname="Left Column Button Background Color" default="${SummerSky}" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${Orange}" mktomodulescope="true" />
-    <meta class="mktoList" id="twoArticlesBorderColor" mktoname="Left Column Button Border Color" default="#2A9FD8" values="${White}, ${SummerSky}, ${Blue}, ${Green},${Orange}" mktomodulescope="true" />
-    <meta class="mktoList" id="twoArticlesButtonBackgroundColor2" mktoname="Right Column Button Background Color" default="${SummerSky}" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${Orange}" mktomodulescope="true" />
-    <meta class="mktoList" id="twoArticlesBorderColor2" mktoname="Right Column Button Border Color" default="#2A9FD8" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${Orange}" mktomodulescope="true" />
-    <!-- Article Marketo Variable Definitions -->
-    <meta class="mktoString" id="articleAltText" mktoname="Image Alt Text" default="Add Me!" mktomodulescope="true" />
-    <meta class="mktoString" id="articleImgLink" mktoname="Image Link" default="Add Me!" mktomodulescope="true" />
-    <meta class="mktoBoolean" id="showHeadline" mktoname="Show Headline?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
-    <meta class="mktoString" id="articleTitleText" mktoname="Headline Text" default="LOREM IPSUM DOLOR SIT AMET" mktomodulescope="true" />
-    <meta class="mktoBoolean" id="showAuthor" mktoname="Show Subline?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
-    <meta class="mktoString" id="articleSubtitleText" mktoname="Subline Text" default="Subline:Add Me!" mktomodulescope="true" />
-    <meta class="mktoBoolean" id="showArtButton" mktoname="Show Button?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
-    <meta class="mktoString" id="articleText" mktoname="Body Text" default="Use less than 100 characters in this section or three lines.
- Remove the headline and subline, use 200 characters or 6 lines" mktomodulescope="true" />
-    <meta class="mktoString" id="articleLinkText" mktoname="Right Button Text" default="READ MORE" mktomodulescope="true" />
-    <meta class="mktoString" id="articleLink" mktoname="Right Button Link" default="http://mylink" mktomodulescope="true" />
-    <meta class="mktoList" id="articleBackgroundColor" mktoname="Module Background" default="${White}" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
-    <meta class="mktoList" id="articleButtonBackgroundColor" mktoname="Right Button Background Color" default="#2A9FD8" values="${White}, ${SummerSky}, ${Blue}, ${Green},${Orange}" mktomodulescope="true" />
-    <meta class="mktoList" id="articleBorderColor" mktoname="Right Button Border Color" default="${SummerSky}" values="#2A9FD8, ${SummerSky}, ${Blue}, ${Green},${Orange}" mktomodulescope="true" />
+    <head>
+      <!-- Marketo Variable Definitions -->
+      <!-- using Boolean to hide hex values/lock the colors, set false_value to white for previews -->
+      <meta class="mktoString" id="trackingToken" mktoname="Limus Tracking Token" default="{{my.LitmusTracking}}" mktomodulescope="false" />
+      <meta class="mktoBoolean" id="White" mktoName="White" default="true" false_value="#ffffff" true_value="#ffffff"  false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
+      <meta class="mktoBoolean" id="SummerSky" mktoName="SummerSky" default="true" false_value="#ffffff" true_value="#2A9FD8"  false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
+      <meta class="mktoBoolean" id="Blue" mktoName="Blue" false_value="#ffffff" true_value="#40528F" default="true" false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
+      <meta class="mktoBoolean" id="Green" mktoName="Green" false_value="#ffffff" true_value="#8F9B49" default="true" false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
+      <meta class="mktoBoolean" id="Orange" mktoName="Orange" false_value="#ffffff" true_value="#e2702e" default="true" false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
+      <meta class="mktoBoolean" id="LightGrey" mktoName="LightGrey" false_value="#ffffff" true_value="#EEEEEE" default="true" false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
+      <meta class="mktoBoolean" id="MediumGrey" mktoName="MediumGrey" false_value="#ffffff" true_value="#d3d3d3" default="true" false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
+      <meta class="mktoBoolean" id="DarkGrey" mktoName="DarkGrey" false_value="#ffffff" true_value="#808080" default="true" false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
+      <meta class="mktoBoolean" id="Black" mktoName="Black" false_value="#ffffff" true_value="#212121" default="true" false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
+      <meta class="mktoBoolean" id="BlueGradient" mktoName="BlueGradient" false_value="#ffffff" true_value="rgba(30,87,153,0.25) 0%,rgba(64,82,143,1)" default="true" false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
+      <meta class="mktoBoolean" id="GreenGradient" mktoName="GreenGradient" false_value="#ffffff" true_value="rgba(143,155,73,0.25) 0%,rgba(143,155,73,1)" default="true" false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
+      <meta class="mktoBoolean" id="BlackGradient" mktoName="BlackGradient" false_value="#ffffff" true_value="rgba(34,34,34,0.25) 0%,rgba(34,34,34,1)" default="true" false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
+      <meta class="mktoList" id="EmailBackgroundColor" mktoname="Marketo Unsubscribe Background Color" default="#f5f5f5;" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="false" />
+      <!-- Hero with Overlay Marketo Variable Definitions -->
+      <meta class="mktoImg" id="heroBackgroundImage" mktoname="Background Image" default="http://na-sj24.marketo.com/rs/630-BEY-937/images/Skyline-Australia-City-No-Fade.jpg" mktomodulescope="true" />
+      <meta class="mktolist" id="heroGradientColor" mktoname="Gradient Color" default="${BlueGradient}" values="${BlueGradient}, ${GreenGradient}, ${BlackGradient}" mktomodulescope="true" />
+      <meta class="mktolist" id="heroBackgroundColor" mktoname="CTA | Outlook Color" default="#40528F" values="${Blue}, ${Green}, ${Black}" mktomodulescope="true" />
+      <meta class="mktolist" id="heroImagePosition" mktoname="Image Position" default="top top" values="top top, center center" mktomodulescope="true" />
+      <meta class="mktoString" id="heroLogoLink" mktoname="Logo Link" default="https://www.tylertech.com/" mktomodulescope="true" />
+      <meta class="mktoString" id="heroLogoAltText" mktoname="Logo Alt Text" default="Tyler Technologies Logo" mktomodulescope="true" />
+      <meta class="mktoList" id="heroButtonBackgroundColor" mktoname="Hero Button Color" default="#ffffff" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${Orange}"  mktomodulescope="true" />
+      <meta class="mktolist" id="heroBorderColor" mktoname="Button Border Color" default="#e2702e" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${Orange}" mktomodulescope="true" />
+      <meta class="mktoString" id="heroLinkText" mktoname="Button Text" default="Call to action" mktomodulescope="true" />
+      <meta class="mktoString" id="heroLink" mktoname="Button Link" default="http://mylink" mktomodulescope="true" />
 
-    <!-- Signature Marketo Variable Definitions -->
-    <meta class="mktoBoolean" id="showSignatureLeft" mktoname="Show Left Signature" default="false" false_value="" true_value="none" false_value_name="Show" true_value_name="Hide" mktomodulescope="true" />
-    <meta class="mktoBoolean" id="showSignatureRight" mktoname="Show Right Signature" default="false" false_value="" true_value="none" false_value_name="Show" true_value_name="Hide" mktomodulescope="true" />
-    <!--Left Signature -->
-    <meta class="mktoBoolean" id="showLeftHeadshot" mktoname="Left Headshot or Ts" default="true" false_value="http://templates.marketo.net/shop1/testimonial1.png" true_value="http://na-sj24.marketo.com/rs/630-BEY-937/images/Talking-Ts-Signature-ONLY.png" false_value_name="Headshot" true_value_name="Talking Ts" mktomodulescope="true" />
-    <meta class="mktoString" id="signatureLeftName" mktoname="Left Sales Rep Name" default="Molly Marketer" mktomodulescope="true" />
-    <meta class="mktoString" id="signatureLeftTitleLine1" mktoname="Left Sales Rep Title" default="Director, Marketing" mktomodulescope="true" />
-    <meta class="mktoString" id="signatureLeftEmail" mktoname="Left Email Address" default="First.Last@tylertech.com" mktomodulescope="true" />
-    <meta class="mktoString" id="signatureLeftPhone" mktoname="Left Phone Number" default="555-555-5555 ex 55-5555" mktomodulescope="true" />
-    <meta class="mktoBoolean" id="showSignatureLeftTwitter" mktoname="Show Left Twitter Icon" default="true" false_value="none" true_value="inline-block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
-    <meta class="mktoString" id="signatureLeftTwitterLink" mktoname="Left Sales Rep Twitter Link" default="http://www.twitter.com/tylertech" mktomodulescope="true" />
-    <meta class="mktoBoolean" id="showSignatureLeftLinkedin" mktoname="Show Left Linkedin Icon" default="true" false_value="none" true_value="inline-block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
-    <meta class="mktoString" id="signatureLeftLinkedinLink" mktoname="Left Sales Rep Linkedin Link" default="http://www.linkedin.com/company/tyler-technologies" mktomodulescope="true" />
-    <!--Right Signature -->
-    <meta class="mktoBoolean" id="showRightHeadshot" mktoname="Right Headshot or Ts" default="false" false_value="http://templates.marketo.net/shop1/testimonial2.png" true_value="http://na-sj24.marketo.com/rs/630-BEY-937/images/Talking-Ts-Signature-ONLY.png" false_value_name="Headshot" true_value_name="Talking Ts" mktomodulescope="true" />
-    <meta class="mktoString" id="signatureRightName" mktoname="Right Sales Rep Name" default="John Salesman" mktomodulescope="true" />
-    <meta class="mktoString" id="signatureRightTitleLine1" mktoname="Right Sales Rep Title" default="Chief Sales Rep" mktomodulescope="true" />
-    <meta class="mktoString" id="signatureRightEmail" mktoname="Right Email Address" default="First.Last@tylertech.com" mktomodulescope="true" />
-    <meta class="mktoString" id="signatureRightPhone" mktoname="Right Phone Number" default="555-555-5555 ex 55-5555" mktomodulescope="true" />
-    <meta class="mktoBoolean" id="showSignatureRightTwitter" mktoname="Show Right Twitter Icon" default="true" false_value="none" true_value="inline-block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
-    <meta class="mktoString" id="signatureRightTwitterLink" mktoname="Right Sales Rep Twitter Link" default="http://www.twitter.com/tylertech" mktomodulescope="true" />
-    <meta class="mktoBoolean" id="showSignatureRightLinkedin" mktoname="Show Right Linkedin Icon" default="true" false_value="none" true_value="inline-block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
-    <meta class="mktoString" id="signatureRightLinkedinLink" mktoname="Right Sales Rep Linkedin Link" default="http://www.linkedin.com/company/tyler-technologies" mktomodulescope="true" />
+      <!--Logo Marketo Variable Definitions -->
+      <meta class="mktoList" id="logoBackgroundColor" mktoname="Logo Background Color" default="${White}" values="${White}, ${Blue}, ${Green}" mktomodulescope="true" />
+      <meta class="mktoString" id="logoLink" mktoname="Logo Link" default="https://www.tylertech.com/" mktomodulescope="true" />
+      <meta class="mktoString" id="logoAltText" mktoname="Logo Alt Text" default="Tyler Technologies Logo" mktomodulescope="true" />
+      <!--CTAHero -->
+        <!--Show/Hide Rows -->
+      <meta class="mktoBoolean" id="showCTAHeadline" mktoname="Show Headline?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
+      <meta class="mktoBoolean" id="showCTAText" mktoname="Show Text?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
+      <meta class="mktoBoolean" id="showCTAButton" mktoname="Show Button?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
+      <meta class="mktoList" id="heroCTABackgroundColor" mktoname="Background Color" default="#40528F" values="${White}, ${Blue}, ${Green}, ${Black}" mktomodulescope="true" />
+
+        <!-- CTA Headline Marketo Variable Definitions -->
+      <meta class="mktoString" id="heroCTATitleText" mktoname="Heading Text" default="Integer posuere erat a ante venenatis dapibus." mktomodulescope="true" />
+      <meta class="mktoList" id="heroCTATitleFontColor" mktoname="Text and Button Color" default="#ffffff" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
+
+        <!--Headline Text Marketo Variable Definitions -->
+      <meta class="mktoString" id="heroCTAText" mktoname="Heading Text" default="Curabitur blandit tempus porttitor. Donec ullamcorper nulla non metus auctor fringilla. Donec sed odio dui." mktomodulescope="true" />
+
+        <!--Headline Button Marketo Variable Definitions -->
+      <meta class="mktoList" id="heroCTAButtonBackgroundColor" mktoname="Button Background Color" default="#ffffff" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${Orange}" mktomodulescope="true" />
+      <meta class="mktoList" id="heroCTABorderColor" mktoname="Button Border Color" default="#ffffff" values="${White}, ${SummerSky}, ${Blue}, ${Green},${Orange}" mktomodulescope="true" />
+      <meta class="mktoString" id="heroCTALink" mktoname="Button Link" default="http://mylink" mktomodulescope="true" />
+      <meta class="mktoString" id="heroCTALinkText" mktoname="Button Label" default="CALL TO ACTION" mktomodulescope="true" />
+      <!--Spacer Marketo Variable Definitions -->
+      <meta class="mktoColor" id="spacerBackgroundColor" mktoname="Background Color" default="#ffffff" mktomodulescope="true" />
+      <meta class="mktoNumber" id="spacerSpacer" mktoname="Height" default="5" min="1" max="300" units="px" step="1" mktomodulescope="true" />
+      <!--Image Marketo Variable Definitions -->
+      <meta class="mktoString" id="freeImageLink" mktoname="Image Link" default="Add Me!" mktomodulescope="true" />
+      <meta class="mktoString" id="freeImageAltText" mktoname="Image Alt Text" default="Add Me!" mktomodulescope="true" />
+      <!-- Title/Headline Marketo Variable Definitions -->
+      <meta class="mktoString" id="titleText" mktoname="Heading Text" default="Main features of this product" mktomodulescope="true" />
+      <meta class="mktoList" id="titleAlignment" mktoname="Heading Alignment" default="center" values="left, right, center" mktomodulescope="true" />
+      <meta class="mktoList" id="titleFontSize" mktoname="Heading Text Size" default="34px" values="24px, 34px, 40px" mktomodulescope="true" />
+      <meta class="mktoList" id="titleFontColor" mktoname="Text Color" default="${Black}" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
+      <meta class="mktoList" id="titleBorderColor" mktoname="Separator Border Color" default="${DarkGrey}"  values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
+      <meta class="mktoList" id="titleBorderColor2" mktoname="Separator Border Color" default="#cac9cf" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
+      <meta class="mktoBoolean" id="showSubtitle" mktoname="Show Subtitle?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
+      <meta class="mktoString" id="subTitleText" mktoname="Subheading Text" default="Sub features of this product" mktomodulescope="true" />
+      <meta class="mktoList" id="subTitleAlignment" mktoname="Subheading Alignment" default="center" values="left, right, center" mktomodulescope="true" />
+      <meta class="mktoList" id="subTitleFontColor" mktoname="Subheading Text Color" default="${Black}" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
+      <meta class="mktoList" id="subtitleFontSize" mktoname="Subheading Text Size" default="26px" values="20px, 26px, 32px" mktomodulescope="true" />
+      <!--One Column Text Marketo Variable Definitions -->
+      <meta class="mktoList" id="freeTextBackgroundColor" mktoname="Background Color" default="${White}" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
+      <meta class="mktoString" id="freeText" mktoname="Free Text" default="It is recommended to use less than 400 characters in this section or three lines, followed by a button. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum officiis dolorum, nulla, mollitia ducimus iure modi perferendis tenetur ea illum veniam aut sapiente deserunt repellendus. Excepturi illo numquam sint harum." mktomodulescope="true" />
+
+      <!--Button Marketo Variable Definitions -->
+      <meta class="mktoList" id="ctaBackgroundColor" mktoname="Background Color" default="${White}" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${Orange}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
+      <meta class="mktoList" id="ctaButtonBackgroundColor" mktoname="Button Background Color" default="#2A9FD8" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${Orange}" mktomodulescope="true" />
+      <meta class="mktoList" id="ctaBorderColor" mktoname="Button Border Color" default="#2A9FD8" values="${White}, ${SummerSky}, ${Blue}, ${Green},${Orange}" mktomodulescope="true" />
+      <meta class="mktoString" id="ctaLink" mktoname="Button Link" default="http://mylink" mktomodulescope="true" />
+      <meta class="mktoString" id="ctaLinkText" mktoname="Button Label" default="CALL TO ACTION" mktomodulescope="true" />
+      <!--Two Column Marketo Variable Definitions -->
+      <meta class="mktoBoolean" id="showButtons" mktoname="Show Buttons?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
+        <!--Two Column Left Article -->
+      <meta class="mktoString" id="twoArticlesLeftAltText" mktoname="Left Image Alt Text" default="Add Me!" mktomodulescope="true" />
+      <meta class="mktoString" id="twoArticlesLeftlink" mktoname="Left Image Link" default="Add Me!" mktomodulescope="true" />
+      <meta class="mktoString" id="leftArticleTitle" mktoname="Left Article Title" default="LOREM IPSUM DOLOR SIT AMET" mktomodulescope="true" />
+      <meta class="mktoString" id="leftArticleText" mktoname="Left Article Text" default="Gumbo beet greens corn soko endive gumbo gourd. shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini." mktomodulescope="true" />
+      <meta class="mktoString" id="twoArticlesLink" mktoname="Left Button Link" default="http://mylink" mktomodulescope="true" />
+      <meta class="mktoString" id="twoArticlesLinkText" mktoname="Left Button Label" default="CALL TO ACTION" mktomodulescope="true" />
+        <!--Two Column Right Article -->
+      <meta class="mktoString" id="twoArticlesRightAltText" mktoname="Right Image Alt Text" default="Add Me!" mktomodulescope="true" />
+      <meta class="mktoString" id="twoArticlesRightLink" mktoname="Right Image Link" default="Add Me!" mktomodulescope="true" />
+      <meta class="mktoString" id="rightArticleTitle" mktoname="Right Article Title" default="LOREM IPSUM DOLOR SIT AMET" mktomodulescope="true" />
+      <meta class="mktoString" id="rightArticleText" mktoname="Right Article Text" default="Gumbo beet greens corn soko endive gumbo gourd. shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini." mktomodulescope="true" />
+      <meta class="mktoString" id="twoArticlesLink2" mktoname="Right Button Link" default="http://mylink" mktomodulescope="true" />
+      <meta class="mktoString" id="twoArticlesLinkText2" mktoname="Right Button Label" default="CALL TO ACTION" mktomodulescope="true" />
+      <meta class="mktoList" id="twoArticlesBackgroundColor" mktoname="Background Color" default="${White}" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
+      <meta class="mktoList" id="twoArticlesButtonBackgroundColor" mktoname="Left Column Button Background Color" default="${SummerSky}" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${Orange}" mktomodulescope="true" />
+      <meta class="mktoList" id="twoArticlesBorderColor" mktoname="Left Column Button Border Color" default="#2A9FD8" values="${White}, ${SummerSky}, ${Blue}, ${Green},${Orange}" mktomodulescope="true" />
+      <meta class="mktoList" id="twoArticlesButtonBackgroundColor2" mktoname="Right Column Button Background Color" default="${SummerSky}" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${Orange}" mktomodulescope="true" />
+      <meta class="mktoList" id="twoArticlesBorderColor2" mktoname="Right Column Button Border Color" default="#2A9FD8" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${Orange}" mktomodulescope="true" />
 
 
-    <!-- Features Marketo Variable Definitions -->
-    <meta class="mktoList" id="featuresBackgroundColor" mktoname="Module Background" default="${MediumGrey}" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
-    <!-- Feature Left Marketo Variable Definitions -->
-    <meta class="mktoString" id="feature1ImgLink" mktoname="Feature One Img Link" default="Add me!" mktomodulescope="true" />
-    <meta class="mktoString" id="feature1ImgAlt" mktoname="Feature One Img Alt Text" default="Add me!" mktomodulescope="true" />
-    <meta class="mktoString" id="feature1Title" mktoname="Feature One Title" default="Feature One short please" mktomodulescope="true" />
-    <meta class="mktoString" id="feature1Text" mktoname="Feature One Text" default="Use less than 100 characters in this section or  four lines.
- " mktomodulescope="true" />
-    <!-- Feature Center Marketo Variable Definitions -->
-    <meta class="mktoString" id="feature2ImgLink" mktoname="Feature Two Img Link" default="Add me!" mktomodulescope="true" />
-    <meta class="mktoString" id="feature2ImgAlt" mktoname="Feature Two Img Alt Text" default="Add me!" mktomodulescope="true" />
-    <meta class="mktoString" id="feature2Title" mktoname="Feature Two Title" default="Feature Two short please" mktomodulescope="true" />
-    <meta class="mktoString" id="feature2Text" mktoname="Feature Two Text" default="Use less than 100 characters in this section or  four lines.
- " mktomodulescope="true" />
-    <!-- Feature Right Marketo Variable Definitions -->
-    <meta class="mktoString" id="feature3ImgLink" mktoname="Feature Three Img Link" default="Add me!" mktomodulescope="true" />
-    <meta class="mktoString" id="feature3ImgAlt" mktoname="Feature Three Img Alt Text" default="Add me!" mktomodulescope="true" />
-    <meta class="mktoString" id="feature3Title" mktoname="Feature Three Title" default="Feature Three short please" mktomodulescope="true" />
-    <meta class="mktoString" id="feature3Text" mktoname="Feature Three Text" default="Use less than 100 characters in this section or  four lines.
- " mktomodulescope="true" />
-    <!-- logos Marketo Variable Definitions -->
-    <meta class="mktoList" id="logosBackgroundColor" mktoname="Logo Module Background" default="#ffffff" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}" mktomodulescope="true" />
-    <meta class="mktoBoolean" id="showLogoText" mktoname="Show Logo Text?" false_value="none" true_value="inline-block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
-    <meta class="mktoBoolean" id="showLeftLogo" mktoname="Show Left Logo?" default="true" false_value="none" true_value="inline-block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
-    <meta class="mktoBoolean" id="showCenterLogo" mktoname="Show Center Logo?" default="true" false_value="none" true_value="inline-block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
-    <meta class="mktoBoolean" id="showRightLogo" mktoname="Show Right Logo?" default="true" false_value="none" true_value="inline-block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
-    <!-- logo Left Marketo Variable Definitions -->
-    <meta class="mktoString" id="logoLeftImgLink" mktoname="Left Logo Img Link" default="Add me!" mktomodulescope="true" />
-    <meta class="mktoString" id="logoLeftImgAlt" mktoname="Left Logo Img Alt Text" default="Add me!" mktomodulescope="true" />
-    <meta class="mktoString" id="logoLeftText" mktoname="Left Logo Text" default="Use less than 100 characters in this section or  four lines.
- " mktomodulescope="true" />
-    <!-- Logo Center Marketo Variable Definitions -->
-    <meta class="mktoString" id="logoCenterImgLink" mktoname="Center Logo Img Link" default="Add me!" mktomodulescope="true" />
-    <meta class="mktoString" id="logoCenterImgAlt" mktoname="Center Logo Img Alt Text" default="Add me!" mktomodulescope="true" />
-    <meta class="mktoString" id="logoCenterText" mktoname="Center Logo Text" default="Use less than 100 characters in this section or  four lines.
- " mktomodulescope="true" />
-    <!-- Logo Right Marketo Variable Definitions -->
-    <meta class="mktoString" id="logoRightImgLink" mktoname="Right Logo Img Link" default="Add me!" mktomodulescope="true" />
-    <meta class="mktoString" id="logoRightImgAlt" mktoname="Right Logo Img Alt Text" default="Add me!" mktomodulescope="true" />
-    <meta class="mktoString" id="logoRightText" mktoname="Right Logo Text" default="Use less than 100 characters in this section or  four lines.
- " mktomodulescope="true" />
-    <!-- Social Footer Marketo Variable Definitions -->
-    <meta class="mktoList" id="contactsBackgroundColor" mktoname="Social Module Background" default="#808080" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
-    <meta class="mktoBoolean" id="showFooterLogo" mktoname="Show Footer Logo?" default="true" false_value="none" true_value="inline-block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
-    <meta class="mktoString" id="footerLogoLink" mktoname="Footer Logo Link" default="https://www.tylertech.com/" mktomodulescope="true" />
-    <meta class="mktoString" id="footerLogoAltText" mktoname="Footer Logo Alt Text" default="Tyler Technologies Logo" mktomodulescope="true" />
-    <meta class="mktoBoolean" id="showSocial" mktoname="Show Social Icons?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
-    <meta class="mktoString" id="contactsLink" mktoname="Community Icon Link" default="https://tylercommunity.tylertech.com/" mktomodulescope="true" />
-    <meta class="mktoString" id="contactsLink2" mktoname="Twitter Icon Link" default="http://www.twitter.com/tylertech" mktomodulescope="true" />
-    <meta class="mktoString" id="contactsLink3" mktoname="Facebook Icon Link" default="http://facebook.com/tylertech" mktomodulescope="true" />
-    <meta class="mktoString" id="contactsLink4" mktoname="Linkedin Icon Link" default="http://www.linkedin.com/company/tyler-technologies" mktomodulescope="true" />
-    <meta class="mktoString" id="contactsLink5" mktoname="Youtube Icon Link" default="https://www.youtube.com/user/TylerTechnologies" mktomodulescope="true" />
-    <meta class="mktoString" id="contactsLink6" mktoname="Instagram Icon Link" default="https://www.instagram.com/tylertechnologies" mktomodulescope="true" />
-    <!-- Other Meta Tags -->
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-    <meta name="robots" content="noindex,nofollow" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet" type="text/css" />
-    <!--[if mso]>
-<style type='text/css'>
-.primary-font {
-font-family: Arial, Helvetica, sans-serif !important;
-}
-</style>
-<![endif]-->
-    <!--[if mso]>
-<style type='text/css'>
-.secondary-font {
-font-family: Arial, Helvetica, sans-serif !important;
-}
-</style>
-<![endif]-->
-    <style>
-      .mktoText table, .mktoText span, .mktoText img, .mktoText div {
-        display: none !important;
+      <!-- Article Marketo Variable Definitions -->
+      <meta class="mktoString" id="articleAltText" mktoname="Image Alt Text" default="Add Me!" mktomodulescope="true" />
+      <meta class="mktoString" id="articleImgLink" mktoname="Image Link" default="Add Me!" mktomodulescope="true" />
+      <meta class="mktoBoolean" id="showHeadline" mktoname="Show Headline?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
+      <meta class="mktoString" id="articleTitleText" mktoname="Headline Text" default="LOREM IPSUM DOLOR SIT AMET" mktomodulescope="true" />
+      <meta class="mktoBoolean" id="showAuthor" mktoname="Show Subline?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
+      <meta class="mktoString" id="articleSubtitleText" mktoname="Subline Text" default="Subline:Add Me!" mktomodulescope="true" />
+      <meta class="mktoBoolean" id="showArtButton" mktoname="Show Button?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
+      <meta class="mktoString" id="articleText" mktoname="Body Text" default="Use less than 100 characters in this section or three lines. Remove the headline and subline, use 200 characters or 6 lines" mktomodulescope="true" />
+      <meta class="mktoString" id="articleLinkText" mktoname="Right Button Text" default="READ MORE" mktomodulescope="true" />
+      <meta class="mktoString" id="articleLink" mktoname="Right Button Link" default="http://mylink" mktomodulescope="true" />
+      <meta class="mktoList" id="articleBackgroundColor" mktoname="Module Background" default="${White}" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
+      <meta class="mktoList" id="articleButtonBackgroundColor" mktoname="Right Button Background Color" default="#2A9FD8" values="${White}, ${SummerSky}, ${Blue}, ${Green},${Orange}" mktomodulescope="true" />
+      <meta class="mktoList" id="articleBorderColor" mktoname="Right Button Border Color" default="${SummerSky}" values="#2A9FD8, ${SummerSky}, ${Blue}, ${Green},${Orange}" mktomodulescope="true" />
+
+      <!-- Promo Footer Marketo Variable Definitions  -->
+      <meta class="mktoString" id="promoAltText" mktoname="Logo Alt Text" default="Add Me!" mktomodulescope="true" />
+      <meta class="mktoString" id="promoImgLink" mktoname="Logo Link" default="Add Me!" mktomodulescope="true" />
+      <meta class="mktoBoolean" id="showPromoHeadline" mktoname="Show Promo Headline?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
+      <meta class="mktoString" id="promoTitleText" mktoname="Promo Title Text" default="LOREM IPSUM DOLOR SIT AMET" mktomodulescope="true" />
+      <meta class="mktoBoolean" id="showPromoSubTitle" mktoname="Show Promo   Subline?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
+      <meta class="mktoString" id="promoSubtitleText" mktoname="Promo Subline Text" default="Subline:Add Me!" mktomodulescope="true" />
+      <meta class="mktoString" id="promoText" mktoname="Promo Body Text" default="Use less than 100 characters in this section or three lines. Remove the headline and subline, use 200 characters or 6 lines" mktomodulescope="true" />
+      <!-- Promo Content Marketo Variable Definitions  -->
+      <meta class="mktoString" id="promoContentAltText" mktoname="Logo Alt Text" default="Add Me!" mktomodulescope="true" />
+      <meta class="mktoString" id="promoContentImgLink" mktoname="Logo Link" default="Add Me!" mktomodulescope="true" />
+      <meta class="mktoBoolean" id="showContentPromoHeadline" mktoname="Show Promo Headline?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
+      <meta class="mktoString" id="promoContentTitleText" mktoname="Promo Title Text" default="LOREM IPSUM DOLOR SIT AMET" mktomodulescope="true" />
+      <meta class="mktoBoolean" id="showPromoContentSubTitle" mktoname="Show Promo   Subline?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
+      <meta class="mktoString" id="promoContentSubtitleText" mktoname="Promo Subline Text" default="Subline:Add Me!" mktomodulescope="true" />
+      <meta class="mktoString" id="promoContentText" mktoname="Promo Body Text" default="Use less than 100 characters in this section or three lines. Remove the headline and subline, use 200 characters or 6 lines" mktomodulescope="true" />
+      <meta class="mktoList" id="promoContentBackgroundColor" mktoname="Module Background" default="${White}" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
+      <!-- Signature Marketo Variable Definitions -->
+      <meta class="mktoBoolean" id="showSignatureLeft" mktoname="Show Left Signature" default="false" false_value="" true_value="none" false_value_name="Show" true_value_name="Hide" mktomodulescope="true" />
+      <meta class="mktoBoolean" id="showSignatureRight" mktoname="Show Right Signature" default="false" false_value="" true_value="none" false_value_name="Show" true_value_name="Hide" mktomodulescope="true" />
+      <!--Left Signature -->
+      <meta class="mktoBoolean" id="showLeftHeadshot" mktoname="Left Headshot or Ts" default="true" false_value="http://templates.marketo.net/shop1/testimonial1.png" true_value="http://na-sj24.marketo.com/rs/630-BEY-937/images/Talking-Ts-Signature-ONLY.png" false_value_name="Headshot" true_value_name="Talking Ts" mktomodulescope="true" />
+      <meta class="mktoString" id="signatureLeftName" mktoname="Left Sales Rep Name" default="Molly Marketer" mktomodulescope="true" />
+      <meta class="mktoString" id="signatureLeftTitleLine1" mktoname="Left Sales Rep Title" default="Director, Marketing" mktomodulescope="true" />
+      <meta class="mktoString" id="signatureLeftEmail" mktoname="Left Email Address" default="First.Last@tylertech.com" mktomodulescope="true" />
+      <meta class="mktoString" id="signatureLeftPhone" mktoname="Left Phone Number" default="555-555-5555 ex 55-5555" mktomodulescope="true" />
+      <meta class="mktoBoolean" id="showSignatureLeftTwitter" mktoname="Show Left Twitter Icon" default="true" false_value="none" true_value="inline-block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
+      <meta class="mktoString" id="signatureLeftTwitterLink" mktoname="Left Sales Rep Twitter Link" default="http://www.twitter.com/tylertech" mktomodulescope="true" />
+      <meta class="mktoBoolean" id="showSignatureLeftLinkedin" mktoname="Show Left Linkedin Icon" default="true" false_value="none" true_value="inline-block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
+      <meta class="mktoString" id="signatureLeftLinkedinLink" mktoname="Left Sales Rep Linkedin Link" default="http://www.linkedin.com/company/tyler-technologies" mktomodulescope="true" />
+      <!--Right Signature -->
+      <meta class="mktoBoolean" id="showRightHeadshot" mktoname="Right Headshot or Ts" default="false" false_value="http://templates.marketo.net/shop1/testimonial2.png" true_value="http://na-sj24.marketo.com/rs/630-BEY-937/images/Talking-Ts-Signature-ONLY.png" false_value_name="Headshot" true_value_name="Talking Ts" mktomodulescope="true" />
+      <meta class="mktoString" id="signatureRightName" mktoname="Right Sales Rep Name" default="John Salesman" mktomodulescope="true" />
+      <meta class="mktoString" id="signatureRightTitleLine1" mktoname="Right Sales Rep Title" default="Chief Sales Rep" mktomodulescope="true" />
+      <meta class="mktoString" id="signatureRightEmail" mktoname="Right Email Address" default="First.Last@tylertech.com" mktomodulescope="true" />
+      <meta class="mktoString" id="signatureRightPhone" mktoname="Right Phone Number" default="555-555-5555 ex 55-5555" mktomodulescope="true" />
+      <meta class="mktoBoolean" id="showSignatureRightTwitter" mktoname="Show Right Twitter Icon" default="true" false_value="none" true_value="inline-block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
+      <meta class="mktoString" id="signatureRightTwitterLink" mktoname="Right Sales Rep Twitter Link" default="http://www.twitter.com/tylertech" mktomodulescope="true" />
+      <meta class="mktoBoolean" id="showSignatureRightLinkedin" mktoname="Show Right Linkedin Icon" default="true" false_value="none" true_value="inline-block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
+      <meta class="mktoString" id="signatureRightLinkedinLink" mktoname="Right Sales Rep Linkedin Link" default="http://www.linkedin.com/company/tyler-technologies" mktomodulescope="true" />
+
+
+      <!-- Features Marketo Variable Definitions -->
+      <meta class="mktoList" id="featuresBackgroundColor" mktoname="Module Background" default="${MediumGrey}" values="${LightGrey}, ${MediumGrey}, ${DarkGrey}" mktomodulescope="true" />
+      <!-- Feature Left Marketo Variable Definitions -->
+      <meta class="mktoString" id="feature1ImgAlt" mktoname="Feature One Img Alt Text" default="Add me!" mktomodulescope="true" />
+      <meta class="mktoString" id="feature1Title" mktoname="Feature One Title" default="Feature One short please" mktomodulescope="true" />
+      <meta class="mktoString" id="feature1Text" mktoname="Feature One Link Text" default="Contact" mktomodulescope="true" />
+      <meta class="mktoString" id="feature1Link" mktoname="Feature One Link" default="Add me!" mktomodulescope="true" />
+      <!-- Feature Center Marketo Variable Definitions -->
+      <meta class="mktoString" id="feature2ImgAlt" mktoname="Feature Two Img Alt Text" default="Add me!" mktomodulescope="true" />
+      <meta class="mktoString" id="feature2Title" mktoname="Feature Two Title" default="Feature Two short please" mktomodulescope="true" />
+      <meta class="mktoString" id="feature2Text" mktoname="Feature Two Text" default="View Winners " mktomodulescope="true" />
+      <meta class="mktoString" id="feature2Link" mktoname="Feature Two Link" default="Add me!" mktomodulescope="true" />
+      <!-- Feature Right Marketo Variable Definitions -->
+      <meta class="mktoString" id="feature3ImgAlt" mktoname="Feature Three Img Alt Text" default="Add me!" mktomodulescope="true" />
+      <meta class="mktoString" id="feature3Title" mktoname="Feature Three Title" default="Feature Three short please" mktomodulescope="true" />
+      <meta class="mktoString" id="feature3Text" mktoname="Feature Three Text" default="Submit now " mktomodulescope="true" />
+      <meta class="mktoString" id="feature3Link" mktoname="Feature Three Link" default="Add me!" mktomodulescope="true" />
+
+      <!-- logos Marketo Variable Definitions -->
+      <meta class="mktoList" id="logosBackgroundColor" mktoname="Logo Module Background" default="#ffffff" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}" mktomodulescope="true" />
+      <meta class="mktoBoolean" id="showLogoText" mktoname="Show Logo Text?" false_value="none" true_value="inline-block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
+      <meta class="mktoBoolean" id="showLeftLogo" mktoname="Show Left Logo?" default="true" false_value="none" true_value="inline-block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
+      <meta class="mktoBoolean" id="showCenterLogo" mktoname="Show Center Logo?" default="true" false_value="none" true_value="inline-block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
+      <meta class="mktoBoolean" id="showRightLogo" mktoname="Show Right Logo?" default="true" false_value="none" true_value="inline-block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
+      <!-- logo Left Marketo Variable Definitions -->
+      <meta class="mktoString" id="logoLeftImgLink" mktoname="Left Logo Img Link" default="Add me!" mktomodulescope="true" />
+      <meta class="mktoString" id="logoLeftImgAlt" mktoname="Left Logo Img Alt Text" default="Add me!" mktomodulescope="true" />
+      <meta class="mktoString" id="logoLeftText" mktoname="Left Logo Text" default="Use less than 100 characters in this section or  four lines. " mktomodulescope="true" />
+
+      <!-- Logo Center Marketo Variable Definitions -->
+      <meta class="mktoString" id="logoCenterImgLink" mktoname="Center Logo Img Link" default="Add me!" mktomodulescope="true" />
+      <meta class="mktoString" id="logoCenterImgAlt" mktoname="Center Logo Img Alt Text" default="Add me!" mktomodulescope="true" />
+      <meta class="mktoString" id="logoCenterText" mktoname="Center Logo Text" default="Use less than 100 characters in this section or  four lines. " mktomodulescope="true" />
+
+      <!-- Logo Right Marketo Variable Definitions -->
+      <meta class="mktoString" id="logoRightImgLink" mktoname="Right Logo Img Link" default="Add me!" mktomodulescope="true" />
+      <meta class="mktoString" id="logoRightImgAlt" mktoname="Right Logo Img Alt Text" default="Add me!" mktomodulescope="true" />
+      <meta class="mktoString" id="logoRightText" mktoname="Right Logo Text" default="Use less than 100 characters in this section or  four lines. " mktomodulescope="true" />
+
+      <!-- Social Footer Marketo Variable Definitions -->
+      <meta class="mktoList" id="contactsBackgroundColor" mktoname="Social Module Background" default="#808080" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
+      <meta class="mktoBoolean" id="showFooterLogo" mktoname="Show Footer Logo?" default="true" false_value="none" true_value="inline-block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
+      <meta class="mktoString" id="footerLogoLink" mktoname="Footer Logo Link" default="https://www.tylertech.com/" mktomodulescope="true" />
+      <meta class="mktoString" id="footerLogoAltText" mktoname="Footer Logo Alt Text" default="Tyler Technologies Logo" mktomodulescope="true" />
+      <meta class="mktoBoolean" id="showSocial" mktoname="Show Social Icons?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
+      <meta class="mktoString" id="contactsLink" mktoname="Community Icon Link" default="https://tylercommunity.tylertech.com/" mktomodulescope="true" />
+      <meta class="mktoString" id="contactsLink2" mktoname="Twitter Icon Link" default="http://www.twitter.com/tylertech" mktomodulescope="true" />
+      <meta class="mktoString" id="contactsLink3" mktoname="Facebook Icon Link" default="http://facebook.com/tylertech" mktomodulescope="true" />
+      <meta class="mktoString" id="contactsLink4" mktoname="Linkedin Icon Link" default="http://www.linkedin.com/company/tyler-technologies" mktomodulescope="true" />
+      <meta class="mktoString" id="contactsLink5" mktoname="Youtube Icon Link" default="https://www.youtube.com/user/TylerTechnologies" mktomodulescope="true" />
+      <meta class="mktoString" id="contactsLink6" mktoname="Instagram Icon Link" default="https://www.instagram.com/tylertechnologies" mktomodulescope="true" />
+
+
+      <!-- Other Meta Tags -->
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+      <meta name="robots" content="noindex,nofollow" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet" type="text/css" />
+      <!--[if mso]>
+  <style type='text/css'>
+  .primary-font {
+  font-family: Arial, Helvetica, sans-serif !important;
+  }
+  </style>
+  <![endif]-->
+      <!--[if mso]>
+  <style type='text/css'>
+  .secondary-font {
+  font-family: Arial, Helvetica, sans-serif !important;
+  }
+  </style>
+  <![endif]-->
+      <style>
+        .mktoText h1, .mktoText h2, .mktoText h3, .mktoText h4, .mktoText h5 {
+          font-weight: 500 !important;
+        }
+        .mktoText h1 {
+          font-size: 32px !important;
+        }
+        .mktoText h2 {
+          font-size: 28px !important;
+        }
+        .mktoText h3 {
+          font-size: 24px !important;
+        }
+        .mktoText h4 {
+          font-size: 18px !important;
+        }
+        .mktoText h5 {
+          font-size: 16px !important;
+        }
+        a:link {
+          text-decoration: none;
+        }
+
+        a:visited {
+          text-decoration: none;
+        }
+
+        a:hover {
+          text-decoration: underline;
+        }
+        .globalmkFooter{
+          background-color: #ffffff !important;
+          text-align: left !important;
+          margin-left: 20px !important;
+        }
+
+        a:active {
+          text-decoration: underline;
+        }
+        .mktoText table, .mktoText span, .mktoText img, .mktoText div {
+          display: none !important;
+        }
+      /*startcommon*/
+      @import url('https://fonts.googleapis.com/css?family=Roboto');
+      @media only screen and (max-width: 640px) {
+        table#boxing {
+          width: 100% !important;
+        }
+
       }
-      .mktoText h1, .mktoText h2, .mktoText h3, .mktoText h4, .mktoText h5 {
-        font-weight: 500 !important;
+
+      /*endcommon*/
+    </style>
+      <!--[if gte mso 9]>
+  		    <style type="text/css">
+  		    	#hero .table3-3{
+  					width: 100% !important;
+  		    	}
+  		    </style>
+  		<![endif]-->
+      <style media="all">
+      /* CLIENT-SPECIFIC STYLES */
+
+      #outlook a {
+        padding: 0;
       }
-      .mktoText h1 {
-        font-size: 32px !important;
+
+      /* Force Outlook to provide a "view in browser" message */
+
+      .ReadMsgBody {
+        width: 100%;
       }
-      .mktoText h2 {
-        font-size: 28px !important;
+
+      .ExternalClass {
+        width: 100%;
       }
-      .mktoText h3 {
-        font-size: 24px !important;
+
+      /* Force Hotmail to display emails at full width */
+
+      .ExternalClass,
+      .ExternalClass p,
+      .ExternalClass span,
+      .ExternalClass font,
+      .ExternalClass td,
+      .ExternalClass div {
+        line-height: 100%;
       }
-      .mktoText h4 {
-        font-size: 18px !important;
-      }
-      .mktoText h5 {
-        font-size: 16px !important;
-      }
-      a:link {
+
+      /* Force Hotmail to display normal line spacing */
+
+      /* iOS BLUE LINKS */
+
+      .appleBody a {
+        color: #212121;
         text-decoration: none;
       }
-      a:visited {
+
+      .appleFooter a {
+        color: #212121;
         text-decoration: none;
       }
-      a:hover {
-        text-decoration: underline;
-      }
-      a:active {
-        text-decoration: underline;
-      }
-    /*startcommon*/
-    @import url('https://fonts.googleapis.com/css?family=Roboto');
-    @media only screen and (max-width: 800px) {
-      table#boxing {
-        width: 100% !important;
+
+      @-ms-viewport {
+        width: device-width;
       }
 
-    }
-    /*endcommon*/
-  </style>
-    <!--[if gte mso 9]>
-<style type="text/css">
-		    	#hero .table3-3{
-					width: 100% !important;
-		    	}
-		    </style>
-<![endif]-->
-    <style media="all">
-    /* CLIENT-SPECIFIC STYLES */
-    #outlook a {
-      padding: 0;
-    }
-    /* Force Outlook to provide a "view in browser" message */
-    .ReadMsgBody {
-      width: 100%;
-    }
-    .ExternalClass {
-      width: 100%;
-    }
-    /* Force Hotmail to display emails at full width */
-    .ExternalClass,
-    .ExternalClass p,
-    .ExternalClass span,
-    .ExternalClass font,
-    .ExternalClass td,
-    .ExternalClass div {
-      line-height: 100%;
-    }
-    /* Force Hotmail to display normal line spacing */
-    /* iOS BLUE LINKS */
-    .appleBody a {
-      color: #212121;
-      text-decoration: none;
-    }
-    .appleFooter a {
-      color: #212121;
-      text-decoration: none;
-    }
-    @-ms-viewport {
-      width: device-width;
-    }
-    .logo{
-      display: inline-block !important;
-    }
-    .right-social-icons {
+      .logo{
         display: inline-block !important;
-        float: right !important;
-        text-align: right !important;
-    }
-    .right-tagline {
-        display: inline-block !important;
-        float: right !important;
-        text-align: right !important;
-    }
-  </style>
-    <style media="all">
-    @media only screen and (max-width: 640px) {
-      /*starttablet*/
-      .mktoVideoThumbnail {
-        width: 100% !important;
-        height: auto !important;
-        max-height: inherit !important;
-        min-height: inherit !important;
       }
-      body {
-        width: auto !important;
+      .right-social-icons {
+          display: inline-block !important;
+          float: right !important;
+          text-align: right !important;
       }
-      table.table600 {
-        width: 450px !important;
+      .right-tagline {
+          display: inline-block !important;
+          float: right !important;
+          text-align: right !important;
       }
-      table.table640 {
-        width: 100% !important;
-        max-width: 800px !important;
-      }
-      table.table-inner {
-        width: 100% !important;
-      }
-      table.table1-2 {
-        width: 47% !important;
-        clear: both;
-      }
-      table.table1-3 {
-        width: 29.4% !important;
-      }
-      table.table1-4 {
-        width: 100% !important;
-        text-align: left !important;
-      }
-      table.table2-3 {
-        width: 64% !important;
-        text-align: center !important;
-      }
-      table.table3-3 {
-        width: 100% !important;
-        text-align: center !important;
-        clear: both;
-      }
-      table.table3-3left {
-        width: 100% !important;
-        text-align: left !important;
-        clear: both;
-        margin-top: 5px;
-        float: left;
-      }
-      table.logo {
-        width: 100% !important;
-        text-align: center !important;
-      }
-      td.outer {
-        min-width: 0 !important;
-      }
-      td.stack {
-        padding-bottom: 40px !important;
-      }
-      .stack-tablet {
-        padding-bottom: 20px !important;
-        overflow: visible !important;
-        float: none !important;
-        mso-hide: none !important;
-        display: block !important;
-      }
-      img.mobile-img {
-        width: 100% !important;
-        height: auto !important;
-      }
-      td.center-tablet {
-        text-align: center !important;
-      }
-      td.hide-tablet {
-        display: none !important;
-      }
-      table.footer-column {
-        width: 47% !important;
-        text-align: left !important;
-      }
-      .m_two-articles .table1-2 {
-        width: 100% !important;
-      }
-      .m_two-articles .photo img {
-        width: 100% !important;
-      }
-      .m_article .imageArt img {
-        width: 290px !important;
-        height: auto !important;
-      }
-      .m_two-articles .stack-tablet td {
-        height: 60px !important;
-      }
-      .m_free-image img {
-        width: 100% !important;
-        max-width: 800px !important;
-        height: auto !important;
-      }
-      .logo {
-          margin: 0 auto !important;
-          display: block !important;
+    </style>
+      <style media="all">
+      @media only screen and (max-width: 640px) {
+
+        /*starttablet*/
+        .mktoVideoThumbnail {
+          width: 100% !important;
+          height: auto !important;
+          max-height: inherit !important;
+          min-height: inherit !important;
+        }
+
+        body {
+          width: auto !important;
+        }
+
+        table.table600 {
+          width: 450px !important;
+        }
+        .table640 {
+          width: 100% !important;
+        }
+
+        table.table-inner {
+          width: 100% !important;
+        }
+
+        table.table1-2 {
+          width: 100% !important;
+          align: center !important;
+          clear: both !important ;
+        }
+
+        table.table1-3 {
+          width: 29.4% !important;
+          align: center !important;
+        }
+        table.table1-3Promo {
+          width: 100% !important;
+          align: center !important;
+        }
+
+        table.table1-4 {
+          width: 100% !important;
+          text-align: left !important;
+        }
+
+        table.table2-3 {
+          width: 64% !important;
           text-align: center !important;
         }
-      .right-social-icons {
-          display: block !important;
+
+        table.table3-3 {
+          width: 100% !important;
+          text-align: center !important;
+          clear: both;
+          margin-top: 5px;
+        }
+        table.table3-3left {
+          width: 100% !important;
+          text-align: left !important;
+          clear: both;
+          margin-top: 5px;
+          float: left;
+        }
+
+        table.logo {
           width: 100% !important;
           text-align: center !important;
         }
+
+        td.outer {
+          min-width: 0 !important;
+        }
+
+        td.stack {
+          padding-bottom: 40px !important;
+        }
+        .m_hero .background {
+          background-size: cover !important;
+
+        }
+        .stack-tablet {
+          padding-bottom: 20px !important;
+          overflow: visible !important;
+          float: none !important;
+          mso-hide: none !important;
+          display: block !important;
+        }
+
+        img.mobile-img {
+          width: 100% !important;
+          height: auto !important;
+        }
+
+        td.center-tablet {
+          text-align: center !important;
+        }
+
+        td.hide-tablet {
+          display: none !important;
+        }
+
+        table.footer-column {
+          width: 47% !important;
+          text-align: left !important;
+        }
+
+        .m_two-articles .table1-2 {
+          width: 100% !important;
+        }
+
+        .m_two-articles .photo img {
+          width: 100% !important;
+        }
+        .m_article .imageArt img {
+          width: 290px !important;
+          height: auto !important;
+        }
+
+        .m_two-articles .stack-tablet td {
+          height: 60px !important;
+        }
+
+        .m_free-image img {
+          width: 100% !important;
+          max-width: 640px !important;
+          height: auto !important;
+        }
+        .logo {
+            margin: 0 auto !important;
+            display: block !important;
+            text-align: center !important;
+          }
+        .right-social-icons {
+            display: block !important;
+            width: 100% !important;
+            text-align: center !important;
+          }
+          .right-tagline {
+              display: none !important;
+
+          }
+          .sigBreak {
+              margin: 0 auto !important;
+              display: block !important;
+              width: 100% !important;
+
+          }
+
+        /*endtablet*/
+      }
+
+      @media only screen and (max-width: 479px) {
+
+        /*startmobile*/
+        body {
+          width: auto !important;
+        }
+
+        table.table600 {
+          width: 290px !important;
+        }
+        table.table640 {
+          width: 100% !important;
+          max-width: 600px !important;
+        }
+
+        table.table-inner {
+          width: 100% !important;
+          float: none !important;
+        }
+
+        table.table1-2 {
+          width: 100% !important;
+          clear: both;
+        }
+
+        table.table1-3 {
+          width: 100% !important;
+          align: center !important;
+          clear: both;
+        }
+
+        table.table1-4 {
+          width: 100% !important;
+          text-align: center !important;
+        }
+
+        table.table2-3 {
+          width: 100% !important;
+          text-align: center !important;
+        }
+
+        table.table3-3 {
+          width: 100% !important;
+          text-align: center !important;
+          clear: both;
+          margin-top: 5px;
+        }
+          table.table3-3left {
+            width: 100% !important;
+            text-align: left !important;
+            clear: both;
+            margin-top: 5px;
+            float: left;
+          }
+
+        table.logo {
+          width: 100% !important;
+          text-align: center !important;
+        }
+
+        td.outer {
+          min-width: 0 !important;
+        }
+
+        td.td3-1 {
+          width: 60% !important;
+          text-align: center !important;
+        }
+
+        .stack-smartphone {
+          padding-bottom: 20px !important;
+          overflow: visible !important;
+          float: none !important;
+          display: block !important;
+          mso-hide: none !important;
+        }
+        .m_hero .background {
+          background-size: cover !important;
+
+        }
+        .footer-stack-smartphone {
+          padding-bottom: 20px !important;
+          overflow: visible !important;
+          float: right !important;
+          display: block !important;
+          mso-hide: none !important;
+        }
+
+        td.center-smartphone {
+          text-align: center !important;
+        }
+
+        img.mobile-img {
+          width: 100% !important;
+        }
+
+        td.center-tablet {
+          text-align: center !important;
+        }
+
+        td.hide-smartphone {
+          display: none !important;
+        }
+
+        table.footer-column {
+          width: 100% !important;
+          text-align: center !important;
+        }
+
+        .m_free-image img {
+          width: 100% !important;
+          max-width: 600px !important;
+          height: auto !important;
+        }
+
+        .m_hr .table-inner {
+          width: 100% !important;
+        }
+        .logo {
+            margin: 0 auto !important;
+            width: 100% !important;
+            display: block !important;
+            text-align: center !important;
+
+          }
+        #footer-container {
+          text-align: center !important;
+          list-style-type: none !important;
+          }
+        .right-social-icons {
+            display: block !important;
+            width: 100% !important;
+            text-align: center !important;
+          }
         .right-tagline {
             display: none !important;
+          }
+        .m_article .imageArt img {
+          width: 290px !important;
+          height: auto !important;
         }
         .sigBreak {
             margin: 0 auto !important;
             display: block !important;
             width: 100% !important;
+        }
 
-        }
-      /*endtablet*/
-    }
-    @media only screen and (max-width: 479px) {
-      /*startmobile*/
-      body {
-        width: auto !important;
+        /*endmobile*/
       }
-      table.table600 {
-        width: 290px !important;
-      }
-      table.table640 {
-        width: 100% !important;
-        max-width: 600px !important;
-      }
-      table.table-inner {
-        width: 100% !important;
-        float: none !important;
-      }
-      table.table1-2 {
-        width: 100% !important;
-        clear: both;
-      }
-      table.table1-3 {
-        width: 100% !important;
-        clear: both;
-      }
-      table.table1-4 {
-        width: 100% !important;
-        text-align: center !important;
-      }
-      table.table2-3 {
-        width: 100% !important;
-        text-align: center !important;
-      }
-      table.table3-3 {
-        width: 100% !important;
-        text-align: center !important;
-        clear: both;
-      }
-      table.table3-3left {
-        width: 100% !important;
-        text-align: left !important;
-        clear: both;
-        margin-top: 5px;
-        float: left;
-      }
-      table.logo {
-        width: 100% !important;
-        text-align: center !important;
-      }
-      td.outer {
-        min-width: 0 !important;
-      }
-      td.td3-1 {
-        width: 60% !important;
-        text-align: center !important;
-      }
-      .stack-smartphone {
-        padding-bottom: 20px !important;
-        overflow: visible !important;
-        float: none !important;
-        display: block !important;
-        mso-hide: none !important;
-      }
-      .footer-stack-smartphone {
-        padding-bottom: 20px !important;
-        overflow: visible !important;
-        float: right !important;
-        display: block !important;
-        mso-hide: none !important;
-      }
-      td.center-smartphone {
-        text-align: center !important;
-      }
-      img.mobile-img {
-        width: 100% !important;
-      }
-      td.center-tablet {
-        text-align: center !important;
-      }
-      td.hide-smartphone {
-        display: none !important;
-      }
-      table.footer-column {
-        width: 100% !important;
-        text-align: center !important;
-      }
-      .m_free-image img {
-        width: 100% !important;
-        max-width: 600px !important;
-        height: auto !important;
-      }
-      .m_hr .table-inner {
-        width: 100% !important;
-      }
-      .logo {
-          margin: 0 auto !important;
-          width: 100% !important;
-          display: block !important;
-          text-align: center !important;
-        }
-      #footer-container {
-        text-align: center !important;
-        list-style-type: none !important;
-        }
-      .right-social-icons {
-          display: block !important;
-          width: 100% !important;
-          text-align: center !important;
-        }
-      .right-tagline {
-          display: none !important;
-        }
-      .m_article .imageArt img {
-        width: 290px !important;
-        height: auto !important;
-      }
-      .sigBreak {
-          margin: 0 auto !important;
-          display: block !important;
-          width: 100% !important;
-
-      }
-      /*endmobile*/
-    }
-  </style>
-  </head>
+    </style>
+    </head>
   <body style="margin-bottom: 0; -webkit-text-size-adjust: 100%; padding-bottom: 0; min-width: 100%; margin-top: 0; margin-right: 0; -ms-text-size-adjust: 100%; margin-left: 0; padding-top: 10px; padding-right: 0; padding-left: 0; width: 100%; background-color: #ffffff;">
     <!--[if mso]>
 <style type="text/css">
@@ -563,7 +675,7 @@ font-family: Arial, Helvetica, sans-serif !important;
               <tbody>
                 <tr>
                   <td class="mktoContainer boxedbackground" id="template-wrapper" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;">
-                    <table class="mktoModule m_free-text" id="free-text" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="left" border="0" cellpadding="0" cellspacing="0" width="95%" mktoname="Text">
+                    <table class="mktoModule m_free-text" id="free-text" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="left" border="0" cellpadding="0" cellspacing="0" width="97%" mktoname="Text">
                       <tbody>
                         <tr>
                           <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;background-color:${freeTextBackgroundColor};padding-left: 20px; " bgcolor="${freeTextBackgroundColor}" valign="top">

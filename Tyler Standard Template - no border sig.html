@@ -3,6 +3,7 @@
   <head>
     <!-- Marketo Variable Definitions -->
     <!-- using Boolean to hide hex values/lock the colors, set false_value to white for previews -->
+    <meta class="mktoString" id="trackingToken" mktoname="Limus Tracking Token" default="{{my.LitmusTracking}}" mktomodulescope="false" />
     <meta class="mktoBoolean" id="White" mktoName="White" default="true" false_value="#ffffff" true_value="#ffffff"  false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
     <meta class="mktoBoolean" id="SummerSky" mktoName="SummerSky" default="true" false_value="#ffffff" true_value="#2A9FD8"  false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
     <meta class="mktoBoolean" id="Blue" mktoName="Blue" false_value="#ffffff" true_value="#40528F" default="true" false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
@@ -347,7 +348,7 @@ font-family: Arial, Helvetica, sans-serif !important;
     }
   </style>
     <style media="all">
-    @media only screen and (max-width: 800px) {
+    @media only screen and (max-width: 640px) {
 
       /*starttablet*/
       .mktoVideoThumbnail {
@@ -471,7 +472,7 @@ font-family: Arial, Helvetica, sans-serif !important;
 
       .m_free-image img {
         width: 100% !important;
-        max-width: 800px !important;
+        max-width: 640px !important;
         height: auto !important;
       }
       .logo {
