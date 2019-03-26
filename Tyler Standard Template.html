@@ -53,7 +53,9 @@
     <meta class="mktoString" id="heroCTALinkText" mktoname="Button Label" default="CALL TO ACTION" mktomodulescope="true" />
     <!--Spacer Marketo Variable Definitions -->
     <meta class="mktoColor" id="spacerBackgroundColor" mktoname="Background Color" default="#ffffff" mktomodulescope="true" />
-    <meta class="mktoNumber" id="spacerSpacer" mktoname="Height" default="5" min="1" max="300" units="px" step="1" mktomodulescope="true" />
+    <meta class="mktoNumber" id="spacerHeight" mktoname="Height" default="5" min="1" max="300" units="px" step="1" mktomodulescope="true" />
+    <meta class="mktoList" id="spacerColor" mktoname="Separator Color" default="#808080"  values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
+
     <!--Image Marketo Variable Definitions -->
     <meta class="mktoString" id="freeImageLink" mktoname="Image Link" default="" mktomodulescope="true" />
     <meta class="mktoString" id="freeImageAltText" mktoname="Image Alt Text" default="" mktomodulescope="true" />
@@ -74,8 +76,8 @@
     <!--One Column Text Marketo Variable Definitions -->
     <meta class="mktoList" id="freeTextBackgroundColor" mktoname="Background Color" default="${White}" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
     <meta class="mktoString" id="freeText" mktoname="Free Text" default="It is recommended to use less than 400 characters in this section or three lines, followed by a button. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum officiis dolorum, nulla, mollitia ducimus iure modi perferendis tenetur ea illum veniam aut sapiente deserunt repellendus. Excepturi illo numquam sint harum." mktomodulescope="true" />
-    <meta class="mktoNumber" id="textSpacerTop" mktoname="Top Spacer" default="15" min="1" max="45" units="px" step="1" mktomodulescope="true" />
-    <meta class="mktoNumber" id="textSpacerBottom" mktoname="Bottom Spacer" default="15" min="1" max="45" units="px" step="1" mktomodulescope="true" />
+    <meta class="mktoNumber" id="textSpacerTop" mktoname="Top Spacer" default="1" min="1" max="45" units="px" step="1" mktomodulescope="true" />
+    <meta class="mktoNumber" id="textSpacerBottom" mktoname="Bottom Spacer" default="1" min="1" max="45" units="px" step="1" mktomodulescope="true" />
     <!--Button Marketo Variable Definitions -->
     <meta class="mktoList" id="ctaBackgroundColor" mktoname="Background Color" default="${White}" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${Orange}, ${LightGrey}, ${MediumGrey}, ${DarkGrey}, ${Black}" mktomodulescope="true" />
     <meta class="mktoList" id="ctaButtonBackgroundColor" mktoname="Button Background Color" default="#2A9FD8" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${Orange}" mktomodulescope="true" />
@@ -976,8 +978,11 @@ font-family: Arial, Helvetica, sans-serif !important;
                                   <tr>
                                     <td class="secondary-font text" style="-moz-hyphens: none;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-ms-text-size-adjust: 100%;hyphens: none;font-family:'Roboto', Arial, sans-serif;font-size: 16px;line-height: 23px;color: #212121;border-collapse: collapse;">
                                       <div class="mktoText" mktoname="FreeText" id="freeText">
-                                        It is recommended to use less than 400 characters in this section or three lines, followed by a button. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum officiis dolorum, nulla, mollitia ducimus iure modi perferendis tenetur ea illum veniam aut sapiente deserunt repellendus. Excepturi illo numquam sint harum.
-                                      </div> </td>
+                                        <p>
+                                          It is recommended to use less than 400 characters in this section or three lines, followed by a button. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum officiis dolorum, nulla, mollitia ducimus iure modi perferendis tenetur ea illum veniam aut sapiente deserunt repellendus. Excepturi illo numquam sint harum.
+                                        </p>
+                                      </div>
+                                    </td>
                                   </tr>
                                   <tr>
                                     <td class="" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;line-height:${textSpacerBottom};font-size:${textSpacerBottom};" height="${textSpacerBottom}">&nbsp;</td>
@@ -1036,7 +1041,7 @@ font-family: Arial, Helvetica, sans-serif !important;
                                               <table class="table3-3" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" border="0" cellpadding="0" cellspacing="0" width="600">
                                                 <tbody>
                                                   <tr style="height: 10px;">
-                                                    <td class="bordered" style="-moz-hyphens: none;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-ms-text-size-adjust: 100%;hyphens: none;border-top-style: none;border-bottom-width:1px;border-bottom-style: solid;border-bottom-color:#212121;border-collapse: collapse;border-top-color:#212121;border-left-color:#212121;border-right-color:#212121;border-top-width:1px;border-left-width:1px;border-right-width:1px;">&nbsp;</td>
+                                                    <td class="bordered" style="-moz-hyphens: none;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-ms-text-size-adjust: 100%;hyphens: none;border-top-style: none;border-bottom-width:1px;border-bottom-style: solid;border-bottom-color:${spacerColor};border-collapse: collapse;border-top-color:${spacerColor};border-left-color:${spacerColor};border-right-color:${spacerColor};border-top-width:${spacerHeight};border-left-width:${spacerHeight};border-right-width:${spacerHeight};">&nbsp;</td>
                                                   </tr>
                                                   <tr style="height: 10px;">
                                                     <td style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;">&nbsp;</td>
@@ -2391,7 +2396,7 @@ solid;border-top-color:${articleBorderColor};border-right-color:${articleBorderC
                                 </tr>
                               </tbody>
                             </table>
-                            <table id="threeContent" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" class="mktoModule m_logos" mktoname="Logos" mktoAddByDefault="false" >
+                            <table id="threeContent" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" class="mktoModule m_logos" mktoname="Three Content" mktoAddByDefault="false" >
                               <tbody>
                                 <tr>
                                   <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;background-color:${threeContentBackgroundColor};" bgcolor="${threeContentBackgroundColor}" valign="top">
@@ -2444,7 +2449,7 @@ solid;border-top-color:${articleBorderColor};border-right-color:${articleBorderC
                                                   </tr>
                                                 </tbody>
                                               </table>
-                                              <table class="spacer" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="left" border="0" cellpadding="0" cellspacing="0" width="40">
+                                              <table class="spacer" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;" align="left" border="0" cellpadding="0" cellspacing="0" width="20">
                                                 <tbody>
                                                   <tr>
                                                     <td style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;" height="20" width="100%"></td>
