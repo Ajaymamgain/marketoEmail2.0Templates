@@ -3,33 +3,34 @@
   <head>
     <!-- Marketo Variable Definitions -->
     <!-- using Boolean to hide hex values/lock the colors, set false_value to white for previews -->
-    <meta class="mktoString" id="trackingToken" mktoname="Limus Tracking Token" default="{{my.LitmusTracking}}" mktomodulescope="false" />
     <meta class="mktoBoolean" id="White" mktoName="White" default="true" false_value="#ffffff" true_value="#ffffff"  false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
     <meta class="mktoBoolean" id="SummerSky" mktoName="SummerSky" default="true" false_value="#ffffff" true_value="#2A9FD8"  false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
-    <meta class="mktoBoolean" id="Blue" mktoName="Blue" false_value="#ffffff" true_value="#40528F" default="true" false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
+    <meta class="mktoBoolean" id="Blue" mktoName="Blue" false_value="#ffffff" true_value="#202F64" default="true" false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
     <meta class="mktoBoolean" id="Green" mktoName="Green" false_value="#ffffff" true_value="#8F9B49" default="true" false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
+    <meta class="mktoBoolean" id="Red" mktoName="Red" false_value="#ffffff" true_value="#C02033" default="true" false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
     <meta class="mktoBoolean" id="Orange" mktoName="Orange" false_value="#ffffff" true_value="#e2702e" default="true" false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
-    <meta class="mktoBoolean" id="LightGrey" mktoName="LightGrey" false_value="#ffffff" true_value="#EEEEEE" default="true" false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
-    <meta class="mktoBoolean" id="MediumGrey" mktoName="MediumGrey" false_value="#ffffff" true_value="#d3d3d3" default="true" false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
-    <meta class="mktoBoolean" id="DarkGrey" mktoName="DarkGrey" false_value="#ffffff" true_value="#808080" default="true" false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
-    <meta class="mktoBoolean" id="Black" mktoName="Black" false_value="#ffffff" true_value="#212121" default="true" false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
-    <meta class="mktoBoolean" id="BlueGradient" mktoName="BlueGradient" false_value="#ffffff" true_value="rgba(30,87,153,0.25) 0%,rgba(64,82,143,1)" default="true" false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
-    <meta class="mktoBoolean" id="GreenGradient" mktoName="GreenGradient" false_value="#ffffff" true_value="rgba(143,155,73,0.25) 0%,rgba(143,155,73,1)" default="true" false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
+    <meta class="mktoBoolean" id="LightGrey" mktoName="LightGrey" false_value="#ffffff" true_value="#DFE6EA" default="true" false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
+    <meta class="mktoBoolean" id="MediumGrey" mktoName="MediumGrey" false_value="#ffffff" true_value="#D4DEE5" default="true" false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
+    <meta class="mktoBoolean" id="DarkGrey" mktoName="DarkGrey" false_value="#ffffff" true_value="#8AACBD" default="true" false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
+    <meta class="mktoBoolean" id="BlueGrey" mktoName="BlueGrey" false_value="#ffffff" true_value="#003E5B" default="true" false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
+    <meta class="mktoBoolean" id="Black" mktoName="Black" false_value="#ffffff" true_value="#545454" default="true" false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
+    <meta class="mktoBoolean" id="BlueGradient" mktoName="BlueGradient" false_value="#ffffff" true_value="rgba(32,47,100,0.25) 0%,rgba(32,47,100,1)" default="true" false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
+    <meta class="mktoBoolean" id="RedGradient" mktoName="RedGradient" false_value="#ffffff" true_value="rgba(192,32,51,0.25) 0%,rgba(192,32,51,1)" default="true" false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
     <meta class="mktoBoolean" id="BlackGradient" mktoName="BlackGradient" false_value="#ffffff" true_value="rgba(34,34,34,0.25) 0%,rgba(34,34,34,1)" default="true" false_value_name="Off" true_value_name="On" mktomodulescope="false"/>
     <!-- Hero with Overlay Marketo Variable Definitions -->
-    <meta class="mktoImg" id="heroBackgroundImage" mktoname="Background Image" default="http://na-sj24.marketo.com/rs/630-BEY-937/images/Skyline-Australia-City-No-Fade.jpg" mktomodulescope="true" />
-    <meta class="mktolist" id="heroGradientColor" mktoname="Gradient Color" default="${BlueGradient}" values="${BlueGradient}, ${GreenGradient}, ${BlackGradient}" mktomodulescope="true" />
-    <meta class="mktolist" id="heroBackgroundColor" mktoname="CTA | Outlook Color" default="#40528F" values="${Blue}, ${Green}, ${Black}" mktomodulescope="true" />
+    <meta class="mktoImg" id="heroBackgroundImage" mktoname="Background Image" default="http://access.researchus.com/rs/093-LPT-380/images/Hero_RESEARCH_Confetti_640.png" mktomodulescope="true" />
+    <meta class="mktolist" id="heroGradientColor" mktoname="Gradient Color" default="${BlueGradient}" values="${BlueGradient}, ${RedGradient}, ${BlackGradient}" mktomodulescope="true" />
+    <meta class="mktolist" id="heroBackgroundColor" mktoname="CTA | Outlook Color" default="#202F64" values="${Blue}, ${Red}, ${Black}" mktomodulescope="true" />
     <meta class="mktolist" id="heroImagePosition" mktoname="Image Position" default="top top" values="top top, center center" mktomodulescope="true" />
     <meta class="mktoString" id="heroLogoLink" mktoname="Logo Link" default="https://www.tylertech.com/" mktomodulescope="true" />
-    <meta class="mktoString" id="heroLogoAltText" mktoname="Logo Alt Text" default="Tyler Technologies Logo" mktomodulescope="true" />
-    <meta class="mktoList" id="heroButtonBackgroundColor" mktoname="Hero Button Color" default="#ffffff" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${Orange}"  mktomodulescope="true" />
-    <meta class="mktolist" id="heroBorderColor" mktoname="Button Border Color" default="#e2702e" values="${White}, ${SummerSky}, ${Blue}, ${Green}, ${Orange}" mktomodulescope="true" />
+    <meta class="mktoString" id="heroLogoAltText" mktoname="Logo Alt Text" default="Research Logo" mktomodulescope="true" />
+    <meta class="mktoList" id="heroButtonBackgroundColor" mktoname="Hero Button Color" default="#ffffff" values="${White}, ${SummerSky}, ${Blue}, ${Red}, ${Orange}"  mktomodulescope="true" />
+    <meta class="mktolist" id="heroBorderColor" mktoname="Button Border Color" default="#ffffff" values="${White}, ${SummerSky}, ${Blue}, ${Red}, ${Orange}" mktomodulescope="true" />
     <meta class="mktoString" id="heroLinkText" mktoname="Button Text" default="Call to action" mktomodulescope="true" />
     <meta class="mktoString" id="heroLink" mktoname="Button Link" default="http://mylink" mktomodulescope="true" />
 
     <!--Logo Marketo Variable Definitions -->
-    <meta class="mktoList" id="logoBackgroundColor" mktoname="Logo Background Color" default="${White}" values="${White}, ${Blue}, ${Green}" mktomodulescope="true" />
+    <meta class="mktoList" id="logoBackgroundColor" mktoname="Logo Background Color" default="${White}" values="${White}, ${Blue}, ${Red}" mktomodulescope="true" />
     <meta class="mktoString" id="logoLink" mktoname="Logo Link" default="https://www.tylertech.com/" mktomodulescope="true" />
     <meta class="mktoString" id="logoAltText" mktoname="Logo Alt Text" default="Tyler Technologies Logo" mktomodulescope="true" />
     <!--CTAHero -->
@@ -37,7 +38,7 @@
     <meta class="mktoBoolean" id="showCTAHeadline" mktoname="Show Headline?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
     <meta class="mktoBoolean" id="showCTAText" mktoname="Show Text?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
     <meta class="mktoBoolean" id="showCTAButton" mktoname="Show Button?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show" mktomodulescope="true" />
-    <meta class="mktoList" id="heroCTABackgroundColor" mktoname="Background Color" default="#40528F" values="${White}, ${Blue}, ${Green}, ${Black}" mktomodulescope="true" />
+    <meta class="mktoList" id="heroCTABackgroundColor" mktoname="Background Color" default="#40528F" values="${White}, ${Blue}, ${Red}, ${Black}" mktomodulescope="true" />
 
       <!-- CTA Headline Marketo Variable Definitions -->
     <meta class="mktoString" id="heroCTATitleText" mktoname="Heading Text" default="Integer posuere erat a ante venenatis dapibus." mktomodulescope="true" />
@@ -295,13 +296,7 @@ font-family: Arial, Helvetica, sans-serif !important;
       a:active {
         text-decoration: underline;
       }
-      .mktoText table, .mktoText span, .mktoText img, .mktoText div {
-        background-color: yellow !important;
-      }
-      .mktoText table:hover:after, .mktoText span:hover:after, .mktoText img:hover:after, .mktoText div:hover:after {
-        background-color: LightGreen !important;
-        content: "You are using unapproved text or there is hidden HTML from when you copy and pasted. The yellow text highlighted above must be plain text." !important;
-      }
+    
     /*startcommon*/
     @import url('https://fonts.googleapis.com/css?family=Roboto');
     @media only screen and (max-width: 640px) {
@@ -718,7 +713,7 @@ font-family: Arial, Helvetica, sans-serif !important;
                                               <tr>
                                                 <td class="logo" style="display:inline-block; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; outline: none; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; text-decoration: none; border-top-width: 0; border-collapse: collapse; " >
                                                   <div style="display:inline;">
-                                                    <a href="${logoLink}"><img class="mktoImg" mktoname="Logo" id="logo" mktolockimgsize="true" src="https://empower.tylertech.com/rs/015-NUU-525/images/tyler_logo_RGB--Template-Small.png" alt="${logoAltText}" width="auto" height="40" style=" width: auto; height: 40px; -ms-interpolation-mode: bicubic; outline: none; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; text-decoration: none; border-top-width: 0; width: auto; height: 40px; max-width: 100%; line-height: 100%;"  /></a>
+                                                    <a href="${logoLink}"><img class="mktoImg" mktoname="Logo" id="logo" mktolockimgsize="true" src="http://access.researchus.com/rs/093-LPT-380/images/Logo_reSearch.png" alt="${logoAltText}" width="auto" height="40" style=" width: auto; height: 40px; -ms-interpolation-mode: bicubic; outline: none; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; text-decoration: none; border-top-width: 0; width: auto; height: 40px; max-width: 100%; line-height: 100%;"  /></a>
                                                   </div>
                                                 </td>
                                               </tr>
